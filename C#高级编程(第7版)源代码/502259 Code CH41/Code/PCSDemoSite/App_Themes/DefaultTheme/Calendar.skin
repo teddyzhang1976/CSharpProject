@@ -1,0 +1,11 @@
+<asp:Calendar Runat="server" BackColor="White" BorderColor="#999999" ForeColor="Black" 
+  CellPadding="4" DayNameFormat="FirstLetter" Width="200px" Height="180px" class="calendar" >
+  <SelectedDayStyle ForeColor="White" Font-Bold="True" BackColor="#666666"></SelectedDayStyle>
+  <SelectorStyle BackColor="#CCCCCC"></SelectorStyle>
+  <WeekendDayStyle BackColor="#FFFFCC"></WeekendDayStyle>
+  <OtherMonthDayStyle ForeColor="#808080"></OtherMonthDayStyle>
+  <TodayDayStyle ForeColor="Black" BackColor="#CCCCCC"></TodayDayStyle>
+  <NextPrevStyle VerticalAlign="Bottom"></NextPrevStyle>
+  <DayHeaderStyle Font-Size="7pt" Font-Bold="True" BackColor="#CCCCCC"></DayHeaderStyle>
+  <TitleStyle BorderColor="Black" Font-Bold="True" BackColor="#444499" ForeColor="#ccccff"></TitleStyle>
+</asp:Calendar>

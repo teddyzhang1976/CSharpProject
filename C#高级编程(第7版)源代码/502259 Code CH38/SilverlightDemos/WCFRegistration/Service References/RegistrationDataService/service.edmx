@@ -1,0 +1,58 @@
+﻿<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+  <edmx:DataServices xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" m:DataServiceVersion="1.0">
+    <Schema Namespace="EventRegistrationModel" xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+      <EntityType Name="Attendee">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Int32" Nullable="false" p8:StoreGeneratedPattern="Identity" xmlns:p8="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        <Property Name="EventId" Type="Edm.Int32" Nullable="false" />
+        <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+        <Property Name="Email" Type="Edm.String" Nullable="true" MaxLength="50" Unicode="true" FixedLength="false" />
+        <Property Name="Company" Type="Edm.String" Nullable="true" MaxLength="50" Unicode="true" FixedLength="false" />
+        <Property Name="RegistrationCode" Type="Edm.String" Nullable="true" MaxLength="10" Unicode="true" FixedLength="true" />
+        <NavigationProperty Name="Event" Relationship="EventRegistrationModel.FK_Attendees_Events" FromRole="Attendees" ToRole="Events" />
+      </EntityType>
+      <EntityType Name="Event">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Int32" Nullable="false" p8:StoreGeneratedPattern="Identity" xmlns:p8="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+        <Property Name="DateFrom" Type="Edm.DateTime" Nullable="false" />
+        <Property Name="DateTo" Type="Edm.DateTime" Nullable="false" />
+        <Property Name="Description" Type="Edm.String" Nullable="true" MaxLength="1000" Unicode="true" FixedLength="false" />
+        <NavigationProperty Name="Attendees" Relationship="EventRegistrationModel.FK_Attendees_Events" FromRole="Events" ToRole="Attendees" />
+      </EntityType>
+      <Association Name="FK_Attendees_Events">
+        <End Role="Events" Type="EventRegistrationModel.Event" Multiplicity="1" />
+        <End Role="Attendees" Type="EventRegistrationModel.Attendee" Multiplicity="*" />
+        <ReferentialConstraint>
+          <Principal Role="Events">
+            <PropertyRef Name="Id" />
+          </Principal>
+          <Dependent Role="Attendees">
+            <PropertyRef Name="EventId" />
+          </Dependent>
+        </ReferentialConstraint>
+      </Association>
+    </Schema>
+    <Schema Namespace="SilverlightDemos.Web" xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+      <EntityContainer Name="EventRegistrationEntities" p7:LazyLoadingEnabled="true" m:IsDefaultEntityContainer="true" xmlns:p7="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+        <FunctionImport Name="AddAttendee" ReturnType="Edm.Boolean" m:HttpMethod="GET">
+          <Parameter Name="name" Type="Edm.String" Mode="In" />
+          <Parameter Name="email" Type="Edm.String" Mode="In" />
+          <Parameter Name="company" Type="Edm.String" Mode="In" />
+          <Parameter Name="registrationCode" Type="Edm.String" Mode="In" />
+          <Parameter Name="eventId" Type="Edm.Int32" Mode="In" />
+        </FunctionImport>
+        <EntitySet Name="Attendees" EntityType="EventRegistrationModel.Attendee" />
+        <EntitySet Name="Events" EntityType="EventRegistrationModel.Event" />
+        <AssociationSet Name="FK_Attendees_Events" Association="EventRegistrationModel.FK_Attendees_Events">
+          <End Role="Events" EntitySet="Events" />
+          <End Role="Attendees" EntitySet="Attendees" />
+        </AssociationSet>
+      </EntityContainer>
+    </Schema>
+  </edmx:DataServices>
+</edmx:Edmx>

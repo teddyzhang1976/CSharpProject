@@ -1,0 +1,12 @@
+private DbConnection GetDatabaseConnection (string name)
+{
+  ConnectionStringSettings settings =
+    ConfigurationManager.ConnectionStrings[name];
+
+  DbProviderFactory factory = DbProviderFactories.GetFactory(settings.ProviderName);
+
+  DbConnection conn = factory.CreateConnection();
+  conn.ConnectionString = settings.ConnectionString;
+
+  return conn;
+}

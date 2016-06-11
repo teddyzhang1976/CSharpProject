@@ -1,0 +1,62 @@
+﻿<Window x:Class="UserSearch.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="User Search" Height="540" Width="700">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Text="1. Enter Domain Controller and Logon Information" Margin="5"/>
+            <TextBlock Grid.Row="1" Grid.Column="0" Text="Domain Controller [optional]" Margin="5" />
+            <TextBox Grid.Row="1" Grid.Column="1" Width="150" x:Name="textDC" Margin="5" />
+            <GroupBox Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Header="Logon [optional]" Margin="5">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Row="0" Grid.Column="0" Text="Username:" Margin="5" />
+                    <TextBlock Grid.Row="1" Grid.Column="0" Text="Password:" Margin="5" />
+                    <TextBox Grid.Row="0" Grid.Column="1" x:Name="textUsername" Width="120" Margin="5" />
+                    <PasswordBox Grid.Row="1" Grid.Column="1" x:Name="textPassword" Width="120" Margin="5" />
+                </Grid>
+            </GroupBox>
+            <TextBlock Grid.Row="3" Grid.Column="0" Text="2. Load the Properties" Margin="5" />
+            <Button Grid.Row="3" Grid.Column="1" Content="Load Properties" Margin="5" Click="OnLoadProperties" />
+            <TextBlock Grid.Row="4" Grid.Column="0" Text="3. Choose the properties to display" Margin="5" />
+            <ListBox Grid.Row="4" Grid.Column="1" x:Name="listBoxProperties" ItemsSource="{Binding}" Height="150" Margin="5" SelectionMode="Multiple" />
+            <TextBlock Grid.Row="5" Grid.Column="0" Text="4. Enter the LDAP Filter" Margin="5" />
+            <TextBlock Grid.Row="6" Grid.Column="0" Text="Filter:" Margin="5" />
+            <TextBox Grid.Row="6" Grid.Column="1" x:Name="textFilter" Text="(objectClass=user)" Margin="5" />
+            <TextBlock Grid.Row="7" Grid.Column="0" Text="Start the search" Margin="5" />
+            <Button Grid.Row="7" Grid.Column="1" Content="Search" Margin="5" Click="OnSearch" />
+            
+
+               
+        </Grid>
+        <ScrollViewer HorizontalScrollBarVisibility="Hidden" Grid.Row="0" Grid.Column="1" Grid.RowSpan="7">
+            <TextBlock x:Name="textResult" Margin="5" />
+        </ScrollViewer>
+
+    </Grid>
+</Window>

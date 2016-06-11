@@ -1,0 +1,42 @@
+﻿<Activity mc:Ignorable="sap" x:Class="PickDemo.ExpenseClaims" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:local="clr-namespace:PickDemo" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mv="clr-namespace:Microsoft.VisualBasic;assembly=System" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" xmlns:s1="clr-namespace:System;assembly=mscorlib" xmlns:s2="clr-namespace:System;assembly=System" xmlns:s3="clr-namespace:System;assembly=System.Xml" xmlns:s4="clr-namespace:System;assembly=System.Core" xmlns:sad="clr-namespace:System.Activities.Debugger;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System" xmlns:scg1="clr-namespace:System.Collections.Generic;assembly=System.ServiceModel" xmlns:scg2="clr-namespace:System.Collections.Generic;assembly=System.Core" xmlns:scg3="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:sd1="clr-namespace:System.Data;assembly=System.Data.DataSetExtensions" xmlns:sl="clr-namespace:System.Linq;assembly=System.Core" xmlns:st="clr-namespace:System.Text;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <Sequence sad:XamlDebuggerXmlReader.FileName="D:\Documents\Home\Pro C#\2010\CH 44 - WF 4\Code\PickDemo\PickDemo\ExpenseClaims.xaml" sap:VirtualizedContainerService.HintSize="958.4,678.4">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Default="Approved" Name="ApprovedBookmark" />
+      <Variable x:TypeArguments="x:String" Default="Rejected" Name="RejectedBookmark" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg3:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <local:CallPromptService AcceptedBookmarkName="[ApprovedBookmark]" DisplayName="DisplayPrompt" sap:VirtualizedContainerService.HintSize="936,22.4" Prompt="Please accept or reject this expense claim" RejectedBookmarkName="[RejectedBookmark]" />
+    <Pick sap:VirtualizedContainerService.HintSize="936,491.2">
+      <PickBranch DisplayName="AcceptBranch" sap:VirtualizedContainerService.HintSize="240,444.8">
+        <PickBranch.Trigger>
+          <local:WaitForData BookmarkName="[ApprovedBookmark]" DisplayName="WaitForAccept" sap:VirtualizedContainerService.HintSize="209.6,99.2" />
+        </PickBranch.Trigger>
+        <WriteLine sap:VirtualizedContainerService.HintSize="209.6,99.2" Text="Yay, your expenses were accepted" />
+      </PickBranch>
+      <PickBranch DisplayName="Branch2" sap:VirtualizedContainerService.HintSize="240,444.8">
+        <PickBranch.Trigger>
+          <local:WaitForData BookmarkName="[RejectedBookmark]" DisplayName="WaitForReject" sap:VirtualizedContainerService.HintSize="209.6,99.2" />
+        </PickBranch.Trigger>
+        <WriteLine sap:VirtualizedContainerService.HintSize="209.6,99.2" Text="Your expenses were rejected" />
+      </PickBranch>
+      <PickBranch sap:VirtualizedContainerService.HintSize="262.4,444.8">
+        <PickBranch.Trigger>
+          <Delay DisplayName="WaitForTimeout" Duration="[New TimeSpan(0, 0, 10)]" sap:VirtualizedContainerService.HintSize="232,99.2" />
+        </PickBranch.Trigger>
+        <Sequence sap:VirtualizedContainerService.HintSize="232,248">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg3:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <local:CancelPromptService DisplayName="ClosePrompt" sap:VirtualizedContainerService.HintSize="209.6,22.4" />
+          <WriteLine sap:VirtualizedContainerService.HintSize="209.6,60.8" Text="Your expense claim has timed out" />
+        </Sequence>
+      </PickBranch>
+    </Pick>
+  </Sequence>
+</Activity>

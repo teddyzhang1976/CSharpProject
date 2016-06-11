@@ -1,0 +1,34 @@
+div#header
+{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 80px;
+    width: 780px;
+    padding: 10px;
+}
+
+div#nav
+{
+    position: absolute;
+    left: 0px;
+    top: 100px;
+    width: 180px;
+    height: 620px;
+    padding: 10px;
+}
+
+div#body
+{
+    position: absolute;
+    left: 200px;
+    top: 100px;
+    width: 580px;
+    height: 620px;
+    padding: 10px;
+}
+
+.mrbEventList
+{
+    width: 40%;
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="df632d06-0a26-431f-bf5f-84949d1977da" xmlns="urn:schemas-microsoft-com:xml-dataservicemap">
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:5574/EventRegistrationDataService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.edmx" MetadataType="Edmx" ID="8a07bc8e-ea28-4454-9e4c-9f89f7a957bc" SourceId="1" SourceUrl="http://localhost:5574/EventRegistrationDataService.svc" />
+  </Metadata>
+  <Extensions />
+</ReferenceGroup>

@@ -1,0 +1,69 @@
+﻿<Window x:Class="Wrox.ProCSharp.WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:Wrox.ProCSharp.WPF"
+        Title="Main Window" Height="400" Width="600">
+    <Window.Resources>
+        <Style x:Key="tabItemButtonStyle" TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Grid>
+                            <Ellipse Width="20" Height="20">
+                                <Ellipse.Fill>
+                                    <LinearGradientBrush StartPoint="1,0" EndPoint="0.2,1">
+                                        <GradientStop Offset="0" Color="LightGreen" />
+                                        <GradientStop Offset="0.6" Color="Green" />
+                                        <GradientStop Offset="1" Color="DarkGreen" />
+                                    </LinearGradientBrush>
+                                </Ellipse.Fill>
+                            </Ellipse>
+                            <Ellipse Fill="Yellow" Width="16" Height="3">
+                                <Ellipse.RenderTransform>
+                                    <RotateTransform Angle="45" CenterX="8" CenterY="1.5" />
+                                </Ellipse.RenderTransform>
+                            </Ellipse>
+                            <Ellipse Fill="Yellow" Width="16" Height="3">
+                                <Ellipse.RenderTransform>
+                                    <RotateTransform Angle="-45" CenterX="8" CenterY="1.5" />
+                                </Ellipse.RenderTransform>
+                            </Ellipse>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Window.CommandBindings>
+        <CommandBinding Command="ApplicationCommands.Close" Executed="OnClose" />
+        <CommandBinding Command="local:BooksCommands.ShowBook" Executed="OnShowBook" />
+    </Window.CommandBindings>
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="_File">
+                <MenuItem Header="_Show Books" Command="local:BooksCommands.ShowBooks" />  
+                <Separator />
+                <MenuItem Header="E_xit" Command="ApplicationCommands.Close" />
+            </MenuItem>
+            <MenuItem Header="_Edit">
+                <MenuItem Header="Undo" Command="ApplicationCommands.Undo" />
+                <Separator />
+                <MenuItem Header="Cut" Command="ApplicationCommands.Cut" />
+                <MenuItem Header="Copy" Command="ApplicationCommands.Copy" />
+                <MenuItem Header="Pastee" Command="ApplicationCommands.Paste" />
+            </MenuItem>
+        </Menu>
+        <ToolBar DockPanel.Dock="Top">
+            
+        </ToolBar>
+        <ListBox DockPanel.Dock="Left" Margin="5" MinWidth="120">
+<!--                <Hyperlink Command="local:BooksCommands.ShowBook">Show Book</Hyperlink> -->
+                <Hyperlink Click="OnShowBook">Show Book</Hyperlink>
+
+                <Hyperlink Click="OnShowBooks">Show Books</Hyperlink>
+            <Hyperlink Click="OnShowGrid">Show Grid</Hyperlink>
+
+        </ListBox>
+        <TabControl Margin="5" x:Name="tabControl1" />
+    </DockPanel>
+</Window>

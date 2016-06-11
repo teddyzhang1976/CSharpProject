@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 10
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "ClientWinFormsSetup", "ClientWinFormsSetup\ClientWinFormsSetup.vdproj", "{40EF8B40-4209-4C8A-91E9-72D7EBEEA75D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{40EF8B40-4209-4C8A-91E9-72D7EBEEA75D}.Debug|Default.ActiveCfg = Debug
+		{40EF8B40-4209-4C8A-91E9-72D7EBEEA75D}.Debug|Default.Build.0 = Debug
+		{40EF8B40-4209-4C8A-91E9-72D7EBEEA75D}.Release|Default.ActiveCfg = Release
+		{40EF8B40-4209-4C8A-91E9-72D7EBEEA75D}.Release|Default.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

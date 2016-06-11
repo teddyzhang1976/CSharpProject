@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="bc8b5f73-9c57-4483-bd62-aa4b3e1129ac" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.ObservableCollection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:58698/RegistrationService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="RegistrationService.xsd" MetadataType="Schema" ID="c662604b-0f76-41fd-9708-4cf71ea5bae3" SourceId="1" SourceUrl="http://localhost:58698/RegistrationService.svc?xsd=xsd3" />
+    <MetadataFile FileName="RegistrationService1.xsd" MetadataType="Schema" ID="08093dcc-aae4-4313-96ba-9d0b54ce78b8" SourceId="1" SourceUrl="http://localhost:58698/RegistrationService.svc?xsd=xsd0" />
+    <MetadataFile FileName="RegistrationService.disco" MetadataType="Disco" ID="ece4c690-fac1-40b8-ac8d-7522d1c7fd5b" SourceId="1" SourceUrl="http://localhost:58698/RegistrationService.svc?disco" />
+    <MetadataFile FileName="RegistrationService.wsdl" MetadataType="Wsdl" ID="a9a9b652-7312-4318-a8bb-4adc0049ee6b" SourceId="1" SourceUrl="http://localhost:58698/RegistrationService.svc?wsdl" />
+    <MetadataFile FileName="RegistrationService2.xsd" MetadataType="Schema" ID="74abce07-4e8f-42e8-979c-bb6878264ce6" SourceId="1" SourceUrl="http://localhost:58698/RegistrationService.svc?xsd=xsd4" />
+    <MetadataFile FileName="RegistrationService3.xsd" MetadataType="Schema" ID="66db3cdb-f8d5-49b3-b7f5-b7c3f3ece984" SourceId="1" SourceUrl="http://localhost:58698/RegistrationService.svc?xsd=xsd2" />
+    <MetadataFile FileName="RegistrationService4.xsd" MetadataType="Schema" ID="118ebbb0-4a34-46b4-b406-4e95a899106d" SourceId="1" SourceUrl="http://localhost:58698/RegistrationService.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

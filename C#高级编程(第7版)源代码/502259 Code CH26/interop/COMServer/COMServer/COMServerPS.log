@@ -1,0 +1,35 @@
+﻿Build started 9/28/2009 11:21:30 AM.
+     1>Project "K:\ProC# 4.0\code\Interop\COMServer\COMServer\COMServerPS.vcxproj" on node 9 (build target(s)).
+     1>_PrepareForBuild:
+         Touching "Debug\COMServerPS.unsuccessfulbuild".
+       PreBuildEvent:
+         Description: Checking for required files
+         if exist dlldata.c goto :END
+         echo Error: MIDL will not generate DLLDATA.C unless you have at least 1 interface in the main project.
+         Exit 1
+         :END
+         
+         :VCEnd
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /nologo /W1 /WX- /Oy- /D WIN32 /D REGISTER_PROXY_DLL /D _DEBUG /D _WINDLL /D _UNICODE /D UNICODE /Gm- /EHsc /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TC /analyze- /errorReport:prompt COMServer_p.c dlldata.c
+         COMServer_p.c
+         dlldata.c
+         Generating Code...
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /OUT:"K:\ProC# 4.0\code\Interop\COMServer\Debug\COMServerPS.dll" /NOLOGO kernel32.lib rpcns4.lib rpcrt4.lib oleaut32.lib uuid.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /DEF:"COMServerPS.def" /MANIFEST /ManifestFile:"Debug\COMServerPS.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /PDB:"K:\ProC# 4.0\code\Interop\COMServer\Debug\COMServerPS.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"K:\ProC# 4.0\code\Interop\COMServer\Debug\COMServerPS.lib" /MACHINE:X86 /ERRORREPORT:PROMPT /DLL Debug\COMServer_i.obj Debug\COMServer_p.obj Debug\dlldata.obj
+     1>COMServer_i.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/OPT:ICF' specification
+            Creating library K:\ProC# 4.0\code\Interop\COMServer\Debug\COMServerPS.lib and object K:\ProC# 4.0\code\Interop\COMServer\Debug\COMServerPS.exp
+         COMServerPS.vcxproj -> K:\ProC# 4.0\code\Interop\COMServer\Debug\COMServerPS.dll
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"K:\ProC# 4.0\code\Interop\COMServer\Debug\COMServerPS.dll;#2" /manifest Debug\COMServerPS.dll.intermediate.manifest
+       RegisterOutput:
+         regsvr32 /s "K:\ProC# 4.0\code\Interop\COMServer\Debug\COMServerPS.dll"
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppCommon.targets(567,5): warning MSB3075: The command "regsvr32 /s "K:\ProC# 4.0\code\Interop\COMServer\Debug\COMServerPS.dll"" exited with code 5. Please verify that you have sufficient rights to run this command.
+         The previous error was converted to a warning because the task was called with ContinueOnError=true.
+         Build continuing because "ContinueOnError" on the task "Exec" is set to "true".
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppCommon.targets(579,5): error : Failed to register output. Please try enabling Per-user Redirection or register the component from a command prompt with elevated permissions.
+     1>Done Building Project "K:\ProC# 4.0\code\Interop\COMServer\COMServer\COMServerPS.vcxproj" (build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:08.77

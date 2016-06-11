@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 10
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RemoteHello", "RemoteHello\RemoteHello.csproj", "{3941D8EA-482B-4E61-B947-21EC7245FE87}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloServer", "HelloServer\HelloServer.csproj", "{FF8212B0-FE57-4970-BF8B-324749778278}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloClient", "HelloClient\HelloClient.csproj", "{B70C97D2-DF51-4A40-A0EC-31F7D62E8156}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3941D8EA-482B-4E61-B947-21EC7245FE87}.Debug|x86.ActiveCfg = Debug|x86
+		{3941D8EA-482B-4E61-B947-21EC7245FE87}.Debug|x86.Build.0 = Debug|x86
+		{3941D8EA-482B-4E61-B947-21EC7245FE87}.Release|x86.ActiveCfg = Release|x86
+		{3941D8EA-482B-4E61-B947-21EC7245FE87}.Release|x86.Build.0 = Release|x86
+		{FF8212B0-FE57-4970-BF8B-324749778278}.Debug|x86.ActiveCfg = Debug|x86
+		{FF8212B0-FE57-4970-BF8B-324749778278}.Debug|x86.Build.0 = Debug|x86
+		{FF8212B0-FE57-4970-BF8B-324749778278}.Release|x86.ActiveCfg = Release|x86
+		{FF8212B0-FE57-4970-BF8B-324749778278}.Release|x86.Build.0 = Release|x86
+		{B70C97D2-DF51-4A40-A0EC-31F7D62E8156}.Debug|x86.ActiveCfg = Debug|x86
+		{B70C97D2-DF51-4A40-A0EC-31F7D62E8156}.Debug|x86.Build.0 = Debug|x86
+		{B70C97D2-DF51-4A40-A0EC-31F7D62E8156}.Release|x86.ActiveCfg = Release|x86
+		{B70C97D2-DF51-4A40-A0EC-31F7D62E8156}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

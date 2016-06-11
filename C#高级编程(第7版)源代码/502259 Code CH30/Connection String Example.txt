@@ -1,0 +1,7 @@
+<configuration>
+  <connectionStrings>
+    <add name="Northwind"
+         providerName="System.Data.SqlClient"
+         connectionString="server=(local);integrated security=SSPI;database=Northwind" />
+  </connectionStrings>
+</configuration>

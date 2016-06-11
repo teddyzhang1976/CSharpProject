@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 10
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicAssembly", "DynamicAssembly\DynamicAssembly.csproj", "{056AB534-D2A0-4B83-BE1B-4336B0625695}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssemblyA", "AssemblyA\AssemblyA.csproj", "{EFE938EF-5927-4CD5-A76B-02B2C009CE2A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomainTest", "DomainTest\DomainTest.csproj", "{DE12E8F7-9682-4280-A7D7-912921C6B19B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedDemo", "SharedDemo\SharedDemo.csproj", "{C284D045-911C-48BE-9901-34F14B70691B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "Client\Client.csproj", "{A5E3A9DB-867B-40F7-8A74-55A60E826A13}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{056AB534-D2A0-4B83-BE1B-4336B0625695}.Debug|x86.ActiveCfg = Debug|x86
+		{056AB534-D2A0-4B83-BE1B-4336B0625695}.Debug|x86.Build.0 = Debug|x86
+		{056AB534-D2A0-4B83-BE1B-4336B0625695}.Release|x86.ActiveCfg = Release|x86
+		{056AB534-D2A0-4B83-BE1B-4336B0625695}.Release|x86.Build.0 = Release|x86
+		{EFE938EF-5927-4CD5-A76B-02B2C009CE2A}.Debug|x86.ActiveCfg = Debug|x86
+		{EFE938EF-5927-4CD5-A76B-02B2C009CE2A}.Debug|x86.Build.0 = Debug|x86
+		{EFE938EF-5927-4CD5-A76B-02B2C009CE2A}.Release|x86.ActiveCfg = Release|x86
+		{EFE938EF-5927-4CD5-A76B-02B2C009CE2A}.Release|x86.Build.0 = Release|x86
+		{DE12E8F7-9682-4280-A7D7-912921C6B19B}.Debug|x86.ActiveCfg = Debug|x86
+		{DE12E8F7-9682-4280-A7D7-912921C6B19B}.Debug|x86.Build.0 = Debug|x86
+		{DE12E8F7-9682-4280-A7D7-912921C6B19B}.Release|x86.ActiveCfg = Release|x86
+		{DE12E8F7-9682-4280-A7D7-912921C6B19B}.Release|x86.Build.0 = Release|x86
+		{C284D045-911C-48BE-9901-34F14B70691B}.Debug|x86.ActiveCfg = Debug|x86
+		{C284D045-911C-48BE-9901-34F14B70691B}.Debug|x86.Build.0 = Debug|x86
+		{C284D045-911C-48BE-9901-34F14B70691B}.Release|x86.ActiveCfg = Release|x86
+		{C284D045-911C-48BE-9901-34F14B70691B}.Release|x86.Build.0 = Release|x86
+		{A5E3A9DB-867B-40F7-8A74-55A60E826A13}.Debug|x86.ActiveCfg = Debug|x86
+		{A5E3A9DB-867B-40F7-8A74-55A60E826A13}.Debug|x86.Build.0 = Debug|x86
+		{A5E3A9DB-867B-40F7-8A74-55A60E826A13}.Release|x86.ActiveCfg = Release|x86
+		{A5E3A9DB-867B-40F7-8A74-55A60E826A13}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

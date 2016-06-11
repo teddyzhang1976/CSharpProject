@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{00000000-0000-0000-0000-000000000000}") = "PCSMVCMagicShop", "PCSMVCMagicShop\PCSMVCMagicShop.csproj", "{F3DB1001-C1FE-45A7-9324-161FDE05F61F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F3DB1001-C1FE-45A7-9324-161FDE05F61F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3DB1001-C1FE-45A7-9324-161FDE05F61F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3DB1001-C1FE-45A7-9324-161FDE05F61F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3DB1001-C1FE-45A7-9324-161FDE05F61F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,27 @@
+﻿<Window x:Class="Wrox.ProCSharp.Threading.BackgroundWorkerWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="BackgroundWorker Sample" Height="300" Width="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Label Margin="5" Content="X:" Grid.Column="0" Grid.Row="0" VerticalAlignment="Center" />
+        <Label Margin="5" Content="Y:" Grid.Column="0" Grid.Row="1" VerticalAlignment="Center" />
+        <Label Margin="5" Content="Result:" Grid.Column="0" Grid.Row="2" VerticalAlignment="Center" />
+        <TextBox x:Name="textX" Margin="5" Grid.Column="1" Grid.Row="0" />
+        <TextBox x:Name="textY" Margin="5" Grid.Column="1" Grid.Row="1" />
+        <TextBox x:Name="textResult" Margin="5" Grid.Column="1" Grid.Row="2" />
+        <Button x:Name="buttonCalculate" Margin="5" Grid.Row="3" Grid.Column="0" Content="Calculate" Click="OnCalculate" />
+        <Button x:Name="buttonCancel" Margin="5" Grid.Row="3" Grid.Column="1" Content="Cancel" IsEnabled="False" Click="OnCancel"  />
+        <ProgressBar x:Name="progressBar" Grid.ColumnSpan="2" Grid.Row="4" Margin="5" />
+    </Grid>
+</Window>

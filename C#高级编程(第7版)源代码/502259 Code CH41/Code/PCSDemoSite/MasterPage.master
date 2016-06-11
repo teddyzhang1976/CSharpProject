@@ -1,0 +1,35 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+  <link rel="stylesheet" href="StyleSheet.css" type="text/css" />
+  <title></title>
+</head>
+<body>
+  <form id="form1" runat="server">
+    <div id="header">
+      <h1>
+        <asp:Literal ID="Literal1" runat="server" Text="<%$ AppSettings:SiteTitle %>" /></h1>
+      <asp:SiteMapPath ID="SiteMapPath1" runat="server" CssClass="breadcrumb" />
+    </div>
+    <div id="nav">
+      <div class="navTree">
+        <asp:TreeView ID="TreeView1" runat="server" DataSourceID="SiteMapDataSource1" ShowLines="True" />
+      </div>
+      <br />
+      <br />
+      <asp:LoginView ID="LoginView1" runat="server">
+        <LoggedInTemplate>
+          You are currently logged in as <b>
+            <asp:LoginName ID="LoginName1" runat="server" /></b>.
+          <asp:LoginStatus ID="LoginStatus1" runat="server" />
+        </LoggedInTemplate>
+      </asp:LoginView>
+    </div>
+    <div id="body">
+      <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server" />
+    </div>
+  </form>
+  <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+</body>
+</html>

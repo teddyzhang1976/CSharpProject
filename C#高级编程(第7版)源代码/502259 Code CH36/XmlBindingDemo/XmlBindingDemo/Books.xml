@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Books>
+  <Book isbn="978–0–470–12472–7">
+    <Title>Professional C# 2008</Title>
+    <Publisher>Wrox Press</Publisher>
+    <Author>Christian Nagel</Author>
+    <Author>Bill Evjen</Author>
+    <Author>Jay Glynn</Author>
+    <Author>Karli Watson</Author>
+    <Author>Morgan Skinner</Author>
+  </Book>
+  <Book isbn="978–0–7645–4382–1">
+    <Title>Beginning Visual C# 2008</Title>
+    <Publisher>Wrox Press</Publisher>
+    <Author>Karli Watson</Author>
+    <Author>David Espinosa</Author>
+    <Author>Zach Greenvoss</Author>
+    <Author>Jacob Hammer Pedersen</Author>
+    <Author>Christian Nagel</Author>
+    <Author>John D. Reid</Author>
+    <Author>Matthew Reynolds</Author>
+    <Author>Morgan Skinner</Author>
+    <Author>Eric White</Author>
+  </Book>
+</Books>
+

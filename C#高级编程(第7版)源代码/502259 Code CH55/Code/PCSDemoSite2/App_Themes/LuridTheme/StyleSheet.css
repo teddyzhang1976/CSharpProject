@@ -1,0 +1,154 @@
+body
+{
+    color: #ffeeff;
+    background-color: #ff00ff;
+    font-family: Arial;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+div#header
+{
+    background-color: #00ff00;
+}
+
+div#nav
+{
+    background-color: #ff0000;
+}
+
+div#body
+{
+    background-color: #0000ff;
+}
+
+h1
+{
+    color: #ffff00;
+    font-family: Verdana;
+    font-size: 24pt;
+    font-weight: bold;
+}
+
+h2
+{
+    color: #ffff00;
+    font-family: Arial;
+    font-size: 18pt;
+    font-weight: bold;
+}
+
+h3
+{
+    color: #ffff00;
+    font-family: Arial;
+    font-size: 14pt;
+    font-weight: bold;
+}
+
+a
+{
+    color: #f74687;
+    background-color: #187822;
+    padding-left: 4px;
+    padding-right: 4px;
+    text-decoration: none;
+}
+
+a:visited
+{
+    color: #f74687;
+    background-color: #187822;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+a:hover
+{
+    color: #f8e382;
+    background-color: #627128;
+}
+
+.navTree a
+{
+    background-color: #ff0000;
+    padding-left: 0px;
+    padding-right: 0px;
+    font-weight: bold;
+    color: #0000ff;
+}
+
+.navTree a:visited
+{
+    color: #0000ff;
+    background-color: #ff0000;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.navTree a:hover
+{
+    padding-left: 0px;
+    padding-right: 0px;
+    color: #ffffff;
+    background-color: #ff0000;
+}
+
+.breadcrumb a
+{
+    background-color: #e8752f;
+    padding-left: 0px;
+    padding-right: 0px;
+    font-weight: bold;
+    color: #878991;
+}
+
+.breadcrumb a:visited
+{
+    color: #878991;
+    background-color: #e8752f;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.breadcrumb a:hover
+{
+    background-color: #871881;
+    padding-left: 0px;
+    padding-right: 0px;
+    color: #e122f3;
+}
+
+.mrbTable
+{
+    text-align: left;
+    border-color: #000000;
+    border-width: 2px;
+    background-color: #774422;
+}
+
+.mrbEventList
+{
+    background-color: #553311;
+}
+
+.calendar a
+{
+    background-color: Transparent;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.calendar a:visited
+{
+    background-color: Transparent;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.calendar a:hover
+{
+    background-color: Transparent;
+    padding-left: 0px;
+    padding-right: 0px;
+}

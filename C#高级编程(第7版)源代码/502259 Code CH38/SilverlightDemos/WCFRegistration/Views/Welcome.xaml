@@ -1,0 +1,61 @@
+﻿<navigation:Page x:Class="WCFRegistration.Views.Welcome"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           mc:Ignorable="d"
+           xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+           d:DesignWidth="640" d:DesignHeight="480"
+           Title="Welcome Page">
+    <Canvas x:Name="LayoutRoot">
+        <Canvas.Resources>
+            <Storyboard x:Name="startStoryboard">
+                <DoubleAnimation From="0" To="400" Duration="00:00:4" Storyboard.TargetName="border1" Storyboard.TargetProperty="(Canvas.Left)">
+                    <DoubleAnimation.EasingFunction>
+                        <CircleEase EasingMode="EaseIn" />
+                    </DoubleAnimation.EasingFunction>
+                </DoubleAnimation>
+                <DoubleAnimation From="0" To="300" Duration="00:00:4" Storyboard.TargetName="border1" Storyboard.TargetProperty="(Canvas.Top)">
+                    <DoubleAnimation.EasingFunction>
+                        <BounceEase Bounces="4" EasingMode="EaseIn" />
+                    </DoubleAnimation.EasingFunction>
+                </DoubleAnimation>
+            </Storyboard>
+            <Storyboard x:Name="endStoryboard">
+                <DoubleAnimation  To="50" Duration="00:00:4" Storyboard.TargetName="border1" Storyboard.TargetProperty="(Canvas.Left)">
+                    <DoubleAnimation.EasingFunction>
+                        <CircleEase EasingMode="EaseOut" />
+                    </DoubleAnimation.EasingFunction>
+                </DoubleAnimation>
+                <DoubleAnimation To="50" Duration="00:00:4" Storyboard.TargetName="border1" Storyboard.TargetProperty="(Canvas.Top)">
+                    <DoubleAnimation.EasingFunction>
+                        <ElasticEase EasingMode="EaseOut" Springiness="4" Oscillations="3" />
+                    </DoubleAnimation.EasingFunction>
+                </DoubleAnimation>
+                <ColorAnimation Duration="00:00:4" Storyboard.TargetName="gradient1" Storyboard.TargetProperty="Color" To="DarkBlue" />
+                <ColorAnimation Duration="00:00:4" Storyboard.TargetName="gradient2" Storyboard.TargetProperty="Color" To="Blue" />
+                <ColorAnimation Duration="00:00:4" Storyboard.TargetName="gradient3" Storyboard.TargetProperty="Color" To="MediumBlue" />
+                <ColorAnimation Duration="00:00:4" Storyboard.TargetName="gradient4" Storyboard.TargetProperty="Color" To="LightBlue" />
+                <DoubleAnimation Duration="00:00:4" BeginTime="00:00:2" Storyboard.TargetName="border1" Storyboard.TargetProperty="Width" To="500" />
+                <DoubleAnimation Duration="00:00:4" BeginTime="00:00:2" Storyboard.TargetName="border1" Storyboard.TargetProperty="Height" To="300" />
+            </Storyboard>
+        </Canvas.Resources>
+
+        <Border x:Name="border1" Canvas.Left="0" Canvas.Top="0" Width="240"  Height="80"  CornerRadius="9">
+            <Border.Effect>
+                <DropShadowEffect ShadowDepth="7" BlurRadius="3" Color="DarkGreen" />
+            </Border.Effect>
+            <Border.Background>
+                <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                    <GradientStop x:Name="gradient1" Offset="0" Color="DarkGreen" />
+                    <GradientStop x:Name="gradient2" Offset="0.4" Color="Green" />
+                    <GradientStop x:Name="gradient3" Offset="0.7" Color="MediumSeaGreen" />
+                    <GradientStop x:Name="gradient4" Offset="0.9" Color="LightGreen" />
+                </LinearGradientBrush>
+            </Border.Background>
+
+            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="Event Registration" FontFamily="Comic Sans MS" FontSize="24" Foreground="Wheat" />
+        </Border>
+
+    </Canvas>
+</navigation:Page>

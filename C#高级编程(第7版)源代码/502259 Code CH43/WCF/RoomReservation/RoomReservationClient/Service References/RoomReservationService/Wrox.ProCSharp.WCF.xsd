@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Wrox.ProCSharp.WCF" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Wrox.ProCSharp.WCF" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" />
+  <xs:complexType name="RoomReservation">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q1:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Contact" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EndDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Event" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Id" type="xs:int" />
+          <xs:element minOccurs="0" name="RoomName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StartDate" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RoomReservation" nillable="true" type="tns:RoomReservation" />
+  <xs:complexType name="RoomReservationRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FromDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ToDate" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RoomReservationRequest" nillable="true" type="tns:RoomReservationRequest" />
+  <xs:complexType name="ArrayOfRoomReservation">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RoomReservation" nillable="true" type="tns:RoomReservation" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRoomReservation" nillable="true" type="tns:ArrayOfRoomReservation" />
+</xs:schema>

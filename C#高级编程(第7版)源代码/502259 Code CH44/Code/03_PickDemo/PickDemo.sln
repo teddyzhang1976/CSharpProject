@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PickDemo", "PickDemo\PickDemo.csproj", "{0931CF7B-8957-4E3F-9AAC-DB2D6772C9B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedInterfaces", "SharedInterfaces\SharedInterfaces.csproj", "{AFB3DC93-3300-49B5-BA32-509A16F1E5CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PromptService", "PromptService\PromptService.csproj", "{EA30D59B-8445-4455-BFE5-9CE5D03EC78D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0931CF7B-8957-4E3F-9AAC-DB2D6772C9B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0931CF7B-8957-4E3F-9AAC-DB2D6772C9B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0931CF7B-8957-4E3F-9AAC-DB2D6772C9B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0931CF7B-8957-4E3F-9AAC-DB2D6772C9B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFB3DC93-3300-49B5-BA32-509A16F1E5CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFB3DC93-3300-49B5-BA32-509A16F1E5CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFB3DC93-3300-49B5-BA32-509A16F1E5CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFB3DC93-3300-49B5-BA32-509A16F1E5CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA30D59B-8445-4455-BFE5-9CE5D03EC78D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA30D59B-8445-4455-BFE5-9CE5D03EC78D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA30D59B-8445-4455-BFE5-9CE5D03EC78D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA30D59B-8445-4455-BFE5-9CE5D03EC78D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,63 @@
+// COMServer.idl : IDL source for COMServer
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (COMServer.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+// IMath
+[
+   object,
+   uuid(2158751B-896E-461d-9012-EF1680BE0628),
+   dual,
+   nonextensible,
+   helpstring("IMath Interface"),
+   pointer_default(unique),
+   custom(0F21F359-AB84-41e8-9A78-36D110E6D2F9,
+      "Wrox.ProCSharp.Interop.Server.IMath")
+]
+interface IMath: IDispatch
+{
+   [id(1)] HRESULT Add([in] LONG val1, [in] LONG val2,
+                        [out, retval] LONG* result);
+   [id(2)] HRESULT Sub([in] LONG val1, [in] LONG val2,
+                        [out, retval] LONG* result);
+};
+
+
+[
+	object,
+	uuid(EB1E5898-4DAB-4184-92E2-BBD8F9341AFD),
+	dual,
+	nonextensible,
+	helpstring("IWelcome Interface"),
+	pointer_default(unique),
+	custom(0F21F359-AB84-41e8-9A78-36D110E6D2F9,
+	"Wrox.ProCSharp.Interop.Server.IWelcome")
+]
+interface IWelcome : IDispatch{
+	[id(1)] HRESULT Greeting([in] BSTR name, [out,retval] BSTR* message);
+};
+[
+	uuid(8C123EAE-F567-421F-ACBE-E11F89909160),
+	version(1.0),
+]
+library COMServerLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(ACB04E72-EB08-4D4A-91D3-34A5DB55D4B4),
+		helpstring("COMDemo Class"),
+		custom(0F21F359-AB84-41e8-9A78-36D110E6D2F9,
+		"Wrox.ProCSharp.Interop.Server.COMDemo")
+
+	]
+	coclass COMDemo
+	{
+		[default] interface IWelcome;
+		interface IMath;
+	};
+};
+

@@ -1,0 +1,84 @@
+﻿<Window x:Class="Wrox.ProCSharp.MEF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:Wrox.ProCSharp.MEF"
+        Title="Calculator" Height="240" Width="500">
+    <Window.CommandBindings>
+        <CommandBinding Command="ApplicationCommands.Close" Executed="OnClose" />
+        <CommandBinding Command="local:CalculatorCommands.RefreshExtensions" Executed="OnRefreshExtensions" />
+        <CommandBinding Command="local:CalculatorCommands.GetExports" Executed="OnGetExports" />
+    </Window.CommandBindings>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="4*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Menu Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
+            <MenuItem Header="_File">
+                <MenuItem Header="E_xit" Command="ApplicationCommands.Close" />
+            </MenuItem>
+            <MenuItem x:Name="menuAddins" Header="_AddIns">
+                
+            </MenuItem>
+            <MenuItem Header="Manage">
+                <MenuItem Header="_Refresh Extensions" Command="local:CalculatorCommands.RefreshExtensions" />
+                <MenuItem Header="Get _Exports" Command="local:CalculatorCommands.GetExports" />
+            </MenuItem>
+        </Menu>
+
+        <Grid Grid.Row="1" Grid.Column="0" Margin="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid Grid.Column="0" Grid.Row="0" Grid.RowSpan="3" Button.Click="OnNumberClick">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Button Grid.Row="0" Grid.Column="0" Content="7" Margin="1" />
+                <Button Grid.Row="0" Grid.Column="1"  Content="8" Margin="1" />
+                <Button Grid.Row="0" Grid.Column="2"  Content="9" Margin="1" />
+                <Button Grid.Row="1" Grid.Column="0"  Content="4" Margin="1" />
+                <Button Grid.Row="1" Grid.Column="1"  Content="5" Margin="1" />
+                <Button Grid.Row="1" Grid.Column="2"  Content="6" Margin="1" />
+                <Button Grid.Row="2" Grid.Column="0"  Content="1" Margin="1" />
+                <Button Grid.Row="2" Grid.Column="1"  Content="2" Margin="1" />
+                <Button Grid.Row="2" Grid.Column="2"  Content="3" Margin="1" />
+                <Button Grid.Row="3" Grid.Column="0"  Content="0" Grid.ColumnSpan="2" Margin="1" />
+                <Button Grid.Row="3" Grid.Column="2"  Content="." Margin="1" />
+            </Grid>
+            <ListBox Grid.Row="0" Grid.Column="1" x:Name="listOperators">
+                
+            </ListBox>
+            <TextBlock x:Name="textInput" Grid.Row="1" Grid.Column="1" />
+            <TextBlock x:Name="textResult" Grid.Row="2" Grid.Column="1" />
+            <Button  Click="InvokeOperation" Content="Calculate" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="3" Margin="5" />
+        </Grid>
+        <GridSplitter Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Stretch" Width="5" ShowsPreview="True" />
+        <TabControl x:Name="tabExtensions" Grid.Row="1" Grid.Column="1" Margin="2">
+            
+        </TabControl>
+        <ScrollViewer Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2">
+            <TextBlock ScrollViewer.VerticalScrollBarVisibility="Auto" x:Name="textStatus" />
+        </ScrollViewer>
+    </Grid>
+</Window>

@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "PCSWebService3", "PCSWebService3\", "{FA0A013F-5BBE-4907-82B7-C020E3B3C5BB}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/PCSWebService3"
+		Debug.AspNetCompiler.PhysicalPath = "PCSWebService3\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\PCSWebService3\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/PCSWebService3"
+		Release.AspNetCompiler.PhysicalPath = "PCSWebService3\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\PCSWebService3\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "54930"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "PCSWebClient2", "PCSWebClient2\", "{1ED02F33-DFAA-4F14-A795-7D4D2930FAAF}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/PCSWebClient2"
+		Debug.AspNetCompiler.PhysicalPath = "PCSWebClient2\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\PCSWebClient2\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/PCSWebClient2"
+		Release.AspNetCompiler.PhysicalPath = "PCSWebClient2\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\PCSWebClient2\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "54959"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FA0A013F-5BBE-4907-82B7-C020E3B3C5BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA0A013F-5BBE-4907-82B7-C020E3B3C5BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1ED02F33-DFAA-4F14-A795-7D4D2930FAAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1ED02F33-DFAA-4F14-A795-7D4D2930FAAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

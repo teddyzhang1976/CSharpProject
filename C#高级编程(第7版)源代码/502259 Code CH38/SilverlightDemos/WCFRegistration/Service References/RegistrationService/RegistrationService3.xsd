@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/SilverlightDemos.Web" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/SilverlightDemos.Web" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:58698/RegistrationService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" />
+  <xs:complexType name="ArrayOfEvent">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Event" nillable="true" type="tns:Event" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEvent" nillable="true" type="tns:ArrayOfEvent" />
+  <xs:complexType name="Event">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q1:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Attendees" nillable="true" type="tns:ArrayOfAttendee" />
+          <xs:element minOccurs="0" name="DateFrom" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DateTo" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Id" type="xs:int" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RegistrationCodes" nillable="true" type="tns:ArrayOfRegistrationCode" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Event" nillable="true" type="tns:Event" />
+  <xs:complexType name="ArrayOfAttendee">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Attendee" nillable="true" type="tns:Attendee" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAttendee" nillable="true" type="tns:ArrayOfAttendee" />
+  <xs:complexType name="Attendee">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q2:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Company" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Event" nillable="true" type="tns:Event" />
+          <xs:element minOccurs="0" name="EventId" type="xs:int" />
+          <xs:element minOccurs="0" name="EventReference" nillable="true" type="q2:EntityReferenceOfEventHKd_SaiZo" />
+          <xs:element minOccurs="0" name="Id" type="xs:int" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RegistrationCode" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Attendee" nillable="true" type="tns:Attendee" />
+  <xs:complexType name="ArrayOfRegistrationCode">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RegistrationCode" nillable="true" type="tns:RegistrationCode" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRegistrationCode" nillable="true" type="tns:ArrayOfRegistrationCode" />
+  <xs:complexType name="RegistrationCode">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q3:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Event" nillable="true" type="tns:Event" />
+          <xs:element minOccurs="0" name="EventId" type="xs:int" />
+          <xs:element minOccurs="0" name="EventReference" nillable="true" type="q3:EntityReferenceOfEventHKd_SaiZo" />
+          <xs:element minOccurs="0" name="Id" type="xs:int" />
+          <xs:element minOccurs="0" name="RegistrationCode1" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RegistrationCode" nillable="true" type="tns:RegistrationCode" />
+</xs:schema>

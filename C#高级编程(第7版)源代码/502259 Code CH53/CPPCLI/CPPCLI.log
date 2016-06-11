@@ -1,0 +1,23 @@
+﻿Build started 12/1/2009 7:53:31 PM.
+     1>Project "K:\ProC# 4.0\code\LanguageSamples\CPPCLI\CPPCLI.vcxproj" on node 2 (build target(s)).
+     1>_PrepareForBuild:
+         Creating "Debug\CPPCLI.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       GenerateTargetFrameworkMonikerAttribute:
+       Skipping target "GenerateTargetFrameworkMonikerAttribute" because all output files are up-to-date with respect to the input files.
+       ClCompile:
+         All outputs are up-to-date.
+         All outputs are up-to-date.
+         All outputs are up-to-date.
+       ResourceCompile:
+         All outputs are up-to-date.
+       Link:
+         All outputs are up-to-date.
+         CPPCLI.vcxproj -> K:\ProC# 4.0\code\LanguageSamples\Debug\CPPCLI.exe
+       _AfterBuild:
+         Deleting file "Debug\CPPCLI.unsuccessfulbuild".
+         Touching "Debug\CPPCLI.lastbuildstate".
+     1>Done Building Project "K:\ProC# 4.0\code\LanguageSamples\CPPCLI\CPPCLI.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:04.96

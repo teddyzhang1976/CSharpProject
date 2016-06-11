@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://pro-csharp/" elementFormDefault="qualified" targetNamespace="http://pro-csharp/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:8080/PropertyService?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:element name="UploadPropertyInformation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="address" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="owner" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="askingPrice" type="xs:double" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UploadRoomInformation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="propertyId" type="q1:guid" />
+        <xs:element minOccurs="0" name="roomName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="width" type="xs:double" />
+        <xs:element minOccurs="0" name="depth" type="xs:double" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

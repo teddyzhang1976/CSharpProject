@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="MagicShop">
+  <DataContextMoniker Name="/MagicShopDataContext" />
+  <nestedChildShapes>
+    <classShape Id="571680cb-08b1-4485-a08e-bcc56a3cdec1" absoluteBounds="0.75, 1, 2, 1.3239465332031248">
+      <DataClassMoniker Name="/MagicShopDataContext/Customer" />
+      <nestedChildShapes>
+        <elementListCompartment Id="abe349bb-d289-48c2-916e-f422e92f9512" absoluteBounds="0.765, 1.46, 1.9700000000000002, 0.763946533203125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b48edde2-3d3b-40a6-9925-c3ef5a6d80df" absoluteBounds="3.5, 3.875, 2, 1.5023929850260416">
+      <DataClassMoniker Name="/MagicShopDataContext/Product" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3956caec-3557-40d0-8d98-0e8b118e706e" absoluteBounds="3.515, 4.335, 1.9700000000000002, 0.94239298502604174" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b8d14c4e-1a89-449b-8d17-89f54ffb9d86" absoluteBounds="3.5, 1, 2, 1.3239465332031248">
+      <DataClassMoniker Name="/MagicShopDataContext/Order" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e70cc5e6-7c60-403f-8068-0a2f9c31a8c7" absoluteBounds="3.515, 1.46, 1.9700000000000002, 0.763946533203125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="63128e30-00f9-460e-9c85-5d2498240f21" absoluteBounds="6.25, 0.875, 2, 1.5023929850260416">
+      <DataClassMoniker Name="/MagicShopDataContext/OrderItem" />
+      <nestedChildShapes>
+        <elementListCompartment Id="26300778-76ce-4053-9b90-8959ed78692d" absoluteBounds="6.265, 1.335, 1.9700000000000002, 0.94239298502604174" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 1.66197326660156); (3.5 : 1.66197326660156)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MagicShopDataContext/Customer/Customer_Order" />
+      <nodes>
+        <classShapeMoniker Id="571680cb-08b1-4485-a08e-bcc56a3cdec1" />
+        <classShapeMoniker Id="b8d14c4e-1a89-449b-8d17-89f54ffb9d86" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 1.66197326660156); (6.25 : 1.66197326660156)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MagicShopDataContext/Order/Order_OrderItem" />
+      <nodes>
+        <classShapeMoniker Id="b8d14c4e-1a89-449b-8d17-89f54ffb9d86" />
+        <classShapeMoniker Id="63128e30-00f9-460e-9c85-5d2498240f21" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 4.62619649251302); (7.25 : 4.62619649251302); (7.25 : 2.37739298502604)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MagicShopDataContext/Product/Product_OrderItem" />
+      <nodes>
+        <classShapeMoniker Id="b48edde2-3d3b-40a6-9925-c3ef5a6d80df" />
+        <classShapeMoniker Id="63128e30-00f9-460e-9c85-5d2498240f21" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

@@ -1,0 +1,17 @@
+﻿<configuration>
+    <system.serviceModel>
+        <bindings>
+            <basicHttpBinding>
+                <binding name="BasicHttpBinding_IRegistrationService" maxBufferSize="2147483647"
+                    maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+            </basicHttpBinding>
+        </bindings>
+        <client>
+            <endpoint address="http://localhost:58698/RegistrationService.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IRegistrationService"
+                contract="RegistrationService.IRegistrationService" name="BasicHttpBinding_IRegistrationService" />
+        </client>
+    </system.serviceModel>
+</configuration>

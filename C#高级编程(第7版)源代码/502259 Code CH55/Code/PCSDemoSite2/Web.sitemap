@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<siteMap>
+	<siteMapNode url="~/Default.aspx" title="Home">
+		<siteMapNode url="~/About/Default.aspx" title="About" />
+		<siteMapNode url="~/MRB/Default.aspx" title="Meeting Room Booker" roles="RegisteredUser,SiteAdministrator" />
+		<siteMapNode url="~/Configuration/Default.aspx" title="Configuration" roles="RegisteredUser,SiteAdministrator">
+			<siteMapNode url="~/Configuration/Themes/Default.aspx" title="Themes" roles="RegisteredUser,SiteAdministrator"/>
+		</siteMapNode>
+		<siteMapNode url="~/Users/Default.aspx" title="User Area" roles="SiteAdministrator" />
+		<siteMapNode url="~/Login.aspx" title="Login Details" />
+	</siteMapNode>
+</siteMap>

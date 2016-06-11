@@ -1,0 +1,153 @@
+body
+{
+    background-color: #ccccff;
+    font-family: Verdana;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+div#header
+{
+    background-color: #449944;
+}
+
+div#nav
+{
+    background-color: #444499;
+}
+
+div#body
+{
+    background-color: #ddddff;
+}
+
+h1
+{
+    color: #ddffdd;
+    font-family: Arial;
+    font-size: 24pt;
+    font-style: italic;
+}
+
+h2
+{
+    color: #444499;
+    font-family: Arial;
+    font-size: 18pt;
+    font-style: italic;
+}
+
+h3
+{
+    color: #444499;
+    font-family: Arial;
+    font-size: 14pt;
+    font-style: italic;
+}
+
+a
+{
+    color: #5555aa;
+    background-color: #eeeeff;
+    padding-left: 4px;
+    padding-right: 4px;
+    text-decoration: none;
+}
+
+a:visited
+{
+    color: #5555aa;
+    background-color: #eeeeff;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+a:hover
+{
+    color: #eeeeff;
+    background-color: #5555aa;
+}
+
+.navTree a
+{
+    background-color: #444499;
+    padding-left: 0px;
+    padding-right: 0px;
+    font-weight: bold;
+    color: #ff0000;
+}
+
+.navTree a:visited
+{
+    color: #ff0000;
+    background-color: #444499;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.navTree a:hover
+{
+    padding-left: 0px;
+    padding-right: 0px;
+    color: #ffcc00;
+    background-color: #444499;
+}
+
+.breadcrumb a
+{
+    background-color: #449944;
+    padding-left: 0px;
+    padding-right: 0px;
+    font-weight: bold;
+    color: #00ff00;
+}
+
+.breadcrumb a:visited
+{
+    color: #00ff00;
+    background-color: #449944;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.breadcrumb a:hover
+{
+    background-color: #449944;
+    padding-left: 0px;
+    padding-right: 0px;
+    color: #ffff00;
+}
+
+.mrbTable
+{
+    text-align: left;
+    border-color: #000000;
+    border-width: 2px;
+    background-color: #ddccff;
+}
+
+.mrbEventList
+{
+    background-color: #bbaadd;
+}
+
+.calendar a
+{
+    background-color: Transparent;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.calendar a:visited
+{
+    background-color: Transparent;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.calendar a:hover
+{
+    background-color: Transparent;
+    padding-left: 0px;
+    padding-right: 0px;
+}

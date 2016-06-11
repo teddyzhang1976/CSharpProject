@@ -1,0 +1,119 @@
+﻿<StateMachineWorkflowDesigner xmlns:ns0="clr-namespace:System.Drawing;Assembly=System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" Size="1764, 868" AutoSizeMargin="16, 24" AutoSize="False" Location="30, 30" Name="DoorFlow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/workflow">
+	<StateMachineWorkflowDesigner.Designers>
+		<StateDesigner Size="160, 126" AutoSizeMargin="16, 24" Location="80, 305" Name="ClosedUnlocked">
+			<StateDesigner.Designers>
+				<EventDrivenDesigner Name="FireLock" Size="150, 200" Location="88, 372">
+					<EventDrivenDesigner.Designers>
+						<DelayDesigner Name="LockWait" Size="130, 41" Location="98, 441" />
+						<SetStateDesigner Name="LockUp" Size="130, 52" Location="98, 501" />
+					</EventDrivenDesigner.Designers>
+				</EventDrivenDesigner>
+				<EventDrivenDesigner Name="DoorOpened" Size="150, 260" Location="88, 402">
+					<EventDrivenDesigner.Designers>
+						<HandleExternalEventActivityDesigner Name="OpenDoor" Size="130, 41" Location="98, 471" />
+						<CodeDesigner Name="OpenBeep" Size="130, 41" Location="98, 531" />
+						<SetStateDesigner Name="Opened" Size="130, 52" Location="98, 591" />
+					</EventDrivenDesigner.Designers>
+				</EventDrivenDesigner>
+				<StateInitializationDesigner Name="CUInitialize" Size="150, 140" Location="88, 342">
+					<StateInitializationDesigner.Designers>
+						<CallExternalMethodActivityDesigner Name="CU_UnlockDoor" Size="130, 52" Location="98, 411" />
+					</StateInitializationDesigner.Designers>
+				</StateInitializationDesigner>
+			</StateDesigner.Designers>
+		</StateDesigner>
+		<StateDesigner Size="160, 102" AutoSizeMargin="16, 24" AutoSize="False" Location="78, 126" Name="ClosedLocked">
+			<StateDesigner.Designers>
+				<EventDrivenDesigner Name="RequestEntry" Size="381, 465" Location="829, 183">
+					<EventDrivenDesigner.Designers>
+						<HandleExternalEventActivityDesigner Name="EnterPIN" Size="130, 41" Location="954, 252" />
+						<CodeDesigner Name="ValidatePIN" Size="130, 41" Location="954, 312" />
+						<IfElseDesigner Name="CheckPINValidity" Size="361, 257" Location="839, 372">
+							<IfElseDesigner.Designers>
+								<IfElseBranchDesigner Name="PINValid" Size="150, 150" Location="858, 450">
+									<IfElseBranchDesigner.Designers>
+										<SetStateDesigner Name="UnlockDoor" Size="130, 52" Location="868, 524" />
+									</IfElseBranchDesigner.Designers>
+								</IfElseBranchDesigner>
+								<IfElseBranchDesigner Name="PINInvalid" Size="150, 150" Location="1031, 450" />
+							</IfElseDesigner.Designers>
+						</IfElseDesigner>
+					</EventDrivenDesigner.Designers>
+				</EventDrivenDesigner>
+				<StateInitializationDesigner Name="CLInitialize" Size="150, 129" Location="837, 166">
+					<StateInitializationDesigner.Designers>
+						<CallExternalMethodActivityDesigner Name="LockDoor" Size="130, 41" Location="847, 235" />
+					</StateInitializationDesigner.Designers>
+				</StateInitializationDesigner>
+			</StateDesigner.Designers>
+		</StateDesigner>
+		<StateDesigner Size="160, 80" AutoSizeMargin="16, 24" Location="331, 326" Name="OpenUnlocked">
+			<StateDesigner.Designers>
+				<EventDrivenDesigner Name="DoorClosed" Size="150, 260" Location="339, 363">
+					<EventDrivenDesigner.Designers>
+						<HandleExternalEventActivityDesigner Name="CloseDoor" Size="130, 41" Location="349, 432" />
+						<CodeDesigner Name="CloseBeep" Size="130, 41" Location="349, 492" />
+						<SetStateDesigner Name="StateClosed" Size="130, 52" Location="349, 552" />
+						<FaultHandlersActivityDesigner Location="383, 194" Name="faultHandlersActivity1" Size="190, 175" ShowPreview="False" />
+					</EventDrivenDesigner.Designers>
+				</EventDrivenDesigner>
+			</StateDesigner.Designers>
+		</StateDesigner>
+		<StateDesigner Size="160, 80" AutoSizeMargin="16, 24" Location="84, 448" Name="FireAlarm" />
+		<EventDrivenDesigner Name="OnFireAlarm" Size="150, 293" Location="38, 67">
+			<EventDrivenDesigner.Designers>
+				<HandleExternalEventActivityDesigner Name="FireAlarmRaised" Size="130, 52" Location="48, 136" />
+				<CallExternalMethodActivityDesigner Name="Unlock" Size="130, 41" Location="48, 207" />
+				<SetStateDesigner Name="setStateActivity1" Size="130, 74" Location="48, 267" />
+			</EventDrivenDesigner.Designers>
+		</EventDrivenDesigner>
+	</StateMachineWorkflowDesigner.Designers>
+	<StateMachineWorkflowDesigner.DesignerConnectors>
+		<StateDesignerConnector TargetActivity="FireAlarm" SetStateName="setStateActivity1" SourceActivity="DoorFlow" TargetConnectionIndex="0" SourceStateName="DoorFlow" TargetConnectionEdge="Top" SourceConnectionEdge="Right" EventHandlerName="OnFireAlarm" SourceConnectionIndex="0" TargetStateName="FireAlarm">
+			<StateDesignerConnector.Segments>
+				<ns1:Point X="161" Y="80" xmlns:ns1="clr-namespace:System.Drawing;Assembly=System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+				<ns2:Point X="161" Y="105" xmlns:ns2="clr-namespace:System.Drawing;Assembly=System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+				<ns3:Point X="249" Y="105" xmlns:ns3="clr-namespace:System.Drawing;Assembly=System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+				<ns4:Point X="249" Y="436" xmlns:ns4="clr-namespace:System.Drawing;Assembly=System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+				<ns5:Point X="164" Y="436" xmlns:ns5="clr-namespace:System.Drawing;Assembly=System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+				<ns6:Point X="164" Y="448" xmlns:ns6="clr-namespace:System.Drawing;Assembly=System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+		<StateDesignerConnector TargetActivity="ClosedLocked" SetStateName="LockUp" SourceActivity="ClosedUnlocked" TargetConnectionIndex="0" SourceStateName="ClosedUnlocked" TargetConnectionEdge="Top" SourceConnectionEdge="Right" EventHandlerName="FireLock" SourceConnectionIndex="2" TargetStateName="ClosedLocked">
+			<StateDesignerConnector.Segments>
+				<ns7:Point X="181" Y="385" xmlns:ns7="clr-namespace:System.Drawing;Assembly=System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+				<ns8:Point X="246" Y="385" xmlns:ns8="clr-namespace:System.Drawing;Assembly=System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+				<ns9:Point X="246" Y="118" xmlns:ns9="clr-namespace:System.Drawing;Assembly=System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+				<ns10:Point X="158" Y="118" xmlns:ns10="clr-namespace:System.Drawing;Assembly=System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+				<ns11:Point X="158" Y="126" xmlns:ns11="clr-namespace:System.Drawing;Assembly=System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+		<StateDesignerConnector TargetActivity="OpenUnlocked" SetStateName="Opened" SourceActivity="ClosedUnlocked" TargetConnectionIndex="0" SourceStateName="ClosedUnlocked" TargetConnectionEdge="Top" SourceConnectionEdge="Right" EventHandlerName="DoorOpened" SourceConnectionIndex="1" TargetStateName="OpenUnlocked">
+			<StateDesignerConnector.Segments>
+				<ns12:Point X="215" Y="415" xmlns:ns12="clr-namespace:System.Drawing;Assembly=System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+				<ns13:Point X="252" Y="415" xmlns:ns13="clr-namespace:System.Drawing;Assembly=System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+				<ns14:Point X="252" Y="318" xmlns:ns14="clr-namespace:System.Drawing;Assembly=System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+				<ns15:Point X="411" Y="318" xmlns:ns15="clr-namespace:System.Drawing;Assembly=System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+				<ns16:Point X="411" Y="326" xmlns:ns16="clr-namespace:System.Drawing;Assembly=System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+		<StateDesignerConnector TargetActivity="ClosedUnlocked" SetStateName="UnlockDoor" SourceActivity="ClosedLocked" TargetConnectionIndex="0" SourceStateName="ClosedLocked" TargetConnectionEdge="Top" SourceConnectionEdge="Right" EventHandlerName="RequestEntry" SourceConnectionIndex="1" TargetStateName="ClosedUnlocked">
+			<StateDesignerConnector.Segments>
+				<ns17:Point X="213" Y="206" xmlns:ns17="clr-namespace:System.Drawing;Assembly=System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+				<ns18:Point X="248" Y="206" xmlns:ns18="clr-namespace:System.Drawing;Assembly=System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+				<ns19:Point X="248" Y="293" xmlns:ns19="clr-namespace:System.Drawing;Assembly=System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+				<ns20:Point X="160" Y="293" xmlns:ns20="clr-namespace:System.Drawing;Assembly=System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+				<ns21:Point X="160" Y="305" xmlns:ns21="clr-namespace:System.Drawing;Assembly=System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+		<StateDesignerConnector TargetActivity="ClosedUnlocked" SetStateName="StateClosed" SourceActivity="OpenUnlocked" TargetConnectionIndex="0" SourceStateName="OpenUnlocked" TargetConnectionEdge="Top" SourceConnectionEdge="Right" EventHandlerName="DoorClosed" SourceConnectionIndex="0" TargetStateName="ClosedUnlocked">
+			<StateDesignerConnector.Segments>
+				<ns22:Point X="457" Y="376" xmlns:ns22="clr-namespace:System.Drawing;Assembly=System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+				<ns23:Point X="496" Y="376" xmlns:ns23="clr-namespace:System.Drawing;Assembly=System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+				<ns24:Point X="496" Y="297" xmlns:ns24="clr-namespace:System.Drawing;Assembly=System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+				<ns25:Point X="160" Y="297" xmlns:ns25="clr-namespace:System.Drawing;Assembly=System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+				<ns26:Point X="160" Y="305" xmlns:ns26="clr-namespace:System.Drawing;Assembly=System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+	</StateMachineWorkflowDesigner.DesignerConnectors>
+</StateMachineWorkflowDesigner>

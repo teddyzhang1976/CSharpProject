@@ -1,0 +1,63 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Pro C# Routing Demo</title>
+</head>
+<body style="font-family: Arial;">
+    <form id="form1" runat="server">
+    <div style="border: medium solid #000080; background-color: #66CCFF; padding: 4px;
+        margin: 4px; float: left;">
+        <b>Querystring parameters:</b>
+        <br />
+        <asp:Label ID="NoQuerystringLabel" runat="server" />
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White"
+            BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3">
+            <Columns>
+                <asp:BoundField DataField="Name" HeaderText="Name" />
+                <asp:BoundField DataField="Value" HeaderText="Value" />
+            </Columns>
+            <FooterStyle BackColor="White" ForeColor="#000066" />
+            <HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White" />
+            <PagerStyle BackColor="White" ForeColor="#000066" HorizontalAlign="Left" />
+            <RowStyle ForeColor="#000066" />
+            <SelectedRowStyle BackColor="#669999" Font-Bold="True" ForeColor="White" />
+        </asp:GridView>
+    </div>
+    <div style="border: medium solid #000080; background-color: #66CCFF; padding: 4px;
+        margin: 4px; float: left;">
+        <b>Routing parameters:</b>
+        <br />
+        <asp:Label ID="NoRoutingLabel" runat="server" />
+        <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" BackColor="White"
+            BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3">
+            <Columns>
+                <asp:BoundField DataField="Name" HeaderText="Name" />
+                <asp:BoundField DataField="Value" HeaderText="Value" />
+            </Columns>
+            <FooterStyle BackColor="White" ForeColor="#000066" />
+            <HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White" />
+            <PagerStyle BackColor="White" ForeColor="#000066" HorizontalAlign="Left" />
+            <RowStyle ForeColor="#000066" />
+            <SelectedRowStyle BackColor="#669999" Font-Bold="True" ForeColor="White" />
+        </asp:GridView>
+    </div>
+    <div style="border: medium solid #800080; background-color: #CC99FF; padding: 4px;
+        margin: 4px; clear: both;">
+        <asp:ContentPlaceHolder ID="body" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    <div style="border: medium solid #008000; background-color: #CCFFCC; padding: 4px;
+        margin: 4px; clear: both;">
+        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Target.aspx">Simple navigation</asp:HyperLink>
+        <br />
+        <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Target.aspx?id=4&name=Trevor">Navigation with query string</asp:HyperLink>
+        <br />
+        <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Target/Trevor">Navigation with routing</asp:HyperLink>
+        <br />
+        <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="<%$ RouteUrl:targetparameter=Reginald,routename=TestRoute %>">Navigation with routing and expression builder</asp:HyperLink>
+    </div>
+    </form>
+</body>
+</html>

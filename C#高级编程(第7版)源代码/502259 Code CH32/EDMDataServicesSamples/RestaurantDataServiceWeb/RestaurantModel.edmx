@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="RestaurantModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="RestaurantModelStoreContainer">
+          <EntitySet Name="Categories" EntityType="RestaurantModel.Store.Categories" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Menus" EntityType="RestaurantModel.Store.Menus" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_Menus_Categories" Association="RestaurantModel.Store.FK_Menus_Categories">
+            <End Role="Categories" EntitySet="Categories" />
+            <End Role="Menus" EntitySet="Menus" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Categories">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Menus">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CategoryId" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Description" Type="nvarchar" MaxLength="200" />
+          <Property Name="Active" Type="bit" Nullable="false" />
+          <Property Name="Price" Type="money" />
+        </EntityType>
+        <Association Name="FK_Menus_Categories">
+          <End Role="Categories" Type="RestaurantModel.Store.Categories" Multiplicity="1" />
+          <End Role="Menus" Type="RestaurantModel.Store.Menus" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Categories">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Menus">
+              <PropertyRef Name="CategoryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="RestaurantModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="RestaurantEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Categories" EntityType="RestaurantModel.Category" />
+          <EntitySet Name="Menus" EntityType="RestaurantModel.Menu" />
+          <AssociationSet Name="FK_Menus_Categories" Association="RestaurantModel.FK_Menus_Categories">
+            <End Role="Categories" EntitySet="Categories" />
+            <End Role="Menus" EntitySet="Menus" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Category">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Menus" Relationship="RestaurantModel.FK_Menus_Categories" FromRole="Categories" ToRole="Menus" />
+        </EntityType>
+        <EntityType Name="Menu">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CategoryId" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="Active" Type="Boolean" Nullable="false" />
+          <Property Name="Price" Type="Decimal" Precision="19" Scale="4" />
+          <NavigationProperty Name="Category" Relationship="RestaurantModel.FK_Menus_Categories" FromRole="Menus" ToRole="Categories" />
+        </EntityType>
+        <Association Name="FK_Menus_Categories">
+          <End Role="Categories" Type="RestaurantModel.Category" Multiplicity="1" />
+          <End Role="Menus" Type="RestaurantModel.Menu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Categories">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Menus">
+              <PropertyRef Name="CategoryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="RestaurantModelStoreContainer" CdmEntityContainer="RestaurantEntities">
+          <EntitySetMapping Name="Categories"><EntityTypeMapping TypeName="RestaurantModel.Category"><MappingFragment StoreEntitySet="Categories">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="Name" ColumnName="Name" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Menus"><EntityTypeMapping TypeName="RestaurantModel.Menu"><MappingFragment StoreEntitySet="Menus">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+            <ScalarProperty Name="Name" ColumnName="Name" />
+            <ScalarProperty Name="Description" ColumnName="Description" />
+            <ScalarProperty Name="Active" ColumnName="Active" />
+            <ScalarProperty Name="Price" ColumnName="Price" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="RestaurantModel">
+        <EntityTypeShape EntityType="RestaurantModel.Category" Width="1.5" PointX="0.75" PointY="1.25" Height="1.5125537109375002" IsExpanded="true" />
+        <EntityTypeShape EntityType="RestaurantModel.Menu" Width="1.5" PointX="3" PointY="0.875" Height="2.2263395182291665" IsExpanded="true" />
+        <AssociationConnector Association="RestaurantModel.FK_Menus_Categories" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="2.0062768554687502" />
+          <ConnectorPoint PointX="3" PointY="2.0062768554687502" /></AssociationConnector></Diagram></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,1 @@
+Only one copy of MagicShop.mdf is included in the code download. For any project that requires it, copy the file to the App_Data directory as instructed in the chapter.

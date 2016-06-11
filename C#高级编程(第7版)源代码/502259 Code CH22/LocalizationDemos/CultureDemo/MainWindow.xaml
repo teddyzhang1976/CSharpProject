@@ -1,0 +1,102 @@
+﻿<Window x:Class="CultureDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Culture Demo" Height="460" Width="700">
+    <Window.Resources>
+        <Style x:Key="baseControls" TargetType="{x:Type Control}">
+            <Setter Property='Margin' Value='5,5,5,5' />
+        </Style>
+        <Style TargetType="{x:Type Label}" BasedOn="{StaticResource baseControls}" />
+        <Style TargetType="{x:Type CheckBox}" BasedOn="{StaticResource baseControls}" />
+        <Style TargetType="{x:Type TextBlock}">
+            <Setter Property="Margin" Value="5" />
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <GridSplitter HorizontalAlignment="Right" Name="gridSplitter1" Width="67" />
+        <TreeView SelectedItemChanged="treeCultures_SelectedItemChanged" Margin="5" Name="treeCultures" VerticalAlignment="Bottom" />
+        <Grid Grid.Column="1" Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="3*" />
+                <RowDefinition Height="3*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" Grid.Column="0">Culture Name:</Label>
+            <TextBlock Grid.Row="0" Grid.Column="1" x:Name="textCultureName" Width="100" />
+            <CheckBox Grid.Row="0" Grid.Column="2" x:Name="chkIsNeutral" HorizontalAlignment="Center" Content="Is Neutral" />
+
+            <Label Grid.Row="1" Grid.Column="0">English Name:</Label>
+            <TextBlock Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" x:Name="textEnglishName" />
+
+            <Label Grid.Row="2" Grid.Column="0">Native Name:</Label>
+            <TextBlock Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" x:Name="textNativeName" />
+
+            <Label Grid.Row="3" Grid.Column="0">Default Calendar:</Label>
+            <TextBlock Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" x:Name="textCalendar" />
+
+            <Label Grid.Row="4" Grid.Column="0">Optional Calendars:</Label>
+            <ListBox Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" x:Name="listCalendars" />
+
+
+            <GroupBox x:Name="groupSamples" IsEnabled="False" Header="Samples" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="3">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Row="0" Grid.Column="0">Number</Label>
+                    <TextBox Grid.Row="0" Grid.Column="1" x:Name="textNumber" />
+
+                    <Label Grid.Row="1" Grid.Column="0">Full Date</Label>
+                    <TextBlock Grid.Row="1" Grid.Column="1" x:Name="textDate" />
+
+                    <Label Grid.Row="2" Grid.Column="0">Time</Label>
+                    <TextBlock Grid.Row="2" Grid.Column="1" x:Name="textTime" />
+                </Grid>
+
+            </GroupBox>
+            <GroupBox x:Name="groupRegion" IsEnabled="False" Header="Region Information" Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="3">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Row="0" Grid.Column="0" >Region</Label>
+                    <TextBlock Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" x:Name="textRegion" />
+
+                    <Label Grid.Row="1" Grid.Column="0" >Currency</Label>
+                    <TextBlock Grid.Row="1" Grid.Column="1" x:Name="textCurrency" />
+                    <TextBlock Grid.Row="1" Grid.Column="2" x:Name="textCurrencyISO" />
+
+                    <CheckBox Grid.Row="2" Grid.Column="1" x:Name="checkIsMetric">Is Metric</CheckBox>
+
+                </Grid>
+
+            </GroupBox>
+        </Grid>
+    </Grid>
+</Window>

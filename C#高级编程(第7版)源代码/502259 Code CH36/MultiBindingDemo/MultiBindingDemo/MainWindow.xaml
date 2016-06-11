@@ -1,0 +1,25 @@
+﻿<Window x:Class="Wrox.ProCSharp.WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:system="clr-namespace:System;assembly=mscorlib"
+        xmlns:local="clr-namespace:Wrox.ProCSharp.WPF"
+        Title="MainWindow" Height="240" Width="500">
+    <Window.Resources>
+        <local:Person x:Key="person1" FirstName="Tom" LastName="Turbo" />
+        <local:PersonNameConverter x:Key="personNameConverter" />
+    </Window.Resources>
+    <Grid DataContext="{StaticResource person1}">
+        <TextBox>
+            <TextBox.Text>
+                <MultiBinding Converter="{StaticResource personNameConverter}"  >
+                    <MultiBinding.ConverterParameter>
+                        <system:String>FirstLast</system:String>
+                    </MultiBinding.ConverterParameter>
+                    <Binding Path="FirstName" />
+                    <Binding Path="LastName" />
+                </MultiBinding>
+            </TextBox.Text>
+        </TextBox>
+        
+    </Grid>
+</Window>

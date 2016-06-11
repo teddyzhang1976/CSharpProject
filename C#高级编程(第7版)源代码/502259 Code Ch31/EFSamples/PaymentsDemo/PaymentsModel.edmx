@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="PaymentsModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="PaymentsModelStoreContainer">
+          <EntitySet Name="Payments" EntityType="PaymentsModel.Store.Payments" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="Payments">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Amount" Type="money" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Type" Type="nchar" Nullable="false" MaxLength="10" />
+          <Property Name="BankName" Type="nvarchar" MaxLength="50" />
+          <Property Name="CreditCardNumber" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="PaymentsModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="PaymentsEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Payments" EntityType="PaymentsModel.Payment" />
+</EntityContainer>
+        <EntityType Name="Payment" Abstract="true">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Amount" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+        </EntityType>
+<EntityType Name="CreditCardPayment" BaseType="PaymentsModel.Payment">
+<Property Type="String" Name="CreditCard" Nullable="false" /></EntityType>
+<EntityType Name="CashPayment" BaseType="PaymentsModel.Payment">
+</EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="PaymentsModelStoreContainer" CdmEntityContainer="PaymentsEntities">
+          <EntitySetMapping Name="Payments">
+<EntityTypeMapping TypeName="IsTypeOf(PaymentsModel.Payment)">
+<MappingFragment StoreEntitySet="Payments">
+<ScalarProperty Name="Id" ColumnName="Id" />
+<ScalarProperty Name="Name" ColumnName="Name" />
+<ScalarProperty Name="Amount" ColumnName="Amount" /></MappingFragment></EntityTypeMapping>
+<EntityTypeMapping TypeName="IsTypeOf(PaymentsModel.CreditCardPayment)">
+<MappingFragment StoreEntitySet="Payments">
+<ScalarProperty Name="CreditCard" ColumnName="CreditCardNumber" />
+<ScalarProperty Name="Id" ColumnName="Id" />
+<Condition ColumnName="Type" Value="CREDIT" /></MappingFragment></EntityTypeMapping>
+<EntityTypeMapping TypeName="IsTypeOf(PaymentsModel.CashPayment)">
+<MappingFragment StoreEntitySet="Payments">
+<ScalarProperty Name="Id" ColumnName="Id" />
+<Condition ColumnName="Type" Value="CASH" /></MappingFragment></EntityTypeMapping>
+</EntitySetMapping>
+</EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+<Diagram Name="PaymentsModel">
+<EntityTypeShape EntityType="PaymentsModel.Payment" Width="1.5" PointX="0.75" PointY="0.75" Height="1.5125537109375" IsExpanded="true" />
+<EntityTypeShape EntityType="PaymentsModel.CreditCardPayment" Width="1.5" PointX="0.875" PointY="2.75" Height="1.155660807291667" />
+<EntityTypeShape EntityType="PaymentsModel.CashPayment" Width="1.5" PointX="3.25" PointY="2.625" Height="0.97721435546875" />
+<InheritanceConnector EntityType="PaymentsModel.CreditCardPayment">
+<ConnectorPoint PointX="1.5" PointY="2.2625537109375" />
+<ConnectorPoint PointX="1.5" PointY="2.51" />
+<ConnectorPoint PointX="1.625" PointY="2.51" />
+<ConnectorPoint PointX="1.625" PointY="2.75" /></InheritanceConnector>
+<InheritanceConnector EntityType="PaymentsModel.CashPayment">
+<ConnectorPoint PointX="1.5" PointY="2.2625537109375" />
+<ConnectorPoint PointX="1.5" PointY="2.4225537109375" />
+<ConnectorPoint PointX="4" PointY="2.4225537109375" />
+<ConnectorPoint PointX="4" PointY="2.625" /></InheritanceConnector>
+</Diagram></Diagrams>
+  </Designer>
+</edmx:Edmx>

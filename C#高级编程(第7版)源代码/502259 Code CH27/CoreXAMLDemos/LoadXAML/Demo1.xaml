@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Grid xmlns="http://schemas.microsoft.com/netfx/2009/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid.RowDefinitions>
+        <RowDefinition />
+        <RowDefinition />
+    </Grid.RowDefinitions>
+    <Button Grid.Row="0" Content="Click Me!" Click="OnButtonClick" >
+    </Button>
+    <ListBox Grid.Row="1">
+        <x:String>string</x:String>
+    </ListBox>
+</Grid>
