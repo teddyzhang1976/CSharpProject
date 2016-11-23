@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetDirectry", "GetDirectry\GetDirectry.csproj", "{D262CDF4-A2CE-483B-A14E-A29351064C46}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D262CDF4-A2CE-483B-A14E-A29351064C46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D262CDF4-A2CE-483B-A14E-A29351064C46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D262CDF4-A2CE-483B-A14E-A29351064C46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D262CDF4-A2CE-483B-A14E-A29351064C46}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

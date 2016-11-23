@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RGBValue", "RGBValue\RGBValue.csproj", "{D8F77125-9081-4B57-BACB-9D2E320A2FBB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D8F77125-9081-4B57-BACB-9D2E320A2FBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8F77125-9081-4B57-BACB-9D2E320A2FBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8F77125-9081-4B57-BACB-9D2E320A2FBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8F77125-9081-4B57-BACB-9D2E320A2FBB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlternationColor", "AlternationColor\AlternationColor.csproj", "{952DF0DB-DA26-465C-A45A-8C912E76B58D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{952DF0DB-DA26-465C-A45A-8C912E76B58D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{952DF0DB-DA26-465C-A45A-8C912E76B58D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{952DF0DB-DA26-465C-A45A-8C912E76B58D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{952DF0DB-DA26-465C-A45A-8C912E76B58D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

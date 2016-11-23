@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HSDesktopIcon", "HSDesktopIcon\HSDesktopIcon.csproj", "{B426EB7E-1A28-44A4-9FD5-6FC98CEAB3FC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B426EB7E-1A28-44A4-9FD5-6FC98CEAB3FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B426EB7E-1A28-44A4-9FD5-6FC98CEAB3FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B426EB7E-1A28-44A4-9FD5-6FC98CEAB3FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B426EB7E-1A28-44A4-9FD5-6FC98CEAB3FC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

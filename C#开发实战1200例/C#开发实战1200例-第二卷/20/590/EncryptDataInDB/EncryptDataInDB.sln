@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EncryptDataInDB", "EncryptDataInDB\EncryptDataInDB.csproj", "{A9E517C6-ABCE-4127-AFB8-4E1FF6D1E4BB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A9E517C6-ABCE-4127-AFB8-4E1FF6D1E4BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9E517C6-ABCE-4127-AFB8-4E1FF6D1E4BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9E517C6-ABCE-4127-AFB8-4E1FF6D1E4BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9E517C6-ABCE-4127-AFB8-4E1FF6D1E4BB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

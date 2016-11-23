@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="StepSample" Class="SalesOrderDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(local)\SQLExpress;Initial Catalog=StepSample;Integrated Security=True" SettingsObjectName="Chapter_20_CSharp.Properties.Settings" SettingsPropertyName="StepSampleConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Customer" Member="Customers">
+    <Type Name="Customer">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FullName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Address1" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Address2" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="City" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="StateRegion" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="PostalCode" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="PhoneNumber" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="WebSite" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="AnnualFee" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Association Name="Customer_OrderEntry" Member="OrderEntries" ThisKey="ID" OtherKey="Customer" Type="OrderEntry" />
+      <Association Name="StateRegion_Customer" Member="StateRegion1" ThisKey="StateRegion" OtherKey="ID" Type="StateRegion" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.StateRegion" Member="StateRegions">
+    <Type Name="StateRegion">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FullName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Abbreviation" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="RegionType" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="Admitted" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Capital" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="StateRegion_Customer" Member="Customers" ThisKey="ID" OtherKey="StateRegion" Type="Customer" />
+    </Type>
+  </Table>
+  <Table Name="dbo.OrderEntry" Member="OrderEntries">
+    <Type Name="OrderEntry">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Customer" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="OrderDate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="ShipDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Subtotal" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="SalesTax" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Total" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="StatusCode" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Association Name="Customer_OrderEntry" Member="Customer1" ThisKey="Customer" OtherKey="ID" Type="Customer" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.AdmittedInYear" Method="AdmittedInYear" IsComposable="true">
+    <Parameter Name="whichDate" Type="System.DateTime" DbType="DateTime" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

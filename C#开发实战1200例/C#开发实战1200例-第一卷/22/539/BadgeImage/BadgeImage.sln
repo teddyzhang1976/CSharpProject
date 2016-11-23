@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BadgeImage", "BadgeImage\BadgeImage.csproj", "{F83CF95D-63C6-437D-85AF-B0DF30797281}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F83CF95D-63C6-437D-85AF-B0DF30797281}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F83CF95D-63C6-437D-85AF-B0DF30797281}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F83CF95D-63C6-437D-85AF-B0DF30797281}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F83CF95D-63C6-437D-85AF-B0DF30797281}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AviPlay", "AviPlay\AviPlay.csproj", "{74AD381B-0882-4CA9-8510-DDB40E671460}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{74AD381B-0882-4CA9-8510-DDB40E671460}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74AD381B-0882-4CA9-8510-DDB40E671460}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74AD381B-0882-4CA9-8510-DDB40E671460}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74AD381B-0882-4CA9-8510-DDB40E671460}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

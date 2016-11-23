@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="db_TomeTwo" Class="linqtosqlDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=MRWXK\WANGXIAOKE;Initial Catalog=db_TomeTwo;User ID=sa" SettingsObjectName="XmlToDatabase.Properties.Settings" SettingsPropertyName="db_TomeTwoConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.tb_XML" Member="tb_XML">
+    <Type Name="tb_XML">
+      <Column Name="ID" Type="System.String" DbType="NVarChar(50)" IsPrimaryKey="true" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Sex" Type="System.String" DbType="NChar(4)" CanBeNull="true" />
+      <Column Name="Salary" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

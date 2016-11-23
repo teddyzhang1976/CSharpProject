@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WatchMemory", "WatchMemory\WatchMemory.csproj", "{DC2D452D-81BD-41CF-BB4E-37EC4F6566BF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DC2D452D-81BD-41CF-BB4E-37EC4F6566BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC2D452D-81BD-41CF-BB4E-37EC4F6566BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC2D452D-81BD-41CF-BB4E-37EC4F6566BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC2D452D-81BD-41CF-BB4E-37EC4F6566BF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

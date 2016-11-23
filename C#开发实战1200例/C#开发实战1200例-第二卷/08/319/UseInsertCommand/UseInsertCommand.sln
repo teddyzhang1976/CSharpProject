@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UseInsertCommand", "UseInsertCommand\UseInsertCommand.csproj", "{CBB9D07D-E101-474F-B4AA-7B0156C65CEB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CBB9D07D-E101-474F-B4AA-7B0156C65CEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBB9D07D-E101-474F-B4AA-7B0156C65CEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBB9D07D-E101-474F-B4AA-7B0156C65CEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBB9D07D-E101-474F-B4AA-7B0156C65CEB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

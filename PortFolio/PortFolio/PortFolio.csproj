@@ -36,6 +36,9 @@
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite">
+      <HintPath>..\..\..\..\..\..\temp\sqlite-netFx451-binary-bundle-Win32-2013-1.0.102.0\System.Data.SQLite.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -47,30 +50,109 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Control\SQLiteEventManager.cs" />
+    <Compile Include="Control\GeneralManagerFactory.cs" />
+    <Compile Include="Control\interfaces\IEventManager.cs" />
     <Compile Include="Control\PortFolioManager.cs" />
-    <Compile Include="Model\Account.cs" />
+    <Compile Include="Control\SQLiteAccountManager.cs" />
+    <Compile Include="Control\SQLitePositionManager.cs" />
+    <Compile Include="Control\SQLiteStockManager.cs" />
+    <Compile Include="Model\AccountModel.cs" />
+    <Compile Include="Control\interfaces\IAccountManager.cs" />
+    <Compile Include="Control\interfaces\IPositionManager.cs" />
+    <Compile Include="Control\interfaces\IStockManager.cs" />
+    <Compile Include="Model\DBUtility\SQLite\SQLiteHelper.cs" />
+    <Compile Include="Model\EventModel.cs" />
     <Compile Include="Model\StockModel.cs" />
-    <Compile Include="Model\StockPositionDataModel.cs" />
-    <Compile Include="Model\TradingConfig.cs" />
+    <Compile Include="Model\PositionModel.cs" />
+    <Compile Include="View\AccountManager\AccountLoginDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AccountManager\AccountLoginDlg.Designer.cs">
+      <DependentUpon>AccountLoginDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\AccountManager\AccountEditDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AccountManager\AccountEditDlg.Designer.cs">
+      <DependentUpon>AccountEditDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\AccountManager\GeneralJournalDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AccountManager\GeneralJournalDlg.Designer.cs">
+      <DependentUpon>GeneralJournalDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\AccountManager\MoveInOutMoneyDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AccountManager\MoveInOutMoneyDlg.Designer.cs">
+      <DependentUpon>MoveInOutMoneyDlg.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\PortfolioMainDlg.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\PortfolioMainDlg.Designer.cs">
       <DependentUpon>PortfolioMainDlg.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\PositionTradingDlg.cs">
+    <Compile Include="View\PositionManagr\PositionJournalDlg.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\PositionTradingDlg.Designer.cs">
-      <DependentUpon>PositionTradingDlg.cs</DependentUpon>
+    <Compile Include="View\PositionManagr\PositionJournalDlg.Designer.cs">
+      <DependentUpon>PositionJournalDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\PositionManagr\PositionMonitorDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\PositionManagr\PositionMonitorDlg.Designer.cs">
+      <DependentUpon>PositionMonitorDlg.cs</DependentUpon>
     </Compile>
     <Compile Include="Starter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\AccountManager\UpdateAccountNameDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AccountManager\UpdateAccountNameDlg.Designer.cs">
+      <DependentUpon>UpdateAccountNameDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\AccountManager\UpdateAccountPasswordDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AccountManager\UpdateAccountPasswordDlg.Designer.cs">
+      <DependentUpon>UpdateAccountPasswordDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\PositionManagr\PositionMoveInOutDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\PositionManagr\PositionMoveInOutDlg.Designer.cs">
+      <DependentUpon>PositionMoveInOutDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\PositionManagr\PositionTradeDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\PositionManagr\PositionTradeDlg.Designer.cs">
+      <DependentUpon>PositionTradeDlg.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="View\AccountManager\AccountLoginDlg.resx">
+      <DependentUpon>AccountLoginDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\AccountManager\AccountEditDlg.resx">
+      <DependentUpon>AccountEditDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\AccountManager\GeneralJournalDlg.resx">
+      <DependentUpon>GeneralJournalDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\AccountManager\MoveInOutMoneyDlg.resx">
+      <DependentUpon>MoveInOutMoneyDlg.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\PortfolioMainDlg.resx">
       <DependentUpon>PortfolioMainDlg.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\PositionTradingDlg.resx">
-      <DependentUpon>PositionTradingDlg.cs</DependentUpon>
+    <EmbeddedResource Include="View\PositionManagr\PositionJournalDlg.resx">
+      <DependentUpon>PositionJournalDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\PositionManagr\PositionMonitorDlg.resx">
+      <DependentUpon>PositionMonitorDlg.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -82,6 +164,18 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="View\AccountManager\UpdateAccountNameDlg.resx">
+      <DependentUpon>UpdateAccountNameDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\AccountManager\UpdateAccountPasswordDlg.resx">
+      <DependentUpon>UpdateAccountPasswordDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\PositionManagr\PositionMoveInOutDlg.resx">
+      <DependentUpon>PositionMoveInOutDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\PositionManagr\PositionTradeDlg.resx">
+      <DependentUpon>PositionTradeDlg.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -139,7 +233,12 @@
   <ItemGroup>
     <None Include="Resources\空平股票.bmp" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="log.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="View\StockManager\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

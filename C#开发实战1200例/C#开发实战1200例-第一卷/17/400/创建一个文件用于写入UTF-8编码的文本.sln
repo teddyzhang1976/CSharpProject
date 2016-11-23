@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{911E67C6-3D85-4FCE-B560-20A9C3E3FF48}") = "创建一个文件用于写入UTF-8编码的文本", "创建一个文件用于写入UTF-8编码的文本.exe", "{A7E3A329-0F82-4092-B0E7-CBC72C69F850}"
+	ProjectSection(DebuggerProjectSystem) = preProject
+		PortSupplier = 00000000-0000-0000-0000-000000000000
+		Executable = D:\workspace\Repository\gitLocalRepository\csharpAllInOne\C#开发实战1200例\C#开发实战1200例-第一卷\17\400\创建一个文件用于写入UTF-8编码的文本.exe
+		RemoteMachine = AFOEC-606181241
+		StartingDirectory = D:\workspace\Repository\gitLocalRepository\csharpAllInOne\C#开发实战1200例\C#开发实战1200例-第一卷\17\400
+		Environment = 默认值
+		LaunchingEngine = 00000000-0000-0000-0000-000000000000
+		UseLegacyDebugEngines = No
+		LaunchSQLEngine = No
+		AttachLaunchAction = No
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A7E3A329-0F82-4092-B0E7-CBC72C69F850}.Debug|Default.ActiveCfg = Debug|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

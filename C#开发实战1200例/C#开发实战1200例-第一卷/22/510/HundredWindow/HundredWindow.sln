@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HundredWindow", "HundredWindow\HundredWindow.csproj", "{BA582062-A2F5-46CA-A08E-7195CBA5752E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BA582062-A2F5-46CA-A08E-7195CBA5752E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA582062-A2F5-46CA-A08E-7195CBA5752E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA582062-A2F5-46CA-A08E-7195CBA5752E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA582062-A2F5-46CA-A08E-7195CBA5752E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

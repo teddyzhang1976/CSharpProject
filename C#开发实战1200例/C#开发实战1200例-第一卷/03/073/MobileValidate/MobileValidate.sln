@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobileValidate", "MobileValidate\MobileValidate.csproj", "{5F7A4DC7-5744-459F-85A2-6E6993F3614E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5F7A4DC7-5744-459F-85A2-6E6993F3614E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F7A4DC7-5744-459F-85A2-6E6993F3614E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F7A4DC7-5744-459F-85A2-6E6993F3614E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F7A4DC7-5744-459F-85A2-6E6993F3614E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

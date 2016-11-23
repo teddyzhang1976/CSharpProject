@@ -3,12 +3,12 @@ using System.Collections.Generic;
 
 namespace Wrox.ProCSharp.Generics
 {
-    public class DocumentManager<TDocument>
-        where TDocument : IDocument
+    public class DocumentManager<GDoc>
+        where GDoc : IDocument
     {
-        private readonly Queue<TDocument> documentQueue = new Queue<TDocument>();
+        private readonly Queue<GDoc> documentQueue = new Queue<GDoc>();
 
-        public void AddDocument(TDocument doc)
+        public void AddDocument(GDoc doc)
         {
             lock (this)
             {
@@ -23,16 +23,16 @@ namespace Wrox.ProCSharp.Generics
 
         public void DisplayAllDocuments()
         {
-            foreach (TDocument doc in documentQueue)
+            foreach (GDoc doc in documentQueue)
             {
                 Console.WriteLine(doc.Title);
             }
         }
 
 
-        public TDocument GetDocument()
+        public GDoc GetDocument()
         {
-            TDocument doc = default(TDocument);
+            GDoc doc = default(GDoc);
             lock (this)
             {
                 doc = documentQueue.Dequeue();

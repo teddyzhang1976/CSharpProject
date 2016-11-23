@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConnectToExcel", "ConnectToExcel\ConnectToExcel.csproj", "{7D3A29F3-91F9-48E5-AB79-4798560E0D4B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7D3A29F3-91F9-48E5-AB79-4798560E0D4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D3A29F3-91F9-48E5-AB79-4798560E0D4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D3A29F3-91F9-48E5-AB79-4798560E0D4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D3A29F3-91F9-48E5-AB79-4798560E0D4B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

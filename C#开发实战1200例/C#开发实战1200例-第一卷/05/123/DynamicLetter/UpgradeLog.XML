@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="DynamicLetter">
+</Property><Property Name="解决方案文件" Value="E:\Disks\C#开发实战1200例光盘\C#开发实战1200例（第I卷）\MR\05\123\DynamicLetter\DynamicLetter.sln">
+</Property><Property Name="Date" Value="2011年10月12日">
+</Property><Property Name="Time" Value="22:31">
+</Property></Properties><Event ErrorLevel="0" Project="DynamicLetter" Source="DynamicLetter\DynamicLetter.csproj" Description="项目已成功转换">
+</Event><Event ErrorLevel="3" Project="DynamicLetter" Source="DynamicLetter\DynamicLetter.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="DynamicLetter.sln" Description="成功转换解决方案">
+</Event><Event ErrorLevel="3" Project="" Source="DynamicLetter.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="DynamicLetter" Source="DynamicLetter\DynamicLetter.csproj" Description="扫描完成: 项目文件不需要升级。">
+</Event></UpgradeLog>

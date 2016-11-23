@@ -28,35 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PortfolioMainDlg));
+            this.components = new System.ComponentModel.Container();
             this.menuStripAccount = new System.Windows.Forms.MenuStrip();
             this.账户ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.登录账户ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.关闭账户ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.修改账号名ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.修改登录密码ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.新建账户ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.删除账户ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.AccountLoginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.CloseAccountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.UpdateAccountNameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.UpdateAccountPasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.CreateAccountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.DeleteAccountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.信息ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.流水账ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.GeneralJournalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.交易明细ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.账户属性ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.AccountDetailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.操作ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.多开ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.空开ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.多平股票ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.空平股票ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.BuyOpenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.SoldOpenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.BuyCloseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.SoldCloseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.送配股票ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.送股ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.配股ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.送衍生品种ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.划入股票ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.划出股票ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.追加资金ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.划出资金ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.现金红冲ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.现金蓝补ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.删除记录ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.MoveInToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.MoveOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.MoveInMoneyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.MoveOutMoneyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.MoneyHongChongToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.MoneyLanbuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.DeleteEventToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.分析ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.投资分析ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.数据导出ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -64,8 +64,8 @@
             this.txt格式存盘ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.xls根式存盘ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.设置ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.参数设置ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.关闭ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.AccountConfigToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.CloseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
@@ -83,7 +83,6 @@
             this.toolStripButton14 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton15 = new System.Windows.Forms.ToolStripButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.listView1 = new System.Windows.Forms.ListView();
             this.order = new System.Windows.Forms.DataGridViewButtonColumn();
             this.code = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -100,9 +99,43 @@
             this.positionRatio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.purchaseDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.market = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.labelAccountSummary = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.labelAccountName = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.contextMenuStripForAccountList = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.登录账户ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.关闭账户ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.新增账户ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.删除账户ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.修改账户名ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.修改账户密码ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.账户流水ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.账户概述ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.accountListBox = new System.Windows.Forms.ListBox();
             this.menuStripAccount.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.contextMenuStripForAccountList.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStripAccount
@@ -113,134 +146,146 @@
             this.操作ToolStripMenuItem,
             this.分析ToolStripMenuItem,
             this.设置ToolStripMenuItem,
-            this.关闭ToolStripMenuItem});
+            this.CloseToolStripMenuItem});
             this.menuStripAccount.Location = new System.Drawing.Point(0, 0);
             this.menuStripAccount.Name = "menuStripAccount";
-            this.menuStripAccount.Size = new System.Drawing.Size(1473, 25);
+            this.menuStripAccount.Size = new System.Drawing.Size(1276, 25);
             this.menuStripAccount.TabIndex = 0;
             this.menuStripAccount.Text = "账户";
             // 
             // 账户ToolStripMenuItem
             // 
             this.账户ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.登录账户ToolStripMenuItem,
-            this.关闭账户ToolStripMenuItem,
-            this.修改账号名ToolStripMenuItem,
-            this.修改登录密码ToolStripMenuItem,
-            this.新建账户ToolStripMenuItem,
-            this.删除账户ToolStripMenuItem});
+            this.AccountLoginToolStripMenuItem,
+            this.CloseAccountToolStripMenuItem,
+            this.UpdateAccountNameToolStripMenuItem,
+            this.UpdateAccountPasswordToolStripMenuItem,
+            this.CreateAccountToolStripMenuItem,
+            this.DeleteAccountToolStripMenuItem});
             this.账户ToolStripMenuItem.Name = "账户ToolStripMenuItem";
             this.账户ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
             this.账户ToolStripMenuItem.Text = "账户";
             // 
-            // 登录账户ToolStripMenuItem
+            // AccountLoginToolStripMenuItem
             // 
-            this.登录账户ToolStripMenuItem.Name = "登录账户ToolStripMenuItem";
-            this.登录账户ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
-            this.登录账户ToolStripMenuItem.Text = "登录账户";
+            this.AccountLoginToolStripMenuItem.Name = "AccountLoginToolStripMenuItem";
+            this.AccountLoginToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.AccountLoginToolStripMenuItem.Text = "登录账户";
+            this.AccountLoginToolStripMenuItem.Click += new System.EventHandler(this.AccountLoginToolStripMenuItem_Click);
             // 
-            // 关闭账户ToolStripMenuItem
+            // CloseAccountToolStripMenuItem
             // 
-            this.关闭账户ToolStripMenuItem.Name = "关闭账户ToolStripMenuItem";
-            this.关闭账户ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
-            this.关闭账户ToolStripMenuItem.Text = "关闭账户";
+            this.CloseAccountToolStripMenuItem.Name = "CloseAccountToolStripMenuItem";
+            this.CloseAccountToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.CloseAccountToolStripMenuItem.Text = "关闭账户";
+            this.CloseAccountToolStripMenuItem.Click += new System.EventHandler(this.CloseAccountToolStripMenuItem_Click);
             // 
-            // 修改账号名ToolStripMenuItem
+            // UpdateAccountNameToolStripMenuItem
             // 
-            this.修改账号名ToolStripMenuItem.Name = "修改账号名ToolStripMenuItem";
-            this.修改账号名ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
-            this.修改账号名ToolStripMenuItem.Text = "修改账号名";
+            this.UpdateAccountNameToolStripMenuItem.Name = "UpdateAccountNameToolStripMenuItem";
+            this.UpdateAccountNameToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.UpdateAccountNameToolStripMenuItem.Text = "修改账号名";
+            this.UpdateAccountNameToolStripMenuItem.Click += new System.EventHandler(this.UpdateAccountNameToolStripMenuItem_Click);
             // 
-            // 修改登录密码ToolStripMenuItem
+            // UpdateAccountPasswordToolStripMenuItem
             // 
-            this.修改登录密码ToolStripMenuItem.Name = "修改登录密码ToolStripMenuItem";
-            this.修改登录密码ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
-            this.修改登录密码ToolStripMenuItem.Text = "修改登录密码";
+            this.UpdateAccountPasswordToolStripMenuItem.Name = "UpdateAccountPasswordToolStripMenuItem";
+            this.UpdateAccountPasswordToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.UpdateAccountPasswordToolStripMenuItem.Text = "修改登录密码";
+            this.UpdateAccountPasswordToolStripMenuItem.Click += new System.EventHandler(this.UpdateAccountPasswordToolStripMenuItem_Click);
             // 
-            // 新建账户ToolStripMenuItem
+            // CreateAccountToolStripMenuItem
             // 
-            this.新建账户ToolStripMenuItem.Name = "新建账户ToolStripMenuItem";
-            this.新建账户ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
-            this.新建账户ToolStripMenuItem.Text = "新建账户";
+            this.CreateAccountToolStripMenuItem.Name = "CreateAccountToolStripMenuItem";
+            this.CreateAccountToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.CreateAccountToolStripMenuItem.Text = "新建账户";
+            this.CreateAccountToolStripMenuItem.Click += new System.EventHandler(this.CreateAccountToolStripMenuItem_Click);
             // 
-            // 删除账户ToolStripMenuItem
+            // DeleteAccountToolStripMenuItem
             // 
-            this.删除账户ToolStripMenuItem.Name = "删除账户ToolStripMenuItem";
-            this.删除账户ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
-            this.删除账户ToolStripMenuItem.Text = "删除账户";
+            this.DeleteAccountToolStripMenuItem.Name = "DeleteAccountToolStripMenuItem";
+            this.DeleteAccountToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.DeleteAccountToolStripMenuItem.Text = "删除账户";
+            this.DeleteAccountToolStripMenuItem.Click += new System.EventHandler(this.DeleteAccountToolStripMenuItem_Click);
             // 
             // 信息ToolStripMenuItem
             // 
             this.信息ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.流水账ToolStripMenuItem,
+            this.GeneralJournalToolStripMenuItem,
             this.交易明细ToolStripMenuItem,
-            this.账户属性ToolStripMenuItem});
+            this.AccountDetailToolStripMenuItem});
             this.信息ToolStripMenuItem.Name = "信息ToolStripMenuItem";
             this.信息ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
             this.信息ToolStripMenuItem.Text = "信息";
             // 
-            // 流水账ToolStripMenuItem
+            // GeneralJournalToolStripMenuItem
             // 
-            this.流水账ToolStripMenuItem.Name = "流水账ToolStripMenuItem";
-            this.流水账ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
-            this.流水账ToolStripMenuItem.Text = "流水账";
+            this.GeneralJournalToolStripMenuItem.Name = "GeneralJournalToolStripMenuItem";
+            this.GeneralJournalToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.GeneralJournalToolStripMenuItem.Text = "流水账";
+            this.GeneralJournalToolStripMenuItem.Click += new System.EventHandler(this.GeneralJournalToolStripMenuItem_Click);
             // 
             // 交易明细ToolStripMenuItem
             // 
             this.交易明细ToolStripMenuItem.Name = "交易明细ToolStripMenuItem";
             this.交易明细ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.交易明细ToolStripMenuItem.Text = "交易明细";
+            this.交易明细ToolStripMenuItem.Click += new System.EventHandler(this.PositionJournalToolStripMenuItem_Click);
             // 
-            // 账户属性ToolStripMenuItem
+            // AccountDetailToolStripMenuItem
             // 
-            this.账户属性ToolStripMenuItem.Name = "账户属性ToolStripMenuItem";
-            this.账户属性ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
-            this.账户属性ToolStripMenuItem.Text = "账户属性";
+            this.AccountDetailToolStripMenuItem.Name = "AccountDetailToolStripMenuItem";
+            this.AccountDetailToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.AccountDetailToolStripMenuItem.Text = "账户属性";
+            this.AccountDetailToolStripMenuItem.Click += new System.EventHandler(this.AccountDetailToolStripMenuItem_Click);
             // 
             // 操作ToolStripMenuItem
             // 
             this.操作ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.多开ToolStripMenuItem,
-            this.空开ToolStripMenuItem,
-            this.多平股票ToolStripMenuItem,
-            this.空平股票ToolStripMenuItem,
+            this.BuyOpenToolStripMenuItem,
+            this.SoldOpenToolStripMenuItem,
+            this.BuyCloseToolStripMenuItem,
+            this.SoldCloseToolStripMenuItem,
             this.送配股票ToolStripMenuItem,
             this.送衍生品种ToolStripMenuItem,
-            this.划入股票ToolStripMenuItem,
-            this.划出股票ToolStripMenuItem,
-            this.追加资金ToolStripMenuItem,
-            this.划出资金ToolStripMenuItem,
-            this.现金红冲ToolStripMenuItem,
-            this.现金蓝补ToolStripMenuItem,
-            this.删除记录ToolStripMenuItem});
+            this.MoveInToolStripMenuItem,
+            this.MoveOutToolStripMenuItem,
+            this.MoveInMoneyToolStripMenuItem,
+            this.MoveOutMoneyToolStripMenuItem,
+            this.MoneyHongChongToolStripMenuItem,
+            this.MoneyLanbuToolStripMenuItem,
+            this.DeleteEventToolStripMenuItem});
             this.操作ToolStripMenuItem.Name = "操作ToolStripMenuItem";
             this.操作ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
             this.操作ToolStripMenuItem.Text = "操作";
             // 
-            // 多开ToolStripMenuItem
+            // BuyOpenToolStripMenuItem
             // 
-            this.多开ToolStripMenuItem.Name = "多开ToolStripMenuItem";
-            this.多开ToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
-            this.多开ToolStripMenuItem.Text = "多开股票";
+            this.BuyOpenToolStripMenuItem.Name = "BuyOpenToolStripMenuItem";
+            this.BuyOpenToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.BuyOpenToolStripMenuItem.Text = "多开股票";
+            this.BuyOpenToolStripMenuItem.Click += new System.EventHandler(this.BuyOpenToolStripMenuItem_Click);
             // 
-            // 空开ToolStripMenuItem
+            // SoldOpenToolStripMenuItem
             // 
-            this.空开ToolStripMenuItem.Name = "空开ToolStripMenuItem";
-            this.空开ToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
-            this.空开ToolStripMenuItem.Text = "空开股票";
-            this.空开ToolStripMenuItem.Click += new System.EventHandler(this.空开ToolStripMenuItem_Click);
+            this.SoldOpenToolStripMenuItem.Name = "SoldOpenToolStripMenuItem";
+            this.SoldOpenToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.SoldOpenToolStripMenuItem.Text = "空开股票";
+            this.SoldOpenToolStripMenuItem.Click += new System.EventHandler(this.SoldOpenToolStripMenuItem_Click);
             // 
-            // 多平股票ToolStripMenuItem
+            // BuyCloseToolStripMenuItem
             // 
-            this.多平股票ToolStripMenuItem.Name = "多平股票ToolStripMenuItem";
-            this.多平股票ToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
-            this.多平股票ToolStripMenuItem.Text = "多平股票";
+            this.BuyCloseToolStripMenuItem.Name = "BuyCloseToolStripMenuItem";
+            this.BuyCloseToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.BuyCloseToolStripMenuItem.Text = "多平股票";
+            this.BuyCloseToolStripMenuItem.Click += new System.EventHandler(this.BuyCloseToolStripMenuItem_Click);
             // 
-            // 空平股票ToolStripMenuItem
+            // SoldCloseToolStripMenuItem
             // 
-            this.空平股票ToolStripMenuItem.Name = "空平股票ToolStripMenuItem";
-            this.空平股票ToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
-            this.空平股票ToolStripMenuItem.Text = "空平股票";
+            this.SoldCloseToolStripMenuItem.Name = "SoldCloseToolStripMenuItem";
+            this.SoldCloseToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.SoldCloseToolStripMenuItem.Text = "空平股票";
+            this.SoldCloseToolStripMenuItem.Click += new System.EventHandler(this.SoldCloseToolStripMenuItem_Click);
             // 
             // 送配股票ToolStripMenuItem
             // 
@@ -269,47 +314,54 @@
             this.送衍生品种ToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.送衍生品种ToolStripMenuItem.Text = "送衍生品种";
             // 
-            // 划入股票ToolStripMenuItem
+            // MoveInToolStripMenuItem
             // 
-            this.划入股票ToolStripMenuItem.Name = "划入股票ToolStripMenuItem";
-            this.划入股票ToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
-            this.划入股票ToolStripMenuItem.Text = "划入股票";
+            this.MoveInToolStripMenuItem.Name = "MoveInToolStripMenuItem";
+            this.MoveInToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.MoveInToolStripMenuItem.Text = "划入股票";
+            this.MoveInToolStripMenuItem.Click += new System.EventHandler(this.MoveInToolStripMenuItem_Click);
             // 
-            // 划出股票ToolStripMenuItem
+            // MoveOutToolStripMenuItem
             // 
-            this.划出股票ToolStripMenuItem.Name = "划出股票ToolStripMenuItem";
-            this.划出股票ToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
-            this.划出股票ToolStripMenuItem.Text = "划出股票";
+            this.MoveOutToolStripMenuItem.Name = "MoveOutToolStripMenuItem";
+            this.MoveOutToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.MoveOutToolStripMenuItem.Text = "划出股票";
+            this.MoveOutToolStripMenuItem.Click += new System.EventHandler(this.MoveOutToolStripMenuItem_Click);
             // 
-            // 追加资金ToolStripMenuItem
+            // MoveInMoneyToolStripMenuItem
             // 
-            this.追加资金ToolStripMenuItem.Name = "追加资金ToolStripMenuItem";
-            this.追加资金ToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
-            this.追加资金ToolStripMenuItem.Text = "追加资金";
+            this.MoveInMoneyToolStripMenuItem.Name = "MoveInMoneyToolStripMenuItem";
+            this.MoveInMoneyToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.MoveInMoneyToolStripMenuItem.Text = "追加资金";
+            this.MoveInMoneyToolStripMenuItem.Click += new System.EventHandler(this.MoveInMoneyToolStripMenuItem_Click);
             // 
-            // 划出资金ToolStripMenuItem
+            // MoveOutMoneyToolStripMenuItem
             // 
-            this.划出资金ToolStripMenuItem.Name = "划出资金ToolStripMenuItem";
-            this.划出资金ToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
-            this.划出资金ToolStripMenuItem.Text = "划出资金";
+            this.MoveOutMoneyToolStripMenuItem.Name = "MoveOutMoneyToolStripMenuItem";
+            this.MoveOutMoneyToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.MoveOutMoneyToolStripMenuItem.Text = "划出资金";
+            this.MoveOutMoneyToolStripMenuItem.Click += new System.EventHandler(this.MoveOutMoneyToolStripMenuItem_Click);
             // 
-            // 现金红冲ToolStripMenuItem
+            // MoneyHongChongToolStripMenuItem
             // 
-            this.现金红冲ToolStripMenuItem.Name = "现金红冲ToolStripMenuItem";
-            this.现金红冲ToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
-            this.现金红冲ToolStripMenuItem.Text = "现金红冲";
+            this.MoneyHongChongToolStripMenuItem.Name = "MoneyHongChongToolStripMenuItem";
+            this.MoneyHongChongToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.MoneyHongChongToolStripMenuItem.Text = "现金红冲";
+            this.MoneyHongChongToolStripMenuItem.Click += new System.EventHandler(this.MoneyHongChongToolStripMenuItem_Click);
             // 
-            // 现金蓝补ToolStripMenuItem
+            // MoneyLanbuToolStripMenuItem
             // 
-            this.现金蓝补ToolStripMenuItem.Name = "现金蓝补ToolStripMenuItem";
-            this.现金蓝补ToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
-            this.现金蓝补ToolStripMenuItem.Text = "现金蓝补";
+            this.MoneyLanbuToolStripMenuItem.Name = "MoneyLanbuToolStripMenuItem";
+            this.MoneyLanbuToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.MoneyLanbuToolStripMenuItem.Text = "现金蓝补";
+            this.MoneyLanbuToolStripMenuItem.Click += new System.EventHandler(this.MoneyLanbuToolStripMenuItem_Click);
             // 
-            // 删除记录ToolStripMenuItem
+            // DeleteEventToolStripMenuItem
             // 
-            this.删除记录ToolStripMenuItem.Name = "删除记录ToolStripMenuItem";
-            this.删除记录ToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
-            this.删除记录ToolStripMenuItem.Text = "删除记录";
+            this.DeleteEventToolStripMenuItem.Name = "DeleteEventToolStripMenuItem";
+            this.DeleteEventToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.DeleteEventToolStripMenuItem.Text = "删除记录";
+            this.DeleteEventToolStripMenuItem.Click += new System.EventHandler(this.DeleteEventToolStripMenuItem_Click);
             // 
             // 分析ToolStripMenuItem
             // 
@@ -357,22 +409,24 @@
             // 设置ToolStripMenuItem
             // 
             this.设置ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.参数设置ToolStripMenuItem});
+            this.AccountConfigToolStripMenuItem});
             this.设置ToolStripMenuItem.Name = "设置ToolStripMenuItem";
             this.设置ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
             this.设置ToolStripMenuItem.Text = "设置";
             // 
-            // 参数设置ToolStripMenuItem
+            // AccountConfigToolStripMenuItem
             // 
-            this.参数设置ToolStripMenuItem.Name = "参数设置ToolStripMenuItem";
-            this.参数设置ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
-            this.参数设置ToolStripMenuItem.Text = "参数设置";
+            this.AccountConfigToolStripMenuItem.Name = "AccountConfigToolStripMenuItem";
+            this.AccountConfigToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.AccountConfigToolStripMenuItem.Text = "参数设置";
+            this.AccountConfigToolStripMenuItem.Click += new System.EventHandler(this.AccountConfigToolStripMenuItem_Click);
             // 
-            // 关闭ToolStripMenuItem
+            // CloseToolStripMenuItem
             // 
-            this.关闭ToolStripMenuItem.Name = "关闭ToolStripMenuItem";
-            this.关闭ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
-            this.关闭ToolStripMenuItem.Text = "关闭";
+            this.CloseToolStripMenuItem.Name = "CloseToolStripMenuItem";
+            this.CloseToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
+            this.CloseToolStripMenuItem.Text = "关闭";
+            this.CloseToolStripMenuItem.Click += new System.EventHandler(this.CloseToolStripMenuItem_Click);
             // 
             // toolStrip1
             // 
@@ -395,143 +449,128 @@
             this.toolStripButton15});
             this.toolStrip1.Location = new System.Drawing.Point(0, 25);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1473, 78);
+            this.toolStrip1.Size = new System.Drawing.Size(1276, 25);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // toolStripButton1
             // 
-            this.toolStripButton1.Image = global::PortFolio.Properties.Resources.登陆账户;
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(60, 75);
+            this.toolStripButton1.Size = new System.Drawing.Size(60, 22);
             this.toolStripButton1.Text = "登陆账户";
             this.toolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // toolStripButton2
             // 
-            this.toolStripButton2.Image = global::PortFolio.Properties.Resources.关闭账户;
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(60, 75);
+            this.toolStripButton2.Size = new System.Drawing.Size(60, 22);
             this.toolStripButton2.Text = "关闭账户";
             this.toolStripButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // toolStripButton3
             // 
-            this.toolStripButton3.Image = global::PortFolio.Properties.Resources.账户属性;
             this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(60, 75);
+            this.toolStripButton3.Size = new System.Drawing.Size(60, 22);
             this.toolStripButton3.Text = "账户属性";
             this.toolStripButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // toolStripButton4
             // 
-            this.toolStripButton4.Image = global::PortFolio.Properties.Resources.流水账;
             this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(57, 75);
+            this.toolStripButton4.Size = new System.Drawing.Size(48, 22);
             this.toolStripButton4.Text = "流水账";
             this.toolStripButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // toolStripButton6
             // 
-            this.toolStripButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton6.Image")));
             this.toolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton6.Name = "toolStripButton6";
-            this.toolStripButton6.Size = new System.Drawing.Size(60, 75);
+            this.toolStripButton6.Size = new System.Drawing.Size(60, 22);
             this.toolStripButton6.Text = "多开股票";
             this.toolStripButton6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // toolStripButton7
             // 
-            this.toolStripButton7.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton7.Image")));
             this.toolStripButton7.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton7.Name = "toolStripButton7";
-            this.toolStripButton7.Size = new System.Drawing.Size(60, 75);
+            this.toolStripButton7.Size = new System.Drawing.Size(60, 22);
             this.toolStripButton7.Text = "多平股票";
             this.toolStripButton7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // toolStripButton5
             // 
-            this.toolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.Image")));
             this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton5.Name = "toolStripButton5";
-            this.toolStripButton5.Size = new System.Drawing.Size(60, 75);
+            this.toolStripButton5.Size = new System.Drawing.Size(60, 22);
             this.toolStripButton5.Text = "空开股票";
             this.toolStripButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // toolStripButton8
             // 
-            this.toolStripButton8.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton8.Image")));
             this.toolStripButton8.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton8.Name = "toolStripButton8";
-            this.toolStripButton8.Size = new System.Drawing.Size(60, 75);
+            this.toolStripButton8.Size = new System.Drawing.Size(60, 22);
             this.toolStripButton8.Text = "空平股票";
             this.toolStripButton8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // toolStripButton9
             // 
-            this.toolStripButton9.Image = global::PortFolio.Properties.Resources.其他操作;
             this.toolStripButton9.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton9.Name = "toolStripButton9";
-            this.toolStripButton9.Size = new System.Drawing.Size(60, 75);
+            this.toolStripButton9.Size = new System.Drawing.Size(60, 22);
             this.toolStripButton9.Text = "其他操作";
             this.toolStripButton9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // toolStripButton10
             // 
-            this.toolStripButton10.Image = global::PortFolio.Properties.Resources.交易明细;
             this.toolStripButton10.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton10.Name = "toolStripButton10";
-            this.toolStripButton10.Size = new System.Drawing.Size(60, 75);
+            this.toolStripButton10.Size = new System.Drawing.Size(60, 22);
             this.toolStripButton10.Text = "交易明细";
             this.toolStripButton10.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // toolStripButton11
             // 
-            this.toolStripButton11.Image = global::PortFolio.Properties.Resources.删除记录;
             this.toolStripButton11.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton11.Name = "toolStripButton11";
-            this.toolStripButton11.Size = new System.Drawing.Size(60, 75);
+            this.toolStripButton11.Size = new System.Drawing.Size(60, 22);
             this.toolStripButton11.Text = "删除记录";
             this.toolStripButton11.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // toolStripButton12
             // 
-            this.toolStripButton12.Image = global::PortFolio.Properties.Resources.行情刷新;
             this.toolStripButton12.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton12.Name = "toolStripButton12";
-            this.toolStripButton12.Size = new System.Drawing.Size(60, 75);
+            this.toolStripButton12.Size = new System.Drawing.Size(60, 22);
             this.toolStripButton12.Text = "行情刷新";
             this.toolStripButton12.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // toolStripButton13
             // 
-            this.toolStripButton13.Image = global::PortFolio.Properties.Resources.投资分析;
             this.toolStripButton13.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton13.Name = "toolStripButton13";
-            this.toolStripButton13.Size = new System.Drawing.Size(60, 75);
+            this.toolStripButton13.Size = new System.Drawing.Size(60, 22);
             this.toolStripButton13.Text = "投资分析";
             this.toolStripButton13.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // toolStripButton14
             // 
-            this.toolStripButton14.Image = global::PortFolio.Properties.Resources.参数设置;
             this.toolStripButton14.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton14.Name = "toolStripButton14";
-            this.toolStripButton14.Size = new System.Drawing.Size(60, 75);
+            this.toolStripButton14.Size = new System.Drawing.Size(60, 22);
             this.toolStripButton14.Text = "参数设置";
             this.toolStripButton14.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // toolStripButton15
             // 
-            this.toolStripButton15.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton15.Image")));
             this.toolStripButton15.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton15.Name = "toolStripButton15";
-            this.toolStripButton15.Size = new System.Drawing.Size(60, 75);
-            this.toolStripButton15.Text = "头寸操作";
+            this.toolStripButton15.Size = new System.Drawing.Size(60, 22);
+            this.toolStripButton15.Text = "头寸监控";
             this.toolStripButton15.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolStripButton15.ToolTipText = "头寸操作";
             // 
@@ -561,17 +600,9 @@
             this.dataGridView1.Location = new System.Drawing.Point(132, 106);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(1329, 336);
+            this.dataGridView1.Size = new System.Drawing.Size(1117, 340);
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // listView1
-            // 
-            this.listView1.Location = new System.Drawing.Point(5, 106);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(121, 336);
-            this.listView1.TabIndex = 3;
-            this.listView1.UseCompatibleStateImageBehavior = false;
             // 
             // order
             // 
@@ -670,24 +701,351 @@
             this.market.Name = "market";
             this.market.Width = 54;
             // 
+            // labelAccountSummary
+            // 
+            this.labelAccountSummary.AutoSize = true;
+            this.labelAccountSummary.Location = new System.Drawing.Point(5, 447);
+            this.labelAccountSummary.Name = "labelAccountSummary";
+            this.labelAccountSummary.Size = new System.Drawing.Size(53, 12);
+            this.labelAccountSummary.TabIndex = 4;
+            this.labelAccountSummary.Text = "账户概述";
+            this.labelAccountSummary.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(5, 467);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(65, 12);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "账户名称：";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // labelAccountName
+            // 
+            this.labelAccountName.AutoSize = true;
+            this.labelAccountName.Location = new System.Drawing.Point(64, 467);
+            this.labelAccountName.Name = "labelAccountName";
+            this.labelAccountName.Size = new System.Drawing.Size(53, 12);
+            this.labelAccountName.TabIndex = 4;
+            this.labelAccountName.Text = "账户名称";
+            this.labelAccountName.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(5, 496);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(65, 12);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "投入资金：";
+            this.label2.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(64, 496);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(53, 12);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "投入资金";
+            this.label3.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(155, 467);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(41, 12);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "市值：";
+            this.label4.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(214, 467);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(29, 12);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "市值";
+            this.label5.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(155, 496);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(65, 12);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "资金余额：";
+            this.label6.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(214, 496);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(53, 12);
+            this.label7.TabIndex = 4;
+            this.label7.Text = "资金余额";
+            this.label7.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(314, 467);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(53, 12);
+            this.label8.TabIndex = 4;
+            this.label8.Text = "总资产：";
+            this.label8.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(373, 467);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(41, 12);
+            this.label9.TabIndex = 4;
+            this.label9.Text = "总资产";
+            this.label9.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(314, 496);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(65, 12);
+            this.label10.TabIndex = 4;
+            this.label10.Text = "持股品种：";
+            this.label10.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(373, 496);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(53, 12);
+            this.label11.TabIndex = 4;
+            this.label11.Text = "持股品种";
+            this.label11.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(473, 467);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(53, 12);
+            this.label12.TabIndex = 4;
+            this.label12.Text = "仓筹比：";
+            this.label12.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(532, 467);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(41, 12);
+            this.label13.TabIndex = 4;
+            this.label13.Text = "仓筹比";
+            this.label13.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(473, 496);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(65, 12);
+            this.label14.TabIndex = 4;
+            this.label14.Text = "成交盈亏：";
+            this.label14.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(532, 496);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(53, 12);
+            this.label15.TabIndex = 4;
+            this.label15.Text = "投入资金";
+            this.label15.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(628, 467);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(77, 12);
+            this.label16.TabIndex = 4;
+            this.label16.Text = "成交赢利率：";
+            this.label16.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(699, 467);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(65, 12);
+            this.label17.TabIndex = 4;
+            this.label17.Text = "成交赢利率";
+            this.label17.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(628, 496);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(53, 12);
+            this.label18.TabIndex = 4;
+            this.label18.Text = "总盈亏：";
+            this.label18.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(687, 496);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(41, 12);
+            this.label19.TabIndex = 4;
+            this.label19.Text = "总盈亏";
+            this.label19.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(5, 527);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(65, 12);
+            this.label20.TabIndex = 4;
+            this.label20.Text = "总盈利率：";
+            this.label20.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(64, 527);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(53, 12);
+            this.label21.TabIndex = 4;
+            this.label21.Text = "总盈利率";
+            this.label21.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // contextMenuStripForAccountList
+            // 
+            this.contextMenuStripForAccountList.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.登录账户ToolStripMenuItem1,
+            this.关闭账户ToolStripMenuItem1,
+            this.新增账户ToolStripMenuItem,
+            this.删除账户ToolStripMenuItem1,
+            this.修改账户名ToolStripMenuItem,
+            this.修改账户密码ToolStripMenuItem,
+            this.账户流水ToolStripMenuItem,
+            this.账户概述ToolStripMenuItem});
+            this.contextMenuStripForAccountList.Name = "contextMenuStripForAccountList";
+            this.contextMenuStripForAccountList.Size = new System.Drawing.Size(149, 180);
+            // 
+            // 登录账户ToolStripMenuItem1
+            // 
+            this.登录账户ToolStripMenuItem1.Name = "登录账户ToolStripMenuItem1";
+            this.登录账户ToolStripMenuItem1.Size = new System.Drawing.Size(148, 22);
+            this.登录账户ToolStripMenuItem1.Text = "登录账户";
+            // 
+            // 关闭账户ToolStripMenuItem1
+            // 
+            this.关闭账户ToolStripMenuItem1.Name = "关闭账户ToolStripMenuItem1";
+            this.关闭账户ToolStripMenuItem1.Size = new System.Drawing.Size(148, 22);
+            this.关闭账户ToolStripMenuItem1.Text = "关闭账户";
+            // 
+            // 新增账户ToolStripMenuItem
+            // 
+            this.新增账户ToolStripMenuItem.Name = "新增账户ToolStripMenuItem";
+            this.新增账户ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.新增账户ToolStripMenuItem.Text = "新增账户";
+            // 
+            // 删除账户ToolStripMenuItem1
+            // 
+            this.删除账户ToolStripMenuItem1.Name = "删除账户ToolStripMenuItem1";
+            this.删除账户ToolStripMenuItem1.Size = new System.Drawing.Size(148, 22);
+            this.删除账户ToolStripMenuItem1.Text = "删除账户";
+            // 
+            // 修改账户名ToolStripMenuItem
+            // 
+            this.修改账户名ToolStripMenuItem.Name = "修改账户名ToolStripMenuItem";
+            this.修改账户名ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.修改账户名ToolStripMenuItem.Text = "修改账户名";
+            // 
+            // 修改账户密码ToolStripMenuItem
+            // 
+            this.修改账户密码ToolStripMenuItem.Name = "修改账户密码ToolStripMenuItem";
+            this.修改账户密码ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.修改账户密码ToolStripMenuItem.Text = "修改账户密码";
+            // 
+            // 账户流水ToolStripMenuItem
+            // 
+            this.账户流水ToolStripMenuItem.Name = "账户流水ToolStripMenuItem";
+            this.账户流水ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.账户流水ToolStripMenuItem.Text = "账户流水";
+            // 
+            // 账户概述ToolStripMenuItem
+            // 
+            this.账户概述ToolStripMenuItem.Name = "账户概述ToolStripMenuItem";
+            this.账户概述ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.账户概述ToolStripMenuItem.Text = "账户概述";
+            // 
+            // accountListBox
+            // 
+            this.accountListBox.FormattingEnabled = true;
+            this.accountListBox.ItemHeight = 12;
+            this.accountListBox.Location = new System.Drawing.Point(7, 106);
+            this.accountListBox.Name = "accountListBox";
+            this.accountListBox.Size = new System.Drawing.Size(125, 340);
+            this.accountListBox.TabIndex = 5;
+            this.accountListBox.Click += new System.EventHandler(this.accountListBox_Click);
+            this.accountListBox.DoubleClick += new System.EventHandler(this.accountListBox_DoubleClick);
+            // 
             // PortfolioMainDlg
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1473, 540);
-            this.Controls.Add(this.listView1);
+            this.ClientSize = new System.Drawing.Size(1276, 550);
+            this.Controls.Add(this.accountListBox);
+            this.Controls.Add(this.label21);
+            this.Controls.Add(this.label19);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.label20);
+            this.Controls.Add(this.label18);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.label17);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.labelAccountName);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelAccountSummary);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.menuStripAccount);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.MainMenuStrip = this.menuStripAccount;
             this.Name = "PortfolioMainDlg";
-            this.Text = "PortfolioMainDlg";
+            this.Text = "通达信个人理财仿真";
             this.menuStripAccount.ResumeLayout(false);
             this.menuStripAccount.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.contextMenuStripForAccountList.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -697,41 +1055,41 @@
 
         private System.Windows.Forms.MenuStrip menuStripAccount;
         private System.Windows.Forms.ToolStripMenuItem 账户ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 登录账户ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 关闭账户ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 修改账号名ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 修改登录密码ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 新建账户ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 删除账户ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem AccountLoginToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem CloseAccountToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem UpdateAccountNameToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem UpdateAccountPasswordToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem CreateAccountToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem DeleteAccountToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 信息ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 流水账ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem GeneralJournalToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 交易明细ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 账户属性ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem AccountDetailToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 操作ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 多开ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 空开ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem BuyOpenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem SoldOpenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 分析ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 设置ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 关闭ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 多平股票ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 空平股票ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem CloseToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem BuyCloseToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem SoldCloseToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 送配股票ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 送股ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 配股ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 送衍生品种ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 划入股票ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 划出股票ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 追加资金ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 划出资金ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 现金红冲ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 现金蓝补ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 删除记录ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem MoveInToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem MoveOutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem MoveInMoneyToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem MoveOutMoneyToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem MoneyHongChongToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem MoneyLanbuToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem DeleteEventToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 投资分析ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 数据导出ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 数据打印ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem txt格式存盘ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem xls根式存盘ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 参数设置ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem AccountConfigToolStripMenuItem;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
@@ -749,7 +1107,6 @@
         private System.Windows.Forms.ToolStripButton toolStripButton14;
         private System.Windows.Forms.ToolStripButton toolStripButton15;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.DataGridViewButtonColumn order;
         private System.Windows.Forms.DataGridViewTextBoxColumn code;
         private System.Windows.Forms.DataGridViewTextBoxColumn name;
@@ -766,6 +1123,39 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn positionRatio;
         private System.Windows.Forms.DataGridViewTextBoxColumn purchaseDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn market;
+        private System.Windows.Forms.Label labelAccountSummary;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelAccountName;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStripForAccountList;
+        private System.Windows.Forms.ToolStripMenuItem 登录账户ToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem 关闭账户ToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem 新增账户ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 删除账户ToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem 修改账户名ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 修改账户密码ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 账户流水ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 账户概述ToolStripMenuItem;
+        private System.Windows.Forms.ListBox accountListBox;
     }
 }
 

@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetScreen", "GetScreen\GetScreen.csproj", "{0C7313FC-291D-4E67-9879-8C85EF16C467}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0C7313FC-291D-4E67-9879-8C85EF16C467}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C7313FC-291D-4E67-9879-8C85EF16C467}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C7313FC-291D-4E67-9879-8C85EF16C467}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C7313FC-291D-4E67-9879-8C85EF16C467}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

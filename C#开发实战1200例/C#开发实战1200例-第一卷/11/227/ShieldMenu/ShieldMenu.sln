@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShieldMenu", "ShieldMenu\ShieldMenu.csproj", "{7A32E6FC-6715-4E53-849C-65FACFCAEDE3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7A32E6FC-6715-4E53-849C-65FACFCAEDE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A32E6FC-6715-4E53-849C-65FACFCAEDE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A32E6FC-6715-4E53-849C-65FACFCAEDE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A32E6FC-6715-4E53-849C-65FACFCAEDE3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

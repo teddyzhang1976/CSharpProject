@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="db_TomeTwo" Class="linqtosqlDataContextDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=MRWXK\WANGXIAOKE;Initial Catalog=db_TomeTwo;User ID=sa" SettingsObjectName="FindDataByLINQ.Properties.Settings" SettingsPropertyName="db_TomeTwoConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.tb_User" Member="tb_User">
+    <Type Name="tb_User">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="User_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="User_Sex" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="User_Age" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="User_Marriage" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="User_Duty" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="User_Pay" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="User_Phone" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="User_Address" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

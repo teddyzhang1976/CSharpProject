@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InsertToSQL", "InsertToSQL\InsertToSQL.csproj", "{B1C55B28-14E3-465E-B74E-08C4E6926E63}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B1C55B28-14E3-465E-B74E-08C4E6926E63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1C55B28-14E3-465E-B74E-08C4E6926E63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1C55B28-14E3-465E-B74E-08C4E6926E63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1C55B28-14E3-465E-B74E-08C4E6926E63}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShareAccess", "ShareAccess\ShareAccess.csproj", "{FBD1B9F3-8DFE-46DB-8528-5D81E73A2955}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FBD1B9F3-8DFE-46DB-8528-5D81E73A2955}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBD1B9F3-8DFE-46DB-8528-5D81E73A2955}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBD1B9F3-8DFE-46DB-8528-5D81E73A2955}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBD1B9F3-8DFE-46DB-8528-5D81E73A2955}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

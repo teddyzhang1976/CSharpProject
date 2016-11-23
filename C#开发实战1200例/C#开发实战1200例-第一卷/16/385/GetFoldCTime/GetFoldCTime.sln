@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetFoldCTime", "GetFoldCTime\GetFoldCTime.csproj", "{65D0009D-6B98-4C77-96E9-25CB940B975A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{65D0009D-6B98-4C77-96E9-25CB940B975A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65D0009D-6B98-4C77-96E9-25CB940B975A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65D0009D-6B98-4C77-96E9-25CB940B975A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65D0009D-6B98-4C77-96E9-25CB940B975A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

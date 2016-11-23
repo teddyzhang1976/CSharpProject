@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{71C8514A-7AA6-4A1C-8563-A0F07DC99E7C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SoundCalculator</RootNamespace>
+    <AssemblyName>SoundCalculator</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Frm_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Main.Designer.cs">
+      <DependentUpon>Frm_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Set.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Set.Designer.cs">
+      <DependentUpon>Frm_Set.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Frm_Main.resx">
+      <DependentUpon>Frm_Main.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Set.resx">
+      <DependentUpon>Frm_Set.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Amound.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Bear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\c.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\ce.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Decr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Deno.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Dot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Hund.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Ride.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\sqrt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\sqrt1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\0_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\1_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\2_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\3_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\4_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\5_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\6_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\7_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\8_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\9_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Add1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Amound1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\back1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Bear1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\c1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\ce1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Decr1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Deno1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Dot1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Humd1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Remove1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Ride1.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DummyKey", "DummyKey\DummyKey.csproj", "{3A6E24B0-6081-453D-954C-A32EDD326A83}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HookEx", "HookEx\HookEx.csproj", "{73621A80-1FAE-4198-9478-FA462B8D365E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3A6E24B0-6081-453D-954C-A32EDD326A83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A6E24B0-6081-453D-954C-A32EDD326A83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A6E24B0-6081-453D-954C-A32EDD326A83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A6E24B0-6081-453D-954C-A32EDD326A83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73621A80-1FAE-4198-9478-FA462B8D365E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73621A80-1FAE-4198-9478-FA462B8D365E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73621A80-1FAE-4198-9478-FA462B8D365E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73621A80-1FAE-4198-9478-FA462B8D365E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

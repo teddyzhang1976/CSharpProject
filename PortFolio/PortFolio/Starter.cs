@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PortFolio.Control;
 
 namespace PortFolio
 {
@@ -15,10 +16,14 @@ namespace PortFolio
         [STAThread]
         static void Main()
         {
+            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            //loadin data
+            PortFolioManager pfMgr = PortFolioManager.singleInstance;
             //Application.Run(new PortfolioMainDlg());
-            Application.Run(new PositionTradingDlg());
+            //Application.Run(new PositionTradingDlg());
+            Application.Run(pfMgr.selectMainDlg());
         }
     }
 }

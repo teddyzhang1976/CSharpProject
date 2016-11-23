@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnatchPlayTime", "SnatchPlayTime\SnatchPlayTime.csproj", "{7B911F78-11DE-40D3-BE00-5988D8F67F50}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7B911F78-11DE-40D3-BE00-5988D8F67F50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B911F78-11DE-40D3-BE00-5988D8F67F50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B911F78-11DE-40D3-BE00-5988D8F67F50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B911F78-11DE-40D3-BE00-5988D8F67F50}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

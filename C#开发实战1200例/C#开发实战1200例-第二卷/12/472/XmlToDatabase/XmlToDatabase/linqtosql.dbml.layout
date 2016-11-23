@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="linqtosql">
+  <DataContextMoniker Name="/linqtosqlDataContext" />
+  <nestedChildShapes>
+    <classShape Id="f46c48aa-02e1-46e9-9d85-1f59eff9a1c6" absoluteBounds="5.75, 2.625, 2, 1.5715458170572916">
+      <DataClassMoniker Name="/linqtosqlDataContext/tb_XML" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9dc8a028-896e-408a-8e70-5d1d45e87200" absoluteBounds="5.765, 3.085, 1.9700000000000002, 1.0115458170572915" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalMultiSheet", "CalMultiSheet\CalMultiSheet.csproj", "{01EB3CAF-575B-425D-9F1C-254A0CF2054F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{01EB3CAF-575B-425D-9F1C-254A0CF2054F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01EB3CAF-575B-425D-9F1C-254A0CF2054F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01EB3CAF-575B-425D-9F1C-254A0CF2054F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01EB3CAF-575B-425D-9F1C-254A0CF2054F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

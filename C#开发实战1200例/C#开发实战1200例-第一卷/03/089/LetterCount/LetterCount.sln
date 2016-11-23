@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LetterCount", "LetterCount\LetterCount.csproj", "{F297535F-8585-4F5E-9C5A-051113BB21EE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F297535F-8585-4F5E-9C5A-051113BB21EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F297535F-8585-4F5E-9C5A-051113BB21EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F297535F-8585-4F5E-9C5A-051113BB21EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F297535F-8585-4F5E-9C5A-051113BB21EE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

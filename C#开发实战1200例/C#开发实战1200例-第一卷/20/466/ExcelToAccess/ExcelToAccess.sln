@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelToAccess", "ExcelToAccess\ExcelToAccess.csproj", "{AD9D4933-541A-4339-92AC-1D40B81D4BDB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AD9D4933-541A-4339-92AC-1D40B81D4BDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD9D4933-541A-4339-92AC-1D40B81D4BDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD9D4933-541A-4339-92AC-1D40B81D4BDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD9D4933-541A-4339-92AC-1D40B81D4BDB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

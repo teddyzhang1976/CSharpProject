@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="db_TomeTwo" Class="DataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=MRWXK\WANGXIAOKE;Initial Catalog=db_TomeTwo;User ID=sa" SettingsObjectName="MultiTableJoin.Properties.Settings" SettingsPropertyName="db_TomeTwoConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.SaleContent" Member="SaleContent">
+    <Type Name="SaleContent">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SaleBillCode" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="SaleMan" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="SaleDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ClientCode" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="WareHouse" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="PayMode" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="InvoiceType" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="InvoiceCode" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Memo" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Operator" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="OperateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AuditFlag" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SaleDetail" Member="SaleDetail">
+    <Type Name="SaleDetail">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SaleBillCode" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="ProductCode" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Quantity" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Price" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="Memo" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Cost" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProductInfo" Member="ProductInfo">
+    <Type Name="ProductInfo">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ProductCode" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="HelpCode" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="ShortName" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="ProductName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Specs" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ProductType" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Yieldly" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Unit" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="WareHouse" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="MaxStore" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MinStore" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsStop" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="RetailPrice" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TradePrice" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="MinimumPrice" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="AdrisePrice" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CurMarketingPrice" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Operator" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="OperateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EmployeeInfo" Member="EmployeeInfo">
+    <Type Name="EmployeeInfo">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="EmployeeCode" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="HelpCode" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Sex" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Birthday" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Handset" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Tel" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Addr" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="IDCard" Type="System.String" DbType="VarChar(22)" CanBeNull="true" />
+      <Column Name="EMail" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Operator" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="OperateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.WarehouseInfo" Member="WarehouseInfo">
+    <Type Name="WarehouseInfo">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="WareHouseCode" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="HelpCode" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="ShortName" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="WareHouseName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Location" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Area" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Memo" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ClientInfo" Member="ClientInfo">
+    <Type Name="ClientInfo">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ClientCode" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="HelpCode" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="ShortName" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="CompanyName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="CompanyAddr" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="CompanyTel" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Linkman" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="LinkTel" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Fax" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="ClientType" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="ClientKind" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="ClientArea" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ClientProperty" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="PostAddr" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="PostalCode" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Bank" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Accounts" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="TaxNum" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="EMail" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="HomePage" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Memo" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Operator" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="OperateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
