@@ -1,0 +1,54 @@
+﻿body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #000;
+    line-height: normal;
+    font-variant: normal;
+    font-weight: normal;
+    font-size-adjust: none;
+    font-stretch: normal;
+    min-height: 500px;
+}
+
+.top {
+    margin: 5px 20px;
+}
+
+    .top h1 {
+        font-size: large;
+        text-align: center;
+    }
+
+.left {
+    float: left;
+    position: relative;
+}
+
+.main {
+    margin: 20px;
+    position: relative;
+    float: left;
+}
+
+.bottom {
+    clear: both;
+    display: block;
+    height: 30px;
+    margin: 10px 0px 0px 0px;
+    padding: 0px;
+    text-align: center;
+    vertical-align: bottom;
+    font-size: xx-small;
+}
+
+    .bottom div {
+        display: inline;
+        margin: 7px;
+        margin: 10px;
+    }
+
+.wrapper {
+    width: 1020px;
+}
+
+.mainnav {
+}

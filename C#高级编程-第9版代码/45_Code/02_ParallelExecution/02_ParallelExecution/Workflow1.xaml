@@ -1,0 +1,104 @@
+﻿<Activity mc:Ignorable="sap sap2010 sads" x:Class="_02_ParallelExecution.Workflow1" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap2010:WorkflowViewState.IdRef="_02_ParallelExecution.Workflow1_1"
+ xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+ xmlns:local="clr-namespace:_02_ParallelExecution"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities"
+ xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger"
+ xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
+ xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
+ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
+ xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>_02_ParallelExecution</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>02_ParallelExecution</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:Int32" Name="stuff" />
+    </Sequence.Variables>
+    <WriteLine sap2010:WorkflowViewState.IdRef="WriteLine_1">
+      <InArgument x:TypeArguments="x:String">
+        <mca:CSharpValue x:TypeArguments="x:String">string.Format("The time is {0}", DateTime.Now)</mca:CSharpValue>
+      </InArgument>
+    </WriteLine>
+    <Parallel sap2010:WorkflowViewState.IdRef="Parallel_1">
+      <Parallel.Variables>
+        <Variable x:TypeArguments="local:WorkerClass" Name="workerClass">
+          <Variable.Default>
+            <mca:CSharpValue x:TypeArguments="local:WorkerClass">new WorkerClass()</mca:CSharpValue>
+          </Variable.Default>
+        </Variable>
+      </Parallel.Variables>
+      <InvokeMethod sap2010:WorkflowViewState.IdRef="InvokeMethod_1" MethodName="DoJob1" RunAsynchronously="True">
+        <InvokeMethod.TargetObject>
+          <InArgument x:TypeArguments="local:WorkerClass">
+            <mca:CSharpValue x:TypeArguments="local:WorkerClass">workerClass</mca:CSharpValue>
+          </InArgument>
+        </InvokeMethod.TargetObject>
+      </InvokeMethod>
+      <InvokeMethod sap2010:WorkflowViewState.IdRef="InvokeMethod_2" MethodName="DoJob2" RunAsynchronously="True">
+        <InvokeMethod.TargetObject>
+          <InArgument x:TypeArguments="local:WorkerClass">
+            <mca:CSharpValue x:TypeArguments="local:WorkerClass">workerClass</mca:CSharpValue>
+          </InArgument>
+        </InvokeMethod.TargetObject>
+      </InvokeMethod>
+      <InvokeMethod sap2010:WorkflowViewState.IdRef="InvokeMethod_3" MethodName="DoMore" RunAsynchronously="True" TargetType="local:WorkerClass">
+        <InvokeMethod.Result>
+          <OutArgument x:TypeArguments="x:Int32">
+            <mca:CSharpReference x:TypeArguments="x:Int32">stuff</mca:CSharpReference>
+          </OutArgument>
+        </InvokeMethod.Result>
+        <InArgument x:TypeArguments="x:Int32">5000</InArgument>
+      </InvokeMethod>
+    </Parallel>
+    <WriteLine sap2010:WorkflowViewState.IdRef="WriteLine_2">
+      <InArgument x:TypeArguments="x:String">
+        <mca:CSharpValue x:TypeArguments="x:String">string.Format("The time is now {0} and the return value from calling a method is {1}", DateTime.Now, stuff)</mca:CSharpValue>
+      </InArgument>
+    </WriteLine>
+    <sads:DebugSymbol.Symbol>d3dFOlxNb3JnYW5cRG9jdW1lbnRzXEhvbWVcV2lsZXlcUHJvZmVzc2lvbmFsIEMjXENINDUgV29ya2Zsb3cgNFwwMl9QYXJhbGxlbEV4ZWN1dGlvblwwMl9QYXJhbGxlbEV4ZWN1dGlvblxXb3JrZmxvdzEueGFtbA4nA1UOAgEBKwUvEQIBFjAFThACAQVPBVMRAgECLQktdQIBFzQNNGUCAQY4Bz4WAgESPwdFFgIBDkYHTRYCAQlRCVGyAQIBAzsNO18CARNCDUJfAgEPTC9MMwIBDUkNSVcCAQo=</sads:DebugSymbol.Symbol>
+  </Sequence>
+  <sap2010:WorkflowViewState.ViewStateManager>
+    <sap2010:ViewStateManager>
+      <sap2010:ViewStateData Id="WriteLine_1" sap:VirtualizedContainerService.HintSize="848,62" />
+      <sap2010:ViewStateData Id="InvokeMethod_1" sap:VirtualizedContainerService.HintSize="218,134" />
+      <sap2010:ViewStateData Id="InvokeMethod_2" sap:VirtualizedContainerService.HintSize="218,134" />
+      <sap2010:ViewStateData Id="InvokeMethod_3" sap:VirtualizedContainerService.HintSize="218,134" />
+      <sap2010:ViewStateData Id="Parallel_1" sap:VirtualizedContainerService.HintSize="848,180" />
+      <sap2010:ViewStateData Id="WriteLine_2" sap:VirtualizedContainerService.HintSize="848,62" />
+      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="870,508">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="_02_ParallelExecution.Workflow1_1" sap:VirtualizedContainerService.HintSize="910,588" />
+    </sap2010:ViewStateManager>
+  </sap2010:WorkflowViewState.ViewStateManager>
+</Activity>

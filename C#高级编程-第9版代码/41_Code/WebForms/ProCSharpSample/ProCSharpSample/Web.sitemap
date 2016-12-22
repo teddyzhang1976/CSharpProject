@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="~/Default.aspx" title="Home"
+    description="Professional C# 5 Demo Web Application">
+    <siteMapNode url="MeetingRooms.aspx" title="Meeting Rooms" description="" >
+      <siteMapNode url="~/ReserveRoom.aspx" title="Reserve a Room" />
+      <siteMapNode url="~/CancelRoom.aspx" title="Cancel a Room" />
+    </siteMapNode>
+    <siteMapNode url="~/Accounts.aspx" title="Accounts">
+      <siteMapNode url="~/RegisterUser.aspx" title="Register User"
+        description="" />
+    </siteMapNode>
+  </siteMapNode>
+</siteMap>

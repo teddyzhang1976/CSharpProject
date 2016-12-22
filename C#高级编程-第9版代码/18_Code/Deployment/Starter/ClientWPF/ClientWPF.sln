@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientWPF", "ClientWPF\ClientWPF.csproj", "{23459982-5B40-42B8-8F59-68F0BE99F3C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppSupport", "AppSupport\AppSupport.csproj", "{F3B61026-54D5-40A9-9934-ABC59EBB7355}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{23459982-5B40-42B8-8F59-68F0BE99F3C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23459982-5B40-42B8-8F59-68F0BE99F3C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23459982-5B40-42B8-8F59-68F0BE99F3C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23459982-5B40-42B8-8F59-68F0BE99F3C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3B61026-54D5-40A9-9934-ABC59EBB7355}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3B61026-54D5-40A9-9934-ABC59EBB7355}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3B61026-54D5-40A9-9934-ABC59EBB7355}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3B61026-54D5-40A9-9934-ABC59EBB7355}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

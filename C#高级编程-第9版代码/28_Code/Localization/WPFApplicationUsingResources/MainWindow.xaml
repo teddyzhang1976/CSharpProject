@@ -1,0 +1,14 @@
+﻿<Window x:Class="Wrox.ProCSharp.Localization.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:props="clr-namespace:Wrox.ProCSharp.Localization.Properties"
+        Title="WPF Sample" Height="240" Width="500">
+    <Grid>
+        <Grid>
+            <Button Name="button1" Margin="30,20,30,20" Click="Button_Click"
+            Content="{x:Static Member=props:Resources.Button1Text}" />
+        </Grid>
+
+
+    </Grid>
+</Window>

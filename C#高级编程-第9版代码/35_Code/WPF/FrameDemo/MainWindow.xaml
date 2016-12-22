@@ -1,0 +1,6 @@
+﻿<Window x:Class="FrameDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Frames Demo" Height="240" Width="500">
+    <Frame Source="http://www.cninnovation.com" />
+</Window>

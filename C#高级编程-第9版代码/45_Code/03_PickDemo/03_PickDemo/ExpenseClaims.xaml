@@ -1,0 +1,130 @@
+﻿<Activity mc:Ignorable="sap sap2010 sads" x:Class="_03_PickDemo.ExpenseClaims" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap2010:WorkflowViewState.IdRef="_03_PickDemo.ExpenseClaims_1"
+ xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+ xmlns:local="clr-namespace:_03_PickDemo"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities"
+ xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger"
+ xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
+ xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
+ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
+ xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Text</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>03_PickDemo.SharedInterfaces</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Windows.Forms</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>03_PickDemo</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Default="Approved" Name="ApprovedBookmark" />
+      <Variable x:TypeArguments="x:String" Default="Rejected" Name="RejectedBookmark" />
+    </Sequence.Variables>
+    <local:CallPromptService DisplayName="DisplayPrompt" sap2010:WorkflowViewState.IdRef="CallPromptService_1" Prompt="Please approve or reject the expense claim">
+      <local:CallPromptService.AcceptedBookmarkName>
+        <InArgument x:TypeArguments="x:String">
+          <mca:CSharpValue x:TypeArguments="x:String">ApprovedBookmark</mca:CSharpValue>
+        </InArgument>
+      </local:CallPromptService.AcceptedBookmarkName>
+      <local:CallPromptService.RejectedBookmarkName>
+        <InArgument x:TypeArguments="x:String">
+          <mca:CSharpValue x:TypeArguments="x:String">RejectedBookmark</mca:CSharpValue>
+        </InArgument>
+      </local:CallPromptService.RejectedBookmarkName>
+    </local:CallPromptService>
+    <Pick sap2010:WorkflowViewState.IdRef="Pick_1">
+      <PickBranch DisplayName="Branch1" sap2010:WorkflowViewState.IdRef="PickBranch_1">
+        <PickBranch.Trigger>
+          <local:WaitForData DisplayName="WaitForApproval" sap2010:WorkflowViewState.IdRef="WaitForData_1">
+            <local:WaitForData.BookmarkName>
+              <InArgument x:TypeArguments="x:String">
+                <mca:CSharpValue x:TypeArguments="x:String">ApprovedBookmark</mca:CSharpValue>
+              </InArgument>
+            </local:WaitForData.BookmarkName>
+          </local:WaitForData>
+        </PickBranch.Trigger>
+        <WriteLine sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="Your expenses were approved" />
+      </PickBranch>
+      <PickBranch DisplayName="Branch2" sap2010:WorkflowViewState.IdRef="PickBranch_2">
+        <PickBranch.Trigger>
+          <local:WaitForData DisplayName="WaitForRejection" sap2010:WorkflowViewState.IdRef="WaitForData_2">
+            <local:WaitForData.BookmarkName>
+              <InArgument x:TypeArguments="x:String">
+                <mca:CSharpValue x:TypeArguments="x:String">RejectedBookmark</mca:CSharpValue>
+              </InArgument>
+            </local:WaitForData.BookmarkName>
+          </local:WaitForData>
+        </PickBranch.Trigger>
+        <WriteLine sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="Your expenses were rejected" />
+      </PickBranch>
+      <PickBranch sap2010:WorkflowViewState.IdRef="PickBranch_3">
+        <PickBranch.Trigger>
+          <Delay sap2010:WorkflowViewState.IdRef="Delay_1">
+            <InArgument x:TypeArguments="x:TimeSpan">
+              <mca:CSharpValue x:TypeArguments="x:TimeSpan">TimeSpan.FromSeconds(10)</mca:CSharpValue>
+            </InArgument>
+          </Delay>
+        </PickBranch.Trigger>
+        <Sequence sap2010:WorkflowViewState.IdRef="Sequence_1">
+          <local:CancelPromptService DisplayName="CancelPrompt" sap2010:WorkflowViewState.IdRef="CancelPromptService_1" />
+          <WriteLine sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="Timeout waiting for a response" />
+        </Sequence>
+      </PickBranch>
+    </Pick>
+    <sads:DebugSymbol.Symbol>d2lFOlxNb3JnYW5cRG9jdW1lbnRzXEhvbWVcV2lsZXlcUHJvZmVzc2lvbmFsIEMjXENINDUgV29ya2Zsb3cgNFwwM19QaWNrRGVtb1wwM19QaWNrRGVtb1xFeHBlbnNlQ2xhaW1zLnhhbWwZKQNiDgIBASs0Kz4CAQMsNCw+AgECLgU5HwIBHDoFYAwCAQQudy6jAQIBIzYLNlkCASAxCzFZAgEdOwdGFAIBFUcHUhQCAQ5TB18UAgEFPQtDHwIBGEUJRWcCARZJC08fAgERUQlRZwIBD1ULWRMCAQpbCV4UAgEGQBFAXwIBGUVHRWQCARdMEUxfAgESUUdRZAIBEFcPV2cCAQtcC1x7AgEJXQtdbAIBB11JXWkCAQg=</sads:DebugSymbol.Symbol>
+  </Sequence>
+  <sap2010:WorkflowViewState.ViewStateManager>
+    <sap2010:ViewStateManager>
+      <sap2010:ViewStateData Id="CallPromptService_1" sap:VirtualizedContainerService.HintSize="939,22" />
+      <sap2010:ViewStateData Id="WaitForData_1" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="WriteLine_1" sap:VirtualizedContainerService.HintSize="211,62" />
+      <sap2010:ViewStateData Id="PickBranch_1" sap:VirtualizedContainerService.HintSize="241,506" />
+      <sap2010:ViewStateData Id="WaitForData_2" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="WriteLine_2" sap:VirtualizedContainerService.HintSize="211,62" />
+      <sap2010:ViewStateData Id="PickBranch_2" sap:VirtualizedContainerService.HintSize="241,506" />
+      <sap2010:ViewStateData Id="Delay_1" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="CancelPromptService_1" sap:VirtualizedContainerService.HintSize="211,22" />
+      <sap2010:ViewStateData Id="WriteLine_3" sap:VirtualizedContainerService.HintSize="211,62" />
+      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="233,248">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="PickBranch_3" sap:VirtualizedContainerService.HintSize="263,506" />
+      <sap2010:ViewStateData Id="Pick_1" sap:VirtualizedContainerService.HintSize="939,552" />
+      <sap2010:ViewStateData Id="Sequence_2" sap:VirtualizedContainerService.HintSize="961,738">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="_03_PickDemo.ExpenseClaims_1" sap:VirtualizedContainerService.HintSize="1001,818" />
+    </sap2010:ViewStateManager>
+  </sap2010:WorkflowViewState.ViewStateManager>
+</Activity>

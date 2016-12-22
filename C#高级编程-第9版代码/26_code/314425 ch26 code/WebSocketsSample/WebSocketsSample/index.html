@@ -1,0 +1,40 @@
+﻿<!doctype html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+    <script src="Scripts/jquery-1.7.2.min.js" type="text/javascript"></script>
+    <title>WroxChat</title>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var name = prompt('what is your name?:');
+            var url = 'ws://localhost/ws.ashx?name=' + name;
+            ws = new WebSocket(url);
+            ws.onopen = function () {
+                $('#messages').prepend('Connected <br/>');
+                $('#cmdSend').click(function () {
+                    ws.send($('#txtMessage').val());
+                    $('#txtMessage').val('');
+                });
+            };
+            ws.onmessage = function (e) {
+                $('#chatMessages').prepend(e.data + '<br/>');
+            };
+            $('#cmdLeave').click(function () {
+                ws.close();
+            });
+            ws.onclose = function () {
+                $('#chatMessages').prepend('Closed <br/>');
+            };
+            ws.onerror = function (e) {
+                $('#chatMessages').prepend('Oops something went wront <br/>');
+            };
+        });
+    </script>
+</head>
+<body>
+<input id="txtMessage" />
+<input id="cmdSend" type="button" value="Send" />
+<input id="cmdLeave" type="button" value="Leave" />
+<br />
+<div id="chatMessages" />
+</body>
+

@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07_WorkflowsAsServices", "07_WorkflowsAsServices\07_WorkflowsAsServices.csproj", "{2241ACB5-3A57-4A5E-86C2-81B68DC1A337}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedInterfaces", "SharedInterfaces\SharedInterfaces.csproj", "{956046C3-74E2-4A1D-AB2F-CB8D308B07EB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientApp", "ClientApp\ClientApp.csproj", "{4DDDB16D-2156-4B8F-AA67-A8EDB2F8D825}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2241ACB5-3A57-4A5E-86C2-81B68DC1A337}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2241ACB5-3A57-4A5E-86C2-81B68DC1A337}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2241ACB5-3A57-4A5E-86C2-81B68DC1A337}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2241ACB5-3A57-4A5E-86C2-81B68DC1A337}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DDDB16D-2156-4B8F-AA67-A8EDB2F8D825}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DDDB16D-2156-4B8F-AA67-A8EDB2F8D825}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DDDB16D-2156-4B8F-AA67-A8EDB2F8D825}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DDDB16D-2156-4B8F-AA67-A8EDB2F8D825}.Release|Any CPU.Build.0 = Release|Any CPU
+		{956046C3-74E2-4A1D-AB2F-CB8D308B07EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{956046C3-74E2-4A1D-AB2F-CB8D308B07EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{956046C3-74E2-4A1D-AB2F-CB8D308B07EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{956046C3-74E2-4A1D-AB2F-CB8D308B07EB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

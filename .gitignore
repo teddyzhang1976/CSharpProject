@@ -3,6 +3,9 @@
 *.ko
 *.obj
 *.elf
+*.zip
+*.rar
+*.tgz
 
 # Precompiled Headers
 *.gch
@@ -31,6 +34,7 @@
 # Debug files
 *.dSYM/
 *.su
+*.suo
 # svn
 .svn/
 *.bak

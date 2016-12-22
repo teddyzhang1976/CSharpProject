@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 11
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShowFonts", "ShowFonts\ShowFonts.csproj", "{1A7A3F54-B77C-4FD5-92B0-9FF0030B7627}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextEffectsDemo", "TextEffectsDemo\TextEffectsDemo.csproj", "{290B7164-2F86-4C5C-9D8D-042DF519D017}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlowDocumentsDemo", "FlowDocumentsDemo\FlowDocumentsDemo.csproj", "{69B6B413-E0E0-43EF-8B60-3FBF2AD1542D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TableDemo", "TableDemo\TableDemo.csproj", "{F4F78C55-87DE-4D86-9306-46EB62E41850}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrintingDemo", "PrintingDemo\PrintingDemo.csproj", "{0A25F8C0-DD80-4051-895A-B63C5C6C92DC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0A25F8C0-DD80-4051-895A-B63C5C6C92DC}.Debug|x86.ActiveCfg = Debug|x86
+		{0A25F8C0-DD80-4051-895A-B63C5C6C92DC}.Debug|x86.Build.0 = Debug|x86
+		{0A25F8C0-DD80-4051-895A-B63C5C6C92DC}.Release|x86.ActiveCfg = Release|x86
+		{0A25F8C0-DD80-4051-895A-B63C5C6C92DC}.Release|x86.Build.0 = Release|x86
+		{1A7A3F54-B77C-4FD5-92B0-9FF0030B7627}.Debug|x86.ActiveCfg = Debug|x86
+		{1A7A3F54-B77C-4FD5-92B0-9FF0030B7627}.Debug|x86.Build.0 = Debug|x86
+		{1A7A3F54-B77C-4FD5-92B0-9FF0030B7627}.Release|x86.ActiveCfg = Release|x86
+		{1A7A3F54-B77C-4FD5-92B0-9FF0030B7627}.Release|x86.Build.0 = Release|x86
+		{290B7164-2F86-4C5C-9D8D-042DF519D017}.Debug|x86.ActiveCfg = Debug|x86
+		{290B7164-2F86-4C5C-9D8D-042DF519D017}.Debug|x86.Build.0 = Debug|x86
+		{290B7164-2F86-4C5C-9D8D-042DF519D017}.Release|x86.ActiveCfg = Release|x86
+		{290B7164-2F86-4C5C-9D8D-042DF519D017}.Release|x86.Build.0 = Release|x86
+		{69B6B413-E0E0-43EF-8B60-3FBF2AD1542D}.Debug|x86.ActiveCfg = Debug|x86
+		{69B6B413-E0E0-43EF-8B60-3FBF2AD1542D}.Debug|x86.Build.0 = Debug|x86
+		{69B6B413-E0E0-43EF-8B60-3FBF2AD1542D}.Release|x86.ActiveCfg = Release|x86
+		{69B6B413-E0E0-43EF-8B60-3FBF2AD1542D}.Release|x86.Build.0 = Release|x86
+		{F4F78C55-87DE-4D86-9306-46EB62E41850}.Debug|x86.ActiveCfg = Debug|x86
+		{F4F78C55-87DE-4D86-9306-46EB62E41850}.Debug|x86.Build.0 = Debug|x86
+		{F4F78C55-87DE-4D86-9306-46EB62E41850}.Release|x86.ActiveCfg = Release|x86
+		{F4F78C55-87DE-4D86-9306-46EB62E41850}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

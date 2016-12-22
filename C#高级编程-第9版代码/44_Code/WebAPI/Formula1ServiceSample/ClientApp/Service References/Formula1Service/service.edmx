@@ -1,0 +1,107 @@
+﻿<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+  <edmx:DataServices m:DataServiceVersion="3.0" m:MaxDataServiceVersion="3.0" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata">
+    <Schema Namespace="Formula1ServiceSample.Models" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <EntityType Name="Racer">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Int32" Nullable="false" />
+        <Property Name="Firstname" Type="Edm.String" />
+        <Property Name="Lastname" Type="Edm.String" />
+        <Property Name="Country" Type="Edm.String" />
+        <Property Name="Starts" Type="Edm.Int32" />
+        <Property Name="Wins" Type="Edm.Int32" />
+        <NavigationProperty Name="RaceResults" Relationship="Formula1ServiceSample.Models.Formula1ServiceSample_Models_Racer_RaceResults_Formula1ServiceSample_Models_RaceResult_RaceResultsPartner" ToRole="RaceResults" FromRole="RaceResultsPartner" />
+      </EntityType>
+      <EntityType Name="RaceResult">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Int32" Nullable="false" />
+        <Property Name="RaceId" Type="Edm.Int32" Nullable="false" />
+        <Property Name="Position" Type="Edm.Int32" Nullable="false" />
+        <Property Name="Grid" Type="Edm.Int32" />
+        <Property Name="Points" Type="Edm.Decimal" />
+        <Property Name="RacerId" Type="Edm.Int32" Nullable="false" />
+        <Property Name="TeamId" Type="Edm.Int32" Nullable="false" />
+        <NavigationProperty Name="Race" Relationship="Formula1ServiceSample.Models.Formula1ServiceSample_Models_RaceResult_Race_Formula1ServiceSample_Models_Race_RacePartner" ToRole="Race" FromRole="RacePartner" />
+        <NavigationProperty Name="Racer" Relationship="Formula1ServiceSample.Models.Formula1ServiceSample_Models_RaceResult_Racer_Formula1ServiceSample_Models_Racer_RacerPartner" ToRole="Racer" FromRole="RacerPartner" />
+      </EntityType>
+      <EntityType Name="Race">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Int32" Nullable="false" />
+        <Property Name="CircuitId" Type="Edm.Int32" Nullable="false" />
+        <Property Name="Date" Type="Edm.DateTime" Nullable="false" />
+        <NavigationProperty Name="Circuit" Relationship="Formula1ServiceSample.Models.Formula1ServiceSample_Models_Race_Circuit_Formula1ServiceSample_Models_Circuit_CircuitPartner" ToRole="Circuit" FromRole="CircuitPartner" />
+        <NavigationProperty Name="RaceResults" Relationship="Formula1ServiceSample.Models.Formula1ServiceSample_Models_Race_RaceResults_Formula1ServiceSample_Models_RaceResult_RaceResultsPartner" ToRole="RaceResults" FromRole="RaceResultsPartner" />
+      </EntityType>
+      <EntityType Name="Circuit">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Int32" Nullable="false" />
+        <Property Name="Name" Type="Edm.String" />
+        <Property Name="Country" Type="Edm.String" />
+        <NavigationProperty Name="Races" Relationship="Formula1ServiceSample.Models.Formula1ServiceSample_Models_Circuit_Races_Formula1ServiceSample_Models_Race_RacesPartner" ToRole="Races" FromRole="RacesPartner" />
+      </EntityType>
+      <Association Name="Formula1ServiceSample_Models_Racer_RaceResults_Formula1ServiceSample_Models_RaceResult_RaceResultsPartner">
+        <End Type="Formula1ServiceSample.Models.RaceResult" Role="RaceResults" Multiplicity="*" />
+        <End Type="Formula1ServiceSample.Models.Racer" Role="RaceResultsPartner" Multiplicity="0..1" />
+      </Association>
+      <Association Name="Formula1ServiceSample_Models_RaceResult_Race_Formula1ServiceSample_Models_Race_RacePartner">
+        <End Type="Formula1ServiceSample.Models.Race" Role="Race" Multiplicity="0..1" />
+        <End Type="Formula1ServiceSample.Models.RaceResult" Role="RacePartner" Multiplicity="0..1" />
+      </Association>
+      <Association Name="Formula1ServiceSample_Models_RaceResult_Racer_Formula1ServiceSample_Models_Racer_RacerPartner">
+        <End Type="Formula1ServiceSample.Models.Racer" Role="Racer" Multiplicity="0..1" />
+        <End Type="Formula1ServiceSample.Models.RaceResult" Role="RacerPartner" Multiplicity="0..1" />
+      </Association>
+      <Association Name="Formula1ServiceSample_Models_Race_Circuit_Formula1ServiceSample_Models_Circuit_CircuitPartner">
+        <End Type="Formula1ServiceSample.Models.Circuit" Role="Circuit" Multiplicity="0..1" />
+        <End Type="Formula1ServiceSample.Models.Race" Role="CircuitPartner" Multiplicity="0..1" />
+      </Association>
+      <Association Name="Formula1ServiceSample_Models_Race_RaceResults_Formula1ServiceSample_Models_RaceResult_RaceResultsPartner">
+        <End Type="Formula1ServiceSample.Models.RaceResult" Role="RaceResults" Multiplicity="*" />
+        <End Type="Formula1ServiceSample.Models.Race" Role="RaceResultsPartner" Multiplicity="0..1" />
+      </Association>
+      <Association Name="Formula1ServiceSample_Models_Circuit_Races_Formula1ServiceSample_Models_Race_RacesPartner">
+        <End Type="Formula1ServiceSample.Models.Race" Role="Races" Multiplicity="*" />
+        <End Type="Formula1ServiceSample.Models.Circuit" Role="RacesPartner" Multiplicity="0..1" />
+      </Association>
+    </Schema>
+    <Schema Namespace="Default" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <EntityContainer Name="Container" m:IsDefaultEntityContainer="true">
+        <EntitySet Name="Racer" EntityType="Formula1ServiceSample.Models.Racer" />
+        <EntitySet Name="RaceResult" EntityType="Formula1ServiceSample.Models.RaceResult" />
+        <EntitySet Name="Race" EntityType="Formula1ServiceSample.Models.Race" />
+        <EntitySet Name="Circuit" EntityType="Formula1ServiceSample.Models.Circuit" />
+        <AssociationSet Name="Formula1ServiceSample_Models_Racer_RaceResults_Formula1ServiceSample_Models_RaceResult_RaceResultsPartnerSet" Association="Formula1ServiceSample.Models.Formula1ServiceSample_Models_Racer_RaceResults_Formula1ServiceSample_Models_RaceResult_RaceResultsPartner">
+          <End Role="RaceResultsPartner" EntitySet="Racer" />
+          <End Role="RaceResults" EntitySet="RaceResult" />
+        </AssociationSet>
+        <AssociationSet Name="Formula1ServiceSample_Models_RaceResult_Race_Formula1ServiceSample_Models_Race_RacePartnerSet" Association="Formula1ServiceSample.Models.Formula1ServiceSample_Models_RaceResult_Race_Formula1ServiceSample_Models_Race_RacePartner">
+          <End Role="RacePartner" EntitySet="RaceResult" />
+          <End Role="Race" EntitySet="Race" />
+        </AssociationSet>
+        <AssociationSet Name="Formula1ServiceSample_Models_RaceResult_Racer_Formula1ServiceSample_Models_Racer_RacerPartnerSet" Association="Formula1ServiceSample.Models.Formula1ServiceSample_Models_RaceResult_Racer_Formula1ServiceSample_Models_Racer_RacerPartner">
+          <End Role="RacerPartner" EntitySet="RaceResult" />
+          <End Role="Racer" EntitySet="Racer" />
+        </AssociationSet>
+        <AssociationSet Name="Formula1ServiceSample_Models_Race_Circuit_Formula1ServiceSample_Models_Circuit_CircuitPartnerSet" Association="Formula1ServiceSample.Models.Formula1ServiceSample_Models_Race_Circuit_Formula1ServiceSample_Models_Circuit_CircuitPartner">
+          <End Role="CircuitPartner" EntitySet="Race" />
+          <End Role="Circuit" EntitySet="Circuit" />
+        </AssociationSet>
+        <AssociationSet Name="Formula1ServiceSample_Models_Race_RaceResults_Formula1ServiceSample_Models_RaceResult_RaceResultsPartnerSet" Association="Formula1ServiceSample.Models.Formula1ServiceSample_Models_Race_RaceResults_Formula1ServiceSample_Models_RaceResult_RaceResultsPartner">
+          <End Role="RaceResultsPartner" EntitySet="Race" />
+          <End Role="RaceResults" EntitySet="RaceResult" />
+        </AssociationSet>
+        <AssociationSet Name="Formula1ServiceSample_Models_Circuit_Races_Formula1ServiceSample_Models_Race_RacesPartnerSet" Association="Formula1ServiceSample.Models.Formula1ServiceSample_Models_Circuit_Races_Formula1ServiceSample_Models_Race_RacesPartner">
+          <End Role="RacesPartner" EntitySet="Circuit" />
+          <End Role="Races" EntitySet="Race" />
+        </AssociationSet>
+      </EntityContainer>
+    </Schema>
+  </edmx:DataServices>
+</edmx:Edmx>

@@ -1,0 +1,59 @@
+.method private hidebysig static void  Main(string[] args) cil managed
+{
+  .entrypoint
+  // Code size       121 (0x79)
+  .maxstack  9
+  .locals init ([0] class DeCompile.DynamicClass dynamicObject,
+           [1] class [Microsoft.CSharp]Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfo[] CS$0$0000)
+  IL_0000:  nop
+  IL_0001:  newobj     instance void DeCompile.DynamicClass::.ctor()
+  IL_0006:  stloc.0
+  IL_0007:  ldsfld     class [System.Core]System.Runtime.CompilerServices.CallSite`1<class [mscorlib]System.Action`3<class [System.Core]System.Runtime.CompilerServices.CallSite,class [mscorlib]System.Type,object>> DeCompile.Program/'<Main>o__SiteContainer0'::'<>p__Site1'
+  IL_000c:  brtrue.s   IL_004d
+  IL_000e:  ldc.i4.0
+  IL_000f:  ldstr      "WriteLine"
+  IL_0014:  ldtoken    DeCompile.Program
+  IL_0019:  call       class [mscorlib]System.Type [mscorlib]System.Type::GetTypeFromHandle(valuetype [mscorlib]System.RuntimeTypeHandle)
+  IL_001e:  ldnull
+  IL_001f:  ldc.i4.2
+  IL_0020:  newarr     [Microsoft.CSharp]Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfo
+  IL_0025:  stloc.1
+  IL_0026:  ldloc.1
+  IL_0027:  ldc.i4.0
+  IL_0028:  ldc.i4.s   33
+  IL_002a:  ldnull
+  IL_002b:  newobj     instance void [Microsoft.CSharp]Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfo::.ctor(valuetype [Microsoft.CSharp]Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfoFlags,
+                                                                                                                string)
+  IL_0030:  stelem.ref
+  IL_0031:  ldloc.1
+  IL_0032:  ldc.i4.1
+  IL_0033:  ldc.i4.0
+  IL_0034:  ldnull
+  IL_0035:  newobj     instance void [Microsoft.CSharp]Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfo::.ctor(valuetype [Microsoft.CSharp]Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfoFlags,
+                                                                                                                string)
+  IL_003a:  stelem.ref
+  IL_003b:  ldloc.1
+  IL_003c:  newobj     instance void [Microsoft.CSharp]Microsoft.CSharp.RuntimeBinder.CSharpInvokeMemberBinder::.ctor(valuetype [Microsoft.CSharp]Microsoft.CSharp.RuntimeBinder.CSharpCallFlags,
+                                                                                                                      string,
+                                                                                                                      class [mscorlib]System.Type,
+                                                                                                                      class [mscorlib]System.Collections.Generic.IEnumerable`1<class [mscorlib]System.Type>,
+                                                                                                                      class [mscorlib]System.Collections.Generic.IEnumerable`1<class [Microsoft.CSharp]Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfo>)
+  IL_0041:  call       class [System.Core]System.Runtime.CompilerServices.CallSite`1<!0> class [System.Core]System.Runtime.CompilerServices.CallSite`1<class [mscorlib]System.Action`3<class [System.Core]System.Runtime.CompilerServices.CallSite,class [mscorlib]System.Type,object>>::Create(class [System.Core]System.Runtime.CompilerServices.CallSiteBinder)
+  IL_0046:  stsfld     class [System.Core]System.Runtime.CompilerServices.CallSite`1<class [mscorlib]System.Action`3<class [System.Core]System.Runtime.CompilerServices.CallSite,class [mscorlib]System.Type,object>> DeCompile.Program/'<Main>o__SiteContainer0'::'<>p__Site1'
+  IL_004b:  br.s       IL_004d
+  IL_004d:  ldsfld     class [System.Core]System.Runtime.CompilerServices.CallSite`1<class [mscorlib]System.Action`3<class [System.Core]System.Runtime.CompilerServices.CallSite,class [mscorlib]System.Type,object>> DeCompile.Program/'<Main>o__SiteContainer0'::'<>p__Site1'
+  IL_0052:  ldfld      !0 class [System.Core]System.Runtime.CompilerServices.CallSite`1<class [mscorlib]System.Action`3<class [System.Core]System.Runtime.CompilerServices.CallSite,class [mscorlib]System.Type,object>>::Target
+  IL_0057:  ldsfld     class [System.Core]System.Runtime.CompilerServices.CallSite`1<class [mscorlib]System.Action`3<class [System.Core]System.Runtime.CompilerServices.CallSite,class [mscorlib]System.Type,object>> DeCompile.Program/'<Main>o__SiteContainer0'::'<>p__Site1'
+  IL_005c:  ldtoken    [mscorlib]System.Console
+  IL_0061:  call       class [mscorlib]System.Type [mscorlib]System.Type::GetTypeFromHandle(valuetype [mscorlib]System.RuntimeTypeHandle)
+  IL_0066:  ldloc.0
+  IL_0067:  ldfld      object DeCompile.DynamicClass::DynValue
+  IL_006c:  callvirt   instance void class [mscorlib]System.Action`3<class [System.Core]System.Runtime.CompilerServices.CallSite,class [mscorlib]System.Type,object>::Invoke(!0,
+                                                                                                                                                                             !1,
+                                                                                                                                                                             !2)
+  IL_0071:  nop
+  IL_0072:  call       string [mscorlib]System.Console::ReadLine()
+  IL_0077:  pop
+  IL_0078:  ret
+} // end of method Program::Main
+

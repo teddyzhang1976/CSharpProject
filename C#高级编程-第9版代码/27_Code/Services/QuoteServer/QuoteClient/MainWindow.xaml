@@ -1,0 +1,14 @@
+﻿<Window x:Class="Wrox.ProCSharp.WinServices.QuoteClientWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Quote Of The Day" Height="200" Width="300">
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="*" MinHeight="30" />
+      <RowDefinition Height="3*" />
+    </Grid.RowDefinitions>
+    <Button Margin="3" VerticalAlignment="Stretch" Grid.Row="0" IsEnabled="{Binding EnableRequest}"  Click="OnGetQuote">Get Quote</Button>
+    <TextBlock Margin="6" Grid.Row="1" TextWrapping="Wrap" Text="{Binding Quote}" />
+  </Grid>
+
+</Window>

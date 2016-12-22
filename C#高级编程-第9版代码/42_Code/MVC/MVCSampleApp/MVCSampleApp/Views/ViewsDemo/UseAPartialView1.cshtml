@@ -1,0 +1,11 @@
+﻿@model MVCSampleApp.Models.EventsAndMenus
+@{
+    ViewBag.Title = "UseAPartialView1";
+}
+
+<h2>UseAPartialView1</h2>
+<div>this is the main view</div>
+<div>
+  @Html.Partial("ShowEvents", Model.Events)
+</div>
+

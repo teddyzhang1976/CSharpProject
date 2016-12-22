@@ -1,0 +1,1 @@
+C:\Users\Christian\Source\Repos\ProfessionalCSharp2013\WinRT\Projections\ProjectionWithJavaScript\ProjectionWithJavaScript.jsproj;neutral

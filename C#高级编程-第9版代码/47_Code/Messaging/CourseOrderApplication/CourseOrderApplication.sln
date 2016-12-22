@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 10
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CourseOrder", "CourseOrder\CourseOrder.csproj", "{96A23C84-07F2-45EC-91F1-AB8A8D588E52}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CourseOrderSender", "CourseOrderSender\CourseOrderSender.csproj", "{93236411-5F4F-4EB6-9719-CE072E72E74E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CourseOrderReceiver", "CourseOrderReceiver\CourseOrderReceiver.csproj", "{7088E461-E56A-4E74-AFFB-5A2C19C2B06F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{96A23C84-07F2-45EC-91F1-AB8A8D588E52}.Debug|x86.ActiveCfg = Debug|x86
+		{96A23C84-07F2-45EC-91F1-AB8A8D588E52}.Debug|x86.Build.0 = Debug|x86
+		{96A23C84-07F2-45EC-91F1-AB8A8D588E52}.Release|x86.ActiveCfg = Release|x86
+		{96A23C84-07F2-45EC-91F1-AB8A8D588E52}.Release|x86.Build.0 = Release|x86
+		{93236411-5F4F-4EB6-9719-CE072E72E74E}.Debug|x86.ActiveCfg = Debug|x86
+		{93236411-5F4F-4EB6-9719-CE072E72E74E}.Debug|x86.Build.0 = Debug|x86
+		{93236411-5F4F-4EB6-9719-CE072E72E74E}.Release|x86.ActiveCfg = Release|x86
+		{93236411-5F4F-4EB6-9719-CE072E72E74E}.Release|x86.Build.0 = Release|x86
+		{7088E461-E56A-4E74-AFFB-5A2C19C2B06F}.Debug|x86.ActiveCfg = Debug|x86
+		{7088E461-E56A-4E74-AFFB-5A2C19C2B06F}.Debug|x86.Build.0 = Debug|x86
+		{7088E461-E56A-4E74-AFFB-5A2C19C2B06F}.Release|x86.ActiveCfg = Release|x86
+		{7088E461-E56A-4E74-AFFB-5A2C19C2B06F}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

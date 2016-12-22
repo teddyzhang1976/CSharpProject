@@ -1,0 +1,335 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Formula1Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Circuit">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Country" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Race">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CircuitId" Type="int" Nullable="false" />
+          <Property Name="Date" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="RaceResults">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RaceId" Type="int" Nullable="false" />
+          <Property Name="Position" Type="int" Nullable="false" />
+          <Property Name="Grid" Type="int" />
+          <Property Name="Points" Type="numeric" Precision="8" Scale="2" />
+          <Property Name="RacerId" Type="int" Nullable="false" />
+          <Property Name="TeamId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Racers">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Firstname" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Lastname" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Country" Type="nvarchar" MaxLength="50" />
+          <Property Name="Starts" Type="int" />
+          <Property Name="Wins" Type="int" />
+        </EntityType>
+        <EntityType Name="Teams">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Race_Circuit">
+          <End Role="Circuit" Type="Self.Circuit" Multiplicity="1" />
+          <End Role="Race" Type="Self.Race" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Circuit">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Race">
+              <PropertyRef Name="CircuitId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RaceResults_Race">
+          <End Role="Race" Type="Self.Race" Multiplicity="1" />
+          <End Role="RaceResults" Type="Self.RaceResults" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Race">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="RaceResults">
+              <PropertyRef Name="RaceId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RaceResults_Racers">
+          <End Role="Racers" Type="Self.Racers" Multiplicity="1" />
+          <End Role="RaceResults" Type="Self.RaceResults" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Racers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="RaceResults">
+              <PropertyRef Name="RacerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RaceResults_Teams">
+          <End Role="Teams" Type="Self.Teams" Multiplicity="1" />
+          <End Role="RaceResults" Type="Self.RaceResults" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Teams">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="RaceResults">
+              <PropertyRef Name="TeamId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Formula1ModelStoreContainer">
+          <EntitySet Name="Circuit" EntityType="Self.Circuit" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Race" EntityType="Self.Race" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="RaceResults" EntityType="Self.RaceResults" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Racers" EntityType="Self.Racers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Teams" EntityType="Self.Teams" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Race_Circuit" Association="Self.FK_Race_Circuit">
+            <End Role="Circuit" EntitySet="Circuit" />
+            <End Role="Race" EntitySet="Race" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RaceResults_Race" Association="Self.FK_RaceResults_Race">
+            <End Role="Race" EntitySet="Race" />
+            <End Role="RaceResults" EntitySet="RaceResults" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RaceResults_Racers" Association="Self.FK_RaceResults_Racers">
+            <End Role="Racers" EntitySet="Racers" />
+            <End Role="RaceResults" EntitySet="RaceResults" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RaceResults_Teams" Association="Self.FK_RaceResults_Teams">
+            <End Role="Teams" EntitySet="Teams" />
+            <End Role="RaceResults" EntitySet="RaceResults" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Formula1Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Circuit">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Country" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Races" Relationship="Self.FK_Race_Circuit" FromRole="Circuit" ToRole="Race" />
+        </EntityType>
+        <EntityType Name="Race">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CircuitId" Type="Int32" Nullable="false" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Circuit" Relationship="Self.FK_Race_Circuit" FromRole="Race" ToRole="Circuit" />
+          <NavigationProperty Name="RaceResults" Relationship="Self.FK_RaceResults_Race" FromRole="Race" ToRole="RaceResults" />
+        </EntityType>
+        <EntityType Name="RaceResult">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RaceId" Type="Int32" Nullable="false" />
+          <Property Name="Position" Type="Int32" Nullable="false" />
+          <Property Name="Grid" Type="Int32" />
+          <Property Name="Points" Type="Decimal" Precision="8" Scale="2" />
+          <Property Name="RacerId" Type="Int32" Nullable="false" />
+          <Property Name="TeamId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Race" Relationship="Self.FK_RaceResults_Race" FromRole="RaceResults" ToRole="Race" />
+          <NavigationProperty Name="Racer" Relationship="Self.FK_RaceResults_Racers" FromRole="RaceResults" ToRole="Racers" />
+          <NavigationProperty Name="Team" Relationship="Self.FK_RaceResults_Teams" FromRole="RaceResults" ToRole="Teams" />
+        </EntityType>
+        <EntityType Name="Racer">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Country" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Starts" Type="Int32" />
+          <Property Name="Wins" Type="Int32" />
+          <NavigationProperty Name="RaceResults" Relationship="Self.FK_RaceResults_Racers" FromRole="Racers" ToRole="RaceResults" />
+        </EntityType>
+        <EntityType Name="Team">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="RaceResults" Relationship="Self.FK_RaceResults_Teams" FromRole="Teams" ToRole="RaceResults" />
+        </EntityType>
+        <Association Name="FK_Race_Circuit">
+          <End Role="Circuit" Type="Self.Circuit" Multiplicity="1" />
+          <End Role="Race" Type="Self.Race" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Circuit">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Race">
+              <PropertyRef Name="CircuitId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RaceResults_Race">
+          <End Role="Race" Type="Self.Race" Multiplicity="1" />
+          <End Role="RaceResults" Type="Self.RaceResult" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Race">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="RaceResults">
+              <PropertyRef Name="RaceId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RaceResults_Racers">
+          <End Role="Racers" Type="Self.Racer" Multiplicity="1" />
+          <End Role="RaceResults" Type="Self.RaceResult" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Racers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="RaceResults">
+              <PropertyRef Name="RacerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RaceResults_Teams">
+          <End Role="Teams" Type="Self.Team" Multiplicity="1" />
+          <End Role="RaceResults" Type="Self.RaceResult" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Teams">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="RaceResults">
+              <PropertyRef Name="TeamId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Formula1Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Circuits" EntityType="Self.Circuit" />
+          <EntitySet Name="Races" EntityType="Self.Race" />
+          <EntitySet Name="RaceResults" EntityType="Self.RaceResult" />
+          <EntitySet Name="Racers" EntityType="Self.Racer" />
+          <EntitySet Name="Teams" EntityType="Self.Team" />
+          <AssociationSet Name="FK_Race_Circuit" Association="Self.FK_Race_Circuit">
+            <End Role="Circuit" EntitySet="Circuits" />
+            <End Role="Race" EntitySet="Races" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RaceResults_Race" Association="Self.FK_RaceResults_Race">
+            <End Role="Race" EntitySet="Races" />
+            <End Role="RaceResults" EntitySet="RaceResults" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RaceResults_Racers" Association="Self.FK_RaceResults_Racers">
+            <End Role="Racers" EntitySet="Racers" />
+            <End Role="RaceResults" EntitySet="RaceResults" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RaceResults_Teams" Association="Self.FK_RaceResults_Teams">
+            <End Role="Teams" EntitySet="Teams" />
+            <End Role="RaceResults" EntitySet="RaceResults" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Formula1ModelStoreContainer" CdmEntityContainer="Formula1Entities">
+          <EntitySetMapping Name="Circuits">
+            <EntityTypeMapping TypeName="Formula1Model.Circuit">
+              <MappingFragment StoreEntitySet="Circuit">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Races">
+            <EntityTypeMapping TypeName="Formula1Model.Race">
+              <MappingFragment StoreEntitySet="Race">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="CircuitId" ColumnName="CircuitId" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RaceResults">
+            <EntityTypeMapping TypeName="Formula1Model.RaceResult">
+              <MappingFragment StoreEntitySet="RaceResults">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="RaceId" ColumnName="RaceId" />
+                <ScalarProperty Name="Position" ColumnName="Position" />
+                <ScalarProperty Name="Grid" ColumnName="Grid" />
+                <ScalarProperty Name="Points" ColumnName="Points" />
+                <ScalarProperty Name="RacerId" ColumnName="RacerId" />
+                <ScalarProperty Name="TeamId" ColumnName="TeamId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Racers">
+            <EntityTypeMapping TypeName="Formula1Model.Racer">
+              <MappingFragment StoreEntitySet="Racers">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="FirstName" ColumnName="Firstname" />
+                <ScalarProperty Name="LastName" ColumnName="Lastname" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="Starts" ColumnName="Starts" />
+                <ScalarProperty Name="Wins" ColumnName="Wins" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Teams">
+            <EntityTypeMapping TypeName="Formula1Model.Team">
+              <MappingFragment StoreEntitySet="Teams">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 11
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataLib", "DataLib\DataLib.csproj", "{F53186B1-2631-4287-9A1D-C8B3D4144240}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQIntro", "LINQIntro\LINQIntro.csproj", "{AF821EFF-BFDC-4B1F-A077-C67EE2F4D23B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnumerableSample", "EnumerableSample\EnumerableSample.csproj", "{2BC49157-C2D6-4E46-8A64-D4E7441767D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParallelLinqSample", "ParallelLinqSample\ParallelLinqSample.csproj", "{0665A714-A343-40E2-A354-F80D87ACCA99}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpressionTreeSample", "ExpressionTreeSample\ExpressionTreeSample.csproj", "{8463CFE4-9CAA-4CD7-941E-21338AC23B79}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0665A714-A343-40E2-A354-F80D87ACCA99}.Debug|x86.ActiveCfg = Debug|x86
+		{0665A714-A343-40E2-A354-F80D87ACCA99}.Debug|x86.Build.0 = Debug|x86
+		{0665A714-A343-40E2-A354-F80D87ACCA99}.Release|x86.ActiveCfg = Release|x86
+		{0665A714-A343-40E2-A354-F80D87ACCA99}.Release|x86.Build.0 = Release|x86
+		{2BC49157-C2D6-4E46-8A64-D4E7441767D5}.Debug|x86.ActiveCfg = Debug|x86
+		{2BC49157-C2D6-4E46-8A64-D4E7441767D5}.Debug|x86.Build.0 = Debug|x86
+		{2BC49157-C2D6-4E46-8A64-D4E7441767D5}.Release|x86.ActiveCfg = Release|x86
+		{2BC49157-C2D6-4E46-8A64-D4E7441767D5}.Release|x86.Build.0 = Release|x86
+		{8463CFE4-9CAA-4CD7-941E-21338AC23B79}.Debug|x86.ActiveCfg = Debug|x86
+		{8463CFE4-9CAA-4CD7-941E-21338AC23B79}.Debug|x86.Build.0 = Debug|x86
+		{8463CFE4-9CAA-4CD7-941E-21338AC23B79}.Release|x86.ActiveCfg = Release|x86
+		{8463CFE4-9CAA-4CD7-941E-21338AC23B79}.Release|x86.Build.0 = Release|x86
+		{AF821EFF-BFDC-4B1F-A077-C67EE2F4D23B}.Debug|x86.ActiveCfg = Debug|x86
+		{AF821EFF-BFDC-4B1F-A077-C67EE2F4D23B}.Debug|x86.Build.0 = Debug|x86
+		{AF821EFF-BFDC-4B1F-A077-C67EE2F4D23B}.Release|x86.ActiveCfg = Release|x86
+		{AF821EFF-BFDC-4B1F-A077-C67EE2F4D23B}.Release|x86.Build.0 = Release|x86
+		{F53186B1-2631-4287-9A1D-C8B3D4144240}.Debug|x86.ActiveCfg = Debug|x86
+		{F53186B1-2631-4287-9A1D-C8B3D4144240}.Debug|x86.Build.0 = Debug|x86
+		{F53186B1-2631-4287-9A1D-C8B3D4144240}.Release|x86.ActiveCfg = Release|x86
+		{F53186B1-2631-4287-9A1D-C8B3D4144240}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

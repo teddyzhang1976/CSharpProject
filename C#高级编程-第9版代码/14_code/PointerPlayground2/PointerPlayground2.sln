@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PointerPlayground2", "PointerPlayground2\PointerPlayground2.csproj", "{027C495E-4C19-44AD-A6D9-D4170FAC68BE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{027C495E-4C19-44AD-A6D9-D4170FAC68BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{027C495E-4C19-44AD-A6D9-D4170FAC68BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{027C495E-4C19-44AD-A6D9-D4170FAC68BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{027C495E-4C19-44AD-A6D9-D4170FAC68BE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

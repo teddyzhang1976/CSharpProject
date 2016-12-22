@@ -1,0 +1,15 @@
+﻿<Window x:Class="BubbleDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+  <StackPanel x:Name="stackPanel1" Button.Click="OnOuterButtonClick">
+    <Button x:Name="button1" Content="Button 1" Margin="5" />
+    <Button x:Name="button2" Margin="5" Click="OnButton2">
+      <ListBox x:Name="listBox1">
+        <Button x:Name="innerButton1" Content="Inner Button 1" Margin="4" Padding="4" Click="OnInner1" />
+        <Button x:Name="innerButton2" Content="Inner Button 2" Margin="4" Padding="4" Click="OnInner2" />
+      </ListBox>
+    </Button>
+    <ListBox ItemsSource="{Binding}" />
+  </StackPanel>
+</Window>

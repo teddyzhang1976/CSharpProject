@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 11
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleExceptions", "SimpleExceptions\SimpleExceptions.csproj", "{1A2A8844-F2C1-4A7A-A484-BFE5DCCC42F4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolicitColdCall", "SolicitColdCall\SolicitColdCall.csproj", "{6ED8210E-967C-4EC0-951F-93F061202C48}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CallerInformation", "CallerInformation\CallerInformation.csproj", "{66840447-EC57-4E51-B4CC-4BA4EFD55D2E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1A2A8844-F2C1-4A7A-A484-BFE5DCCC42F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A2A8844-F2C1-4A7A-A484-BFE5DCCC42F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A2A8844-F2C1-4A7A-A484-BFE5DCCC42F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A2A8844-F2C1-4A7A-A484-BFE5DCCC42F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66840447-EC57-4E51-B4CC-4BA4EFD55D2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66840447-EC57-4E51-B4CC-4BA4EFD55D2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66840447-EC57-4E51-B4CC-4BA4EFD55D2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66840447-EC57-4E51-B4CC-4BA4EFD55D2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6ED8210E-967C-4EC0-951F-93F061202C48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6ED8210E-967C-4EC0-951F-93F061202C48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6ED8210E-967C-4EC0-951F-93F061202C48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6ED8210E-967C-4EC0-951F-93F061202C48}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

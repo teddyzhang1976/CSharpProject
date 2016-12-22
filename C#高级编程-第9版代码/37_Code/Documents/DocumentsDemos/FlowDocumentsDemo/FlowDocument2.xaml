@@ -1,0 +1,35 @@
+﻿<FlowDocument xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+              ColumnWidth="400" FontSize="14" FontFamily="Segoe UI">
+  <Paragraph TextAlignment="Center" >
+    <Span FontSize="36" FontFamily="Mangal">
+      <Bold>cn|elements</Bold>
+    </Span>
+    <LineBreak />
+    <LineBreak />
+    <InlineUIContainer>
+      <Grid>
+        <Grid.RowDefinitions>
+          <RowDefinition />
+          <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition />
+          <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <ComboBox Width="140"  Margin="3"  Grid.Row="0">
+          <ComboBoxItem>Filet Mignon</ComboBoxItem>
+          <ComboBoxItem>Rib Eye</ComboBoxItem>
+          <ComboBoxItem>Sirloin</ComboBoxItem>
+        </ComboBox>
+
+        <StackPanel Grid.Row="0" Grid.RowSpan="2" Grid.Column="1">
+          <RadioButton>Raw</RadioButton>
+          <RadioButton>Medium</RadioButton>
+          <RadioButton>Well done</RadioButton>
+        </StackPanel>
+        <TextBox Grid.Row="1" Grid.Column="0" Width="140"></TextBox>
+      </Grid>
+    </InlineUIContainer>
+
+  </Paragraph>
+</FlowDocument>

@@ -1,0 +1,15 @@
+C:\Users\Christian\Source\Repos\ProfessionalCSharp2013\WinRT\Projections\ProjectionWithJavaScript\bin\Debug\AppxManifest.xml
+C:\Users\Christian\Source\Repos\ProfessionalCSharp2013\WinRT\Projections\ProjectionWithJavaScript\bin\Debug\ProjectionWithJavaScript.build.appxrecipe
+C:\Users\Christian\Source\Repos\ProfessionalCSharp2013\WinRT\Projections\ProjectionWithJavaScript\bld\Debug\priconfig.xml
+C:\Users\Christian\Source\Repos\ProfessionalCSharp2013\WinRT\Projections\ProjectionWithJavaScript\bld\Debug\priconfig.xml.intermediate
+C:\Users\Christian\Source\Repos\ProfessionalCSharp2013\WinRT\Projections\ProjectionWithJavaScript\bld\Debug\layout.resfiles
+C:\Users\Christian\Source\Repos\ProfessionalCSharp2013\WinRT\Projections\ProjectionWithJavaScript\bld\Debug\layout.resfiles.intermediate
+C:\Users\Christian\Source\Repos\ProfessionalCSharp2013\WinRT\Projections\ProjectionWithJavaScript\bld\Debug\resources.resfiles
+C:\Users\Christian\Source\Repos\ProfessionalCSharp2013\WinRT\Projections\ProjectionWithJavaScript\bld\Debug\resources.resfiles.intermediate
+C:\Users\Christian\Source\Repos\ProfessionalCSharp2013\WinRT\Projections\ProjectionWithJavaScript\bld\Debug\pri.resfiles
+C:\Users\Christian\Source\Repos\ProfessionalCSharp2013\WinRT\Projections\ProjectionWithJavaScript\bld\Debug\pri.resfiles.intermediate
+C:\Users\Christian\Source\Repos\ProfessionalCSharp2013\WinRT\Projections\ProjectionWithJavaScript\bld\Debug\qualifiers.txt
+C:\Users\Christian\Source\Repos\ProfessionalCSharp2013\WinRT\Projections\ProjectionWithJavaScript\bld\Debug\qualifiers.txt.intermediate
+C:\Users\Christian\Source\Repos\ProfessionalCSharp2013\WinRT\Projections\ProjectionWithJavaScript\bld\Debug\MultipleQualifiersPerDimensionFound.txt
+C:\Users\Christian\Source\Repos\ProfessionalCSharp2013\WinRT\Projections\ProjectionWithJavaScript\bld\Debug\ProjectArchitectures.txt
+C:\Users\Christian\Source\Repos\ProfessionalCSharp2013\WinRT\Projections\ProjectionWithJavaScript\bin\Debug\ReverseMap\resources.pri

@@ -1,0 +1,52 @@
+﻿<Activity mc:Ignorable="sap sap2010 sads" x:Class="_04_CustomActivities.Workflow1" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap2010:WorkflowViewState.IdRef="_04_CustomActivities.Workflow1_1"
+ xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+ xmlns:a="clr-namespace:Activities;assembly=Activities"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger"
+ xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
+ xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
+ xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Text</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>Activities</AssemblyReference>
+      <AssemblyReference>Activities.Design</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>04_CustomActivities</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <a:Retry sap2010:WorkflowViewState.IdRef="Retry_1" NumberOfRetries="7">
+    <a:Retry.Body>
+      <a:FailSometimes sap2010:WorkflowViewState.IdRef="FailSometimes_1" />
+    </a:Retry.Body>
+    <sads:DebugSymbol.Symbol>d3VFOlxNb3JnYW5cRG9jdW1lbnRzXEhvbWVcV2lsZXlcUHJvZmVzc2lvbmFsIEMjXENINDUgV29ya2Zsb3cgNFwwNF9DdXN0b21BY3Rpdml0aWVzXDA0X0N1c3RvbUFjdGl2aXRpZXNcV29ya2Zsb3cxLnhhbWwDJwMsDQIBASdGJ0kCAQIpBylMAgED</sads:DebugSymbol.Symbol>
+  </a:Retry>
+  <sap2010:WorkflowViewState.ViewStateManager>
+    <sap2010:ViewStateManager>
+      <sap2010:ViewStateData Id="FailSometimes_1" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="Retry_1" sap:VirtualizedContainerService.HintSize="319,132" />
+      <sap2010:ViewStateData Id="_04_CustomActivities.Workflow1_1" sap:VirtualizedContainerService.HintSize="359,212" />
+    </sap2010:ViewStateManager>
+  </sap2010:WorkflowViewState.ViewStateManager>
+</Activity>

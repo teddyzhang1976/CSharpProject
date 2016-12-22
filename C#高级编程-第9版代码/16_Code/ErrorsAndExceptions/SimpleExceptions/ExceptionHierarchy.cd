@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="System.Exception" Collapsed="true">
+    <Position X="13.5" Y="2" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="System.SystemException" Collapsed="true">
+    <Position X="8.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="System.ArgumentException" Collapsed="true">
+    <Position X="4.5" Y="4.75" Width="1.75" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="System.ArgumentNullException" Collapsed="true">
+    <Position X="2.75" Y="6.25" Width="2" />
+    <InheritanceLine Type="System.ArgumentException" FixedToPoint="true">
+      <Path>
+        <Point X="5.375" Y="5.441" />
+        <Point X="5.375" Y="6.625" />
+        <Point X="4.75" Y="6.625" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier />
+  </Class>
+  <Class Name="System.ArgumentOutOfRangeException" Collapsed="true">
+    <Position X="2.5" Y="7.5" Width="2.5" />
+    <InheritanceLine Type="System.ArgumentException" FixedToPoint="true">
+      <Path>
+        <Point X="5.375" Y="5.441" />
+        <Point X="5.375" Y="7.875" />
+        <Point X="5" Y="7.875" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="System.ArithmeticException" Collapsed="true">
+    <Position X="6.5" Y="4.75" Width="1.75" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="System.OverflowException" Collapsed="true">
+    <Position X="6.5" Y="6" Width="1.75" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="System.StackOverflowException" Collapsed="true">
+    <Position X="8.5" Y="5" Width="2" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="System.IO.IOException" Collapsed="true">
+    <Position X="11" Y="5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="System.IO.FileLoadException" Collapsed="true">
+    <Position X="11" Y="6.5" Width="1.5" />
+    <InheritanceLine Type="System.IO.IOException" FixedToPoint="true">
+      <Path>
+        <Point X="11.75" Y="5.691" />
+        <Point X="11.75" Y="6.066" />
+        <Point X="10.625" Y="6.066" />
+        <Point X="10.625" Y="6.938" />
+        <Point X="11" Y="6.938" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier />
+  </Class>
+  <Class Name="System.IO.FileNotFoundException" Collapsed="true">
+    <Position X="11" Y="7.5" Width="2" />
+    <InheritanceLine Type="System.IO.IOException" FixedToPoint="true">
+      <Path>
+        <Point X="11.75" Y="5.691" />
+        <Point X="11.75" Y="6.066" />
+        <Point X="10.625" Y="6.066" />
+        <Point X="10.625" Y="7.875" />
+        <Point X="11" Y="7.875" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier />
+  </Class>
+  <Class Name="System.IO.DriveNotFoundException" Collapsed="true">
+    <Position X="11" Y="9.5" Width="2" />
+    <InheritanceLine Type="System.IO.IOException" FixedToPoint="true">
+      <Path>
+        <Point X="11.75" Y="5.691" />
+        <Point X="11.75" Y="6.066" />
+        <Point X="10.625" Y="6.066" />
+        <Point X="10.625" Y="9.812" />
+        <Point X="11" Y="9.812" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier />
+  </Class>
+  <Class Name="System.IO.EndOfStreamException" Collapsed="true">
+    <Position X="11" Y="8.5" Width="2" />
+    <InheritanceLine Type="System.IO.IOException" FixedToPoint="true">
+      <Path>
+        <Point X="11.75" Y="5.691" />
+        <Point X="11.75" Y="6.066" />
+        <Point X="10.625" Y="6.066" />
+        <Point X="10.625" Y="8.875" />
+        <Point X="11" Y="8.875" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier />
+  </Class>
+  <Class Name="System.ApplicationException" Collapsed="true">
+    <Position X="13" Y="3.5" Width="1.75" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="System.Reflection.TargetInvocationException" Collapsed="true">
+    <Position X="12.75" Y="5.75" Width="2.25" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="System.ComponentModel.Composition.CompositionException" Collapsed="true">
+    <Position X="15.25" Y="3.5" Width="2" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="System.ComponentModel.Composition.ChangeRejectedException" Collapsed="true">
+    <Position X="15.25" Y="5.25" Width="2" />
+    <TypeIdentifier />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

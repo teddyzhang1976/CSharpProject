@@ -1,0 +1,4 @@
+FirstName,LastName,Address1,Address2,City,State,Zip
+Bugs,Bunny,123 Hole InGround Lane,,Hollywood,CA,90210
+Daffy,Duck,456 Another St,Apt 555, Hollywood,CA,90210
+Porky,Pig,789 Pig Pen Blvd,,Hollywood,CA,90210

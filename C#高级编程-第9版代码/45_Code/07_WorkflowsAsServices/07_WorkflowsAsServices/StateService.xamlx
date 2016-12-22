@@ -1,0 +1,323 @@
+﻿<WorkflowService mc:Ignorable="sap sap2010 sads" p1:TextExpression.Namespaces="{x:Reference __ReferenceID5}" p1:TextExpression.References="{x:Reference __ReferenceID6}" ConfigurationName="StateService" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap2010:WorkflowViewState.IdRef="WorkflowService_1" Name="StateService"
+ xmlns="http://schemas.microsoft.com/netfx/2009/xaml/servicemodel"
+ xmlns:_="clr-namespace:_07_WorkflowsAsServices;assembly=07_WorkflowsAsServices"
+ xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities"
+ xmlns:p="http://www.morganskinner.com"
+ xmlns:p1="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+ xmlns:s="clr-namespace:SharedInterfaces;assembly=SharedInterfaces"
+ xmlns:s1="clr-namespace:System;assembly=mscorlib"
+ xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger"
+ xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
+ xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
+ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
+ xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib"
+ xmlns:ssx="clr-namespace:System.ServiceModel.XamlIntegration;assembly=System.ServiceModel"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <p1:StateMachine InitialState="{x:Reference __ReferenceID4}" sap2010:WorkflowViewState.IdRef="StateMachine_1">
+    <p1:TextExpression.Namespaces>
+      <sco:Collection x:TypeArguments="x:String" x:Name="__ReferenceID5">
+        <x:String>System</x:String>
+        <x:String>System.Collections.Generic</x:String>
+        <x:String>System.Data</x:String>
+        <x:String>System.Linq</x:String>
+        <x:String>System.Text</x:String>
+        <x:String>System.ServiceModel.Activities</x:String>
+      </sco:Collection>
+    </p1:TextExpression.Namespaces>
+    <p1:TextExpression.References>
+      <sco:Collection x:TypeArguments="p1:AssemblyReference" x:Name="__ReferenceID6">
+        <p1:AssemblyReference>Microsoft.CSharp</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Web.DynamicData</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Drawing</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Web.Entity</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Web.ApplicationServices</p1:AssemblyReference>
+        <p1:AssemblyReference>System</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Activities</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Core</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Data</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Data.Entity</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Runtime.Serialization</p1:AssemblyReference>
+        <p1:AssemblyReference>System.ServiceModel</p1:AssemblyReference>
+        <p1:AssemblyReference>System.ServiceModel.Activities</p1:AssemblyReference>
+        <p1:AssemblyReference>System.ServiceModel.Channels</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Web</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Xaml</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Xml</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Xml.Linq</p1:AssemblyReference>
+        <p1:AssemblyReference>SharedInterfaces</p1:AssemblyReference>
+        <p1:AssemblyReference>System.Activities.Presentation</p1:AssemblyReference>
+        <p1:AssemblyReference>PresentationFramework</p1:AssemblyReference>
+        <p1:AssemblyReference>PresentationCore</p1:AssemblyReference>
+        <p1:AssemblyReference>WindowsBase</p1:AssemblyReference>
+        <p1:AssemblyReference>mscorlib</p1:AssemblyReference>
+        <p1:AssemblyReference>07_WorkflowsAsServices</p1:AssemblyReference>
+      </sco:Collection>
+    </p1:TextExpression.References>
+    <p1:State x:Name="__ReferenceID0" DisplayName="Waiting" sap2010:WorkflowViewState.IdRef="State_2">
+      <p1:State.Transitions>
+        <p1:Transition DisplayName="Done" sap2010:WorkflowViewState.IdRef="Transition_1">
+          <p1:Transition.Trigger>
+            <Receive Action="http://www.morganskinner.com/IPropertyInformation/DetailsComplete" DisplayName="DetailsComplete_Receive" sap2010:WorkflowViewState.IdRef="Receive_1" OperationName="DetailsComplete" ProtectionLevel="None" ServiceContractName="p:IPropertyInformation">
+              <Receive.CorrelatesOn>
+                <XPathMessageQuery x:Key="key1">
+                  <XPathMessageQuery.Namespaces>
+                    <ssx:XPathMessageContextMarkup>
+                      <x:String x:Key="xgSc">http://www.morganskinner.com</x:String>
+                    </ssx:XPathMessageContextMarkup>
+                  </XPathMessageQuery.Namespaces>sm:body()/xgSc:DetailsComplete/xgSc:propertyId</XPathMessageQuery>
+              </Receive.CorrelatesOn>
+              <Receive.CorrelatesWith>
+                <p1:InArgument x:TypeArguments="CorrelationHandle">
+                  <mca:CSharpValue x:TypeArguments="CorrelationHandle">operationHandle</mca:CSharpValue>
+                </p1:InArgument>
+              </Receive.CorrelatesWith>
+              <ReceiveParametersContent>
+                <p1:OutArgument x:TypeArguments="s1:Guid" x:Key="propertyId" />
+              </ReceiveParametersContent>
+            </Receive>
+          </p1:Transition.Trigger>
+          <p1:Transition.To>
+            <p1:State x:Name="__ReferenceID1" DisplayName="FinalState" sap2010:WorkflowViewState.IdRef="State_1" IsFinal="True" />
+          </p1:Transition.To>
+          <p1:Transition.Action>
+            <_:DebugWrite sap2010:WorkflowViewState.IdRef="DebugWrite_3" Message="Finished Uploading Rooms" />
+          </p1:Transition.Action>
+        </p1:Transition>
+        <p1:Transition DisplayName="Room Info" sap2010:WorkflowViewState.IdRef="Transition_2">
+          <p1:Transition.Trigger>
+            <Receive Action="http://www.morganskinner.com/IPropertyInformation/UploadRoomInformation" DisplayName="UploadRoomInformation_Receive" sap2010:WorkflowViewState.IdRef="Receive_2" OperationName="UploadRoomInformation" ProtectionLevel="None" ServiceContractName="p:IPropertyInformation">
+              <Receive.CorrelatesOn>
+                <XPathMessageQuery x:Key="key1">
+                  <XPathMessageQuery.Namespaces>
+                    <ssx:XPathMessageContextMarkup>
+                      <x:String x:Key="xgSc">http://www.morganskinner.com</x:String>
+                    </ssx:XPathMessageContextMarkup>
+                  </XPathMessageQuery.Namespaces>sm:body()/xgSc:UploadRoomInformation/xgSc:propertyId</XPathMessageQuery>
+              </Receive.CorrelatesOn>
+              <Receive.CorrelatesWith>
+                <p1:InArgument x:TypeArguments="CorrelationHandle">
+                  <mca:CSharpValue x:TypeArguments="CorrelationHandle">operationHandle</mca:CSharpValue>
+                </p1:InArgument>
+              </Receive.CorrelatesWith>
+              <ReceiveParametersContent>
+                <p1:OutArgument x:TypeArguments="s1:Guid" x:Key="propertyId" />
+                <p1:OutArgument x:TypeArguments="x:String" x:Key="roomName">
+                  <mca:CSharpReference x:TypeArguments="x:String">roomName</mca:CSharpReference>
+                </p1:OutArgument>
+                <p1:OutArgument x:TypeArguments="x:Single" x:Key="width">
+                  <mca:CSharpReference x:TypeArguments="x:Single">roomWidth</mca:CSharpReference>
+                </p1:OutArgument>
+                <p1:OutArgument x:TypeArguments="x:Single" x:Key="length">
+                  <mca:CSharpReference x:TypeArguments="x:Single">roomLength</mca:CSharpReference>
+                </p1:OutArgument>
+              </ReceiveParametersContent>
+            </Receive>
+          </p1:Transition.Trigger>
+          <p1:Transition.To>
+            <x:Reference>__ReferenceID0</x:Reference>
+          </p1:Transition.To>
+          <p1:Transition.Action>
+            <_:DebugWrite sap2010:WorkflowViewState.IdRef="DebugWrite_2">
+              <_:DebugWrite.Message>
+                <p1:InArgument x:TypeArguments="x:String">
+                  <mca:CSharpValue x:TypeArguments="x:String">string.Format("Room '{0}' dimensions {1}*{2}", roomName, roomLength, roomWidth)</mca:CSharpValue>
+                </p1:InArgument>
+              </_:DebugWrite.Message>
+            </_:DebugWrite>
+          </p1:Transition.Action>
+        </p1:Transition>
+      </p1:State.Transitions>
+      <p1:State.Variables>
+        <p1:Variable x:TypeArguments="x:String" Name="roomName" />
+        <p1:Variable x:TypeArguments="x:Single" Name="roomWidth" />
+        <p1:Variable x:TypeArguments="x:Single" Name="roomLength" />
+      </p1:State.Variables>
+    </p1:State>
+    <x:Reference>__ReferenceID1</x:Reference>
+    <p1:State x:Name="__ReferenceID4" DisplayName="Initial State" sap2010:WorkflowViewState.IdRef="State_3">
+      <p1:State.Transitions>
+        <p1:Transition DisplayName="UploadInfo" sap2010:WorkflowViewState.IdRef="Transition_3">
+          <p1:Transition.Trigger>
+            <p1:Sequence DisplayName="UploadPropertyInformation_ReceiveAndSendReply" sap2010:WorkflowViewState.IdRef="Sequence_1">
+              <p1:Sequence.Variables>
+                <x:Reference>__ReferenceID3</x:Reference>
+                <p1:Variable x:TypeArguments="s1:Guid" Name="propertyId" />
+              </p1:Sequence.Variables>
+              <Receive x:Name="__ReferenceID2" Action="http://www.morganskinner.com/IPropertyInformation/UploadPropertyInformation" CanCreateInstance="True" DisplayName="UploadPropertyInformation_Receive" sap2010:WorkflowViewState.IdRef="Receive_3" OperationName="UploadPropertyInformation" ProtectionLevel="None" ServiceContractName="p:IPropertyInformation">
+                <Receive.CorrelationInitializers>
+                  <RequestReplyCorrelationInitializer>
+                    <RequestReplyCorrelationInitializer.CorrelationHandle>
+                      <p1:InArgument x:TypeArguments="CorrelationHandle">
+                        <p1:VariableValue x:TypeArguments="CorrelationHandle">
+                          <p1:VariableValue.Variable>
+                            <p1:Variable x:TypeArguments="CorrelationHandle" x:Name="__ReferenceID3" Name="__handle" />
+                          </p1:VariableValue.Variable>
+                        </p1:VariableValue>
+                      </p1:InArgument>
+                    </RequestReplyCorrelationInitializer.CorrelationHandle>
+                  </RequestReplyCorrelationInitializer>
+                </Receive.CorrelationInitializers>
+                <ReceiveParametersContent>
+                  <p1:OutArgument x:TypeArguments="x:String" x:Key="ownerName" />
+                  <p1:OutArgument x:TypeArguments="x:String" x:Key="address" />
+                  <p1:OutArgument x:TypeArguments="x:Single" x:Key="price" />
+                </ReceiveParametersContent>
+              </Receive>
+              <p1:Assign sap2010:WorkflowViewState.IdRef="Assign_1">
+                <p1:Assign.To>
+                  <p1:OutArgument x:TypeArguments="s1:Guid">
+                    <mca:CSharpReference x:TypeArguments="s1:Guid">propertyId</mca:CSharpReference>
+                  </p1:OutArgument>
+                </p1:Assign.To>
+                <p1:Assign.Value>
+                  <p1:InArgument x:TypeArguments="s1:Guid">
+                    <mca:CSharpValue x:TypeArguments="s1:Guid">Guid.NewGuid()</mca:CSharpValue>
+                  </p1:InArgument>
+                </p1:Assign.Value>
+              </p1:Assign>
+              <_:DebugWrite sap2010:WorkflowViewState.IdRef="DebugWrite_1">
+                <_:DebugWrite.Message>
+                  <p1:InArgument x:TypeArguments="x:String">
+                    <mca:CSharpValue x:TypeArguments="x:String">string.Format("The property is '{0}'", propertyId)</mca:CSharpValue>
+                  </p1:InArgument>
+                </_:DebugWrite.Message>
+              </_:DebugWrite>
+              <SendReply Request="{x:Reference __ReferenceID2}" Action="http://www.morganskinner.com/IPropertyInformation/UploadPropertyInformationResponse" DisplayName="UploadPropertyInformation_SendReply" sap2010:WorkflowViewState.IdRef="SendReply_1">
+                <SendReply.CorrelationInitializers>
+                  <QueryCorrelationInitializer>
+                    <QueryCorrelationInitializer.CorrelationHandle>
+                      <p1:InArgument x:TypeArguments="CorrelationHandle">
+                        <mca:CSharpValue x:TypeArguments="CorrelationHandle">operationHandle</mca:CSharpValue>
+                      </p1:InArgument>
+                    </QueryCorrelationInitializer.CorrelationHandle>
+                    <XPathMessageQuery x:Key="key1">
+                      <XPathMessageQuery.Namespaces>
+                        <ssx:XPathMessageContextMarkup>
+                          <x:String x:Key="xgSc">http://www.morganskinner.com</x:String>
+                        </ssx:XPathMessageContextMarkup>
+                      </XPathMessageQuery.Namespaces>sm:body()/xgSc:UploadPropertyInformationResponse/xgSc:UploadPropertyInformationResult</XPathMessageQuery>
+                  </QueryCorrelationInitializer>
+                </SendReply.CorrelationInitializers>
+                <SendParametersContent>
+                  <p1:InArgument x:TypeArguments="s1:Guid" x:Key="UploadPropertyInformationResult">
+                    <mca:CSharpValue x:TypeArguments="s1:Guid">propertyId</mca:CSharpValue>
+                  </p1:InArgument>
+                </SendParametersContent>
+              </SendReply>
+            </p1:Sequence>
+          </p1:Transition.Trigger>
+          <p1:Transition.To>
+            <x:Reference>__ReferenceID0</x:Reference>
+          </p1:Transition.To>
+        </p1:Transition>
+      </p1:State.Transitions>
+    </p1:State>
+    <p1:StateMachine.Variables>
+      <p1:Variable x:TypeArguments="CorrelationHandle" Name="operationHandle" />
+    </p1:StateMachine.Variables>
+    <sads:DebugSymbol.Symbol>d39FOlxNb3JnYW5cRG9jdW1lbnRzXEhvbWVcV2lsZXlcUHJvZmVzc2lvbmFsIEMjXENINDUgV29ya2Zsb3cgNFwwN19Xb3JrZmxvd3NBc1NlcnZpY2VzXDA3X1dvcmtmbG93c0FzU2VydmljZXNcU3RhdGVTZXJ2aWNlLnhhbWx4GhID3QEVAQE6BYkBEAEiUg1SgwEBIIsBBdgBEAECPg1PFwFBVQ1VbwE/Wg10FwEqeg2AARwBJI8BDdEBGwEESRNJaQFCVVJVbAFAZRNlaQE6axNrYQE1bhNuYgEwcRNxYwErfRN9oAEBJZQBD6cBGQEeqAEPswEbARW0AQ+6AR4BELsBD9ABGwEFmQEZnQEsAR+wARWwAWABGqsBFasBZAEWtwEVtwGFAQERzQEVzQFcAQzAARnAAW8BBg==</sads:DebugSymbol.Symbol>
+  </p1:StateMachine>
+  <sap2010:WorkflowViewState.ViewStateManager>
+    <sap2010:ViewStateManager>
+      <sap2010:ViewStateData Id="Receive_1" sap:VirtualizedContainerService.HintSize="255,90">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Type Type="s:IPropertyInformation" x:Key="contractType" />
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="State_1" sap:VirtualizedContainerService.HintSize="114,61">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">403,289.5</av:Point>
+            <av:Size x:Key="ShapeSize">114,61</av:Size>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="DebugWrite_3" sap:VirtualizedContainerService.HintSize="227,62" />
+      <sap2010:ViewStateData Id="Transition_1" sap:VirtualizedContainerService.HintSize="430,539">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:PointCollection x:Key="ConnectorLocation">297,316.1 327,316.1 327,332.2 403,332.2</av:PointCollection>
+            <x:Int32 x:Key="SrcConnectionPointIndex">44</x:Int32>
+            <x:Int32 x:Key="DestConnectionPointIndex">53</x:Int32>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Receive_2" sap:VirtualizedContainerService.HintSize="255,90">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Type Type="s:IPropertyInformation" x:Key="contractType" />
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="DebugWrite_2" sap:VirtualizedContainerService.HintSize="525,62" />
+      <sap2010:ViewStateData Id="Transition_2" sap:VirtualizedContainerService.HintSize="608,539">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:PointCollection x:Key="ConnectorLocation">234.3,340.5 234.3,370 153,370 153,310 183,310</av:PointCollection>
+            <x:Int32 x:Key="SrcConnectionPointIndex">35</x:Int32>
+            <x:Int32 x:Key="DestConnectionPointIndex">37</x:Int32>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="State_2" sap:VirtualizedContainerService.HintSize="114,61">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">183,279.5</av:Point>
+            <av:Size x:Key="ShapeSize">114,61</av:Size>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Receive_3" sap:VirtualizedContainerService.HintSize="327,92" />
+      <sap2010:ViewStateData Id="Assign_1" sap:VirtualizedContainerService.HintSize="327,62" />
+      <sap2010:ViewStateData Id="DebugWrite_1" sap:VirtualizedContainerService.HintSize="327,62" />
+      <sap2010:ViewStateData Id="SendReply_1" sap:VirtualizedContainerService.HintSize="327,92" />
+      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="349,552">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Type Type="s:IPropertyInformation" x:Key="contractType" />
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Transition_3" sap:VirtualizedContainerService.HintSize="430,1008">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:PointCollection x:Key="ConnectorLocation">305,200.5 305,230.5 234.3,230.5 234.3,279.5</av:PointCollection>
+            <x:Int32 x:Key="SrcConnectionPointIndex">35</x:Int32>
+            <x:Int32 x:Key="DestConnectionPointIndex">34</x:Int32>
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="State_3" sap:VirtualizedContainerService.HintSize="160,61">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">233,139.5</av:Point>
+            <av:Size x:Key="ShapeSize">160,61</av:Size>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            <x:Double x:Key="StateContainerWidth">146</x:Double>
+            <x:Double x:Key="StateContainerHeight">25.080000000000041</x:Double>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="StateMachine_1" sap:VirtualizedContainerService.HintSize="614,636">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
+            <x:Double x:Key="StateContainerWidth">600</x:Double>
+            <x:Double x:Key="StateContainerHeight">600</x:Double>
+            <av:PointCollection x:Key="ConnectorLocation">290,77.5 290,107.5 312,107.5 312,139.5</av:PointCollection>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="WorkflowService_1" sap:VirtualizedContainerService.HintSize="644,706" />
+    </sap2010:ViewStateManager>
+  </sap2010:WorkflowViewState.ViewStateManager>
+</WorkflowService>
