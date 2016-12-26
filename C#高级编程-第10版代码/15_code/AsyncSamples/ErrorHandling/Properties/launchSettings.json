@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "ErrorHandling": {
+      "commandName": "ErrorHandling",
+      "commandLineArgs": "-agg",
+      "sdkVersion": "dnx-coreclr-win-x64.1.0.0-rc2-16357"
+    }
+  }
+}

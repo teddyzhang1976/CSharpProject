@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "ClientApp": {
+      "commandName": "Project"
+    },
+    "ClientApp - .NET 4.6.1": {
+      "executablePath": "C:\\Source\\ProfessionalCSharp6\\ReflectionAndDynamic\\DynamicSamples\\ClientApp\\bin\\Debug\\net461\\ClientApp.exe"
+    }
+  }
+}
