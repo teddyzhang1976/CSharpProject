@@ -1,0 +1,16 @@
+﻿<Window x:Class="WpfApplication1.Window31"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        Title="Window31" FontSize="16" SizeToContent="Height" Loaded="Window_Loaded">
+    <Window.Resources>
+        <ResourceDictionary>
+            <sys:String x:Key="str">沉舟侧畔千帆过，病树前头万木春。</sys:String>
+            <sys:Double x:Key="db">3.1415926</sys:Double>
+        </ResourceDictionary>
+    </Window.Resources>
+    <StackPanel>
+        <TextBlock Text="{ StaticResource str}" x:Name="txt0"></TextBlock>
+        <!--<TextBlock Text="{StaticResource ResourceKey=db}"></TextBlock>-->
+    </StackPanel>
+</Window>

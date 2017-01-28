@@ -1,0 +1,36 @@
+﻿<Window x:Class="WpfApplication1.Window43"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Window43" Height="262" Width="425">
+    <Window.Resources>
+        <Style TargetType="ListBoxItem">
+            <!--使用Style设置Datatemplate-->
+            <Setter Property="ContentTemplate">
+                <Setter.Value>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="{Binding Id}" Width="60"></TextBlock>
+                            <TextBlock Text="{Binding Name}" Width="120"></TextBlock>
+                            <TextBlock Text="{Binding Skill}" Width="60"></TextBlock>
+                        </StackPanel>
+                    </DataTemplate>
+                </Setter.Value>
+            </Setter>
+            <!--MultiDataTrigger-->
+            <Style.Triggers>
+                <MultiDataTrigger>
+                    <MultiDataTrigger.Conditions>
+                        <Condition Binding="{Binding Path=Id}" Value="2"></Condition>
+                        <Condition Binding="{Binding Path=Name}" Value="Darren"></Condition>
+                    </MultiDataTrigger.Conditions>
+                    <MultiDataTrigger.Setters>
+                        <Setter Property="Background" Value="Orange"></Setter>
+                    </MultiDataTrigger.Setters>
+                </MultiDataTrigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    <StackPanel>
+        <ListBox x:Name="lbInfos" Margin="5"></ListBox>
+    </StackPanel>
+</Window>

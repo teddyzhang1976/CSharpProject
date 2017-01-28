@@ -1,0 +1,40 @@
+﻿<Window x:Class="WpfApplication1.Window39"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:c="clr-namespace:System.Collections;assembly=mscorlib"
+        xmlns:local="clr-namespace:WpfApplication1"
+        Title="Window39" Height="250" Width="358">
+    <Window.Resources>
+        <!--数据集合-->
+        <c:ArrayList x:Key="stuList">
+            <local:Student39 Id="1" Name="Timoty Liu" Skill="WPF" HasJob="True"></local:Student39>
+            <local:Student39 Id="2" Name="Tom Chang" Skill="BI/SQL" HasJob="True"></local:Student39>
+            <local:Student39 Id="3" Name="Guan Chong" Skill="Writing" HasJob="False"></local:Student39>
+            <local:Student39 Id="4" Name="Shanshan" Skill="C#/Java" HasJob="False"></local:Student39>
+            <local:Student39 Id="5" Name="Pingping Zhang" Skill="Writing" HasJob="False"></local:Student39>
+            <local:Student39 Id="6" Name="kenny Tian" Skill="Asp.net" HasJob="False"></local:Student39>
+        </c:ArrayList>
+        <!--DataTemplate-->
+        <DataTemplate x:Key="nameDT">
+            <TextBox x:Name="txtBoxName" Text="{Binding Name}" GotFocus="txtBoxName_GotFocus"></TextBox>
+        </DataTemplate>
+        <DataTemplate x:Key="skillDT">
+            <TextBox x:Name="txtSkill" Text="{Binding Skill}"></TextBox>
+        </DataTemplate>
+        <DataTemplate x:Key="hasJobDT">
+            <CheckBox IsChecked="{Binding HasJob}" x:Name="checkBoxJob"></CheckBox>
+        </DataTemplate>
+    </Window.Resources>
+    <Grid Margin="5">
+        <ListView x:Name="lvStudent" ItemsSource="{StaticResource stuList}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="ID" DisplayMemberBinding="{Binding Id}"></GridViewColumn>
+                    <GridViewColumn Header="姓名" CellTemplate="{StaticResource nameDT}"></GridViewColumn>
+                    <GridViewColumn Header="技术" CellTemplate="{StaticResource skillDT}"></GridViewColumn>
+                    <GridViewColumn Header="已工作" CellTemplate="{StaticResource hasJobDT}"></GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Window>

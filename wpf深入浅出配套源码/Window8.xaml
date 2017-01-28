@@ -1,0 +1,24 @@
+﻿<Window x:Class="WpfApplication1.Window8"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Window8" Height="356" Width="471">
+    <Grid>
+        <StackPanel Height="295" HorizontalAlignment="Left" Margin="10,10,0,0" Name="stackPanel1" VerticalAlignment="Top" Width="427">
+            <TextBlock Height="23" Name="textBlock1" Text="学员编号:" />
+            <TextBox Height="23" Name="txtStudentId" Width="301" HorizontalAlignment="Left"/>
+            <TextBlock Height="23" Name="textBlock2" Text="学员列表:" />
+            <ListBox Height="156" Name="lbStudent" Width="305" HorizontalAlignment="Left">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Name="stackPanel2" Orientation="Horizontal">
+                            <TextBlock  Text="{Binding Id}" Margin="5" Background="Beige"/>
+                            <TextBlock Text="{Binding Name}" Margin="5"/>
+                            <TextBlock  Text="{Binding Age}" Margin="5"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+            <Button Content="Button" Height="23" Name="button1" Width="75" HorizontalAlignment="Left" Click="button1_Click" />
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,19 @@
+﻿<Window x:Class="WpfApplication1.Window6"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Stu="clr-namespace:WpfApplication1"
+        Title="Window6" Height="345" Width="464">
+    <StackPanel Background="AliceBlue">
+        <StackPanel.DataContext>
+            <Stu:Student Id="1" Name="Darren" Age="10"></Stu:Student>
+        </StackPanel.DataContext>
+        <Grid>
+            <StackPanel Height="283" HorizontalAlignment="Left" Margin="12,12,0,0" Name="stackPanel1" VerticalAlignment="Top" Width="418">
+                <TextBox Height="23" Name="textBox1" Width="120" Margin="15" Text="{Binding Path=Id}"/>
+                <TextBox Height="23" Name="textBox2" Width="120" Margin="15" Text="{Binding Path=Name}"/>
+                <TextBox Height="23" Name="textBox3" Width="120" Margin="15" Text="{Binding Path=Age}"/>
+            </StackPanel>
+        </Grid>
+    </StackPanel>
+    
+</Window>

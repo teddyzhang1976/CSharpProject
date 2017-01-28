@@ -1,0 +1,621 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{31A33F81-C9F4-48C7-B4A9-B5D58A19CEE1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WpfApplication1</RootNamespace>
+    <AssemblyName>WpfApplication1</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <Utf8Output>true</Utf8Output>
+    <ExpressionBlendVersion>4.0.20621.0</ExpressionBlendVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationFramework.Classic" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="BLL\CategoryToSourceConverter.cs" />
+    <Compile Include="BLL\MultiBindingConverter.cs" />
+    <Compile Include="BLL\StateToNullableBoolConverter.cs" />
+    <Compile Include="CarDetailView.xaml.cs">
+      <DependentUpon>CarDetailView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CarListViewItem.xaml.cs">
+      <DependentUpon>CarListViewItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Command\ClearCommand.cs" />
+    <Compile Include="InterFace\IView.cs" />
+    <Compile Include="MniView.xaml.cs">
+      <DependentUpon>MniView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Model\AutoMarkToLogoPathConverter.cs" />
+    <Compile Include="Model\Caculate.cs" />
+    <Compile Include="Model\Human.cs" />
+    <Compile Include="Model\NameToPhotoPathConverter.cs" />
+    <Compile Include="Model\ReportTimeEventArgs.cs" />
+    <Compile Include="MyCommandSource.xaml.cs">
+      <DependentUpon>MyCommandSource.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MyUserControl.xaml.cs">
+      <DependentUpon>MyUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Person.cs" />
+    <Compile Include="Window1.xaml.cs">
+      <DependentUpon>Window1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window10.xaml.cs">
+      <DependentUpon>Window10.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window11.xaml.cs">
+      <DependentUpon>Window11.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window12.xaml.cs">
+      <DependentUpon>Window12.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window13.xaml.cs">
+      <DependentUpon>Window13.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window14.xaml.cs">
+      <DependentUpon>Window14.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window15.xaml.cs">
+      <DependentUpon>Window15.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window16.xaml.cs">
+      <DependentUpon>Window16.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window17.xaml.cs">
+      <DependentUpon>Window17.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window18.xaml.cs">
+      <DependentUpon>Window18.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window19.xaml.cs">
+      <DependentUpon>Window19.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window2.xaml.cs">
+      <DependentUpon>Window2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window20.xaml.cs">
+      <DependentUpon>Window20.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window21.xaml.cs">
+      <DependentUpon>Window21.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window22.xaml.cs">
+      <DependentUpon>Window22.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window23.xaml.cs">
+      <DependentUpon>Window23.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window24.xaml.cs">
+      <DependentUpon>Window24.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window25.xaml.cs">
+      <DependentUpon>Window25.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window26.xaml.cs">
+      <DependentUpon>Window26.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window27.xaml.cs">
+      <DependentUpon>Window27.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window28.xaml.cs">
+      <DependentUpon>Window28.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window29.xaml.cs">
+      <DependentUpon>Window29.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window3.xaml.cs">
+      <DependentUpon>Window3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window30.xaml.cs">
+      <DependentUpon>Window30.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window31.xaml.cs">
+      <DependentUpon>Window31.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window32.xaml.cs">
+      <DependentUpon>Window32.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window33.xaml.cs">
+      <DependentUpon>Window33.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window34.xaml.cs">
+      <DependentUpon>Window34.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window35.xaml.cs">
+      <DependentUpon>Window35.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window36.xaml.cs">
+      <DependentUpon>Window36.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window37.xaml.cs">
+      <DependentUpon>Window37.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window38.xaml.cs">
+      <DependentUpon>Window38.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window39.xaml.cs">
+      <DependentUpon>Window39.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window4.xaml.cs">
+      <DependentUpon>Window4.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window40.xaml.cs">
+      <DependentUpon>Window40.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window41.xaml.cs">
+      <DependentUpon>Window41.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window42.xaml.cs">
+      <DependentUpon>Window42.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window43.xaml.cs">
+      <DependentUpon>Window43.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window44.xaml.cs">
+      <DependentUpon>Window44.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window45.xaml.cs">
+      <DependentUpon>Window45.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window46.xaml.cs">
+      <DependentUpon>Window46.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window47.xaml.cs">
+      <DependentUpon>Window47.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window48.xaml.cs">
+      <DependentUpon>Window48.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window49.xaml.cs">
+      <DependentUpon>Window49.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window5.xaml.cs">
+      <DependentUpon>Window5.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window50.xaml.cs">
+      <DependentUpon>Window50.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window51.xaml.cs">
+      <DependentUpon>Window51.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window52.xaml.cs">
+      <DependentUpon>Window52.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window53.xaml.cs">
+      <DependentUpon>Window53.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window54.xaml.cs">
+      <DependentUpon>Window54.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window55.xaml.cs">
+      <DependentUpon>Window55.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window56.xaml.cs">
+      <DependentUpon>Window56.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window57.xaml.cs">
+      <DependentUpon>Window57.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window59.xaml.cs">
+      <DependentUpon>Window59.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window6.xaml.cs">
+      <DependentUpon>Window6.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window60.xaml.cs">
+      <DependentUpon>Window60.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window61.xaml.cs">
+      <DependentUpon>Window61.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window62.xaml.cs">
+      <DependentUpon>Window62.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window63.xaml.cs">
+      <DependentUpon>Window63.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window64.xaml.cs">
+      <DependentUpon>Window64.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window7.xaml.cs">
+      <DependentUpon>Window7.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window8.xaml.cs">
+      <DependentUpon>Window8.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window9.xaml.cs">
+      <DependentUpon>Window9.xaml</DependentUpon>
+    </Compile>
+    <Page Include="CarDetailView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CarListViewItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="MniView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MyCommandSource.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MyUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window10.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window11.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window12.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window13.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window14.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window15.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window16.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window17.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window18.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window19.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window20.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window21.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window22.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window23.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Window24.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window25.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window26.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window27.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window28.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window29.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window30.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window31.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window32.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window33.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window34.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window35.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window36.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window37.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Window38.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window39.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window4.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window40.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window41.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window42.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window43.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window44.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window45.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window46.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window47.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window48.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window49.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window5.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window50.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window51.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window52.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window53.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window54.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window55.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window56.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window57.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window59.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window6.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window60.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window61.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window62.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window63.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window64.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window7.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window8.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window9.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Model\Student.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="StudentData.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="testDate.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ICONS\Bomber.png" />
+    <Resource Include="ICONS\Fighter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\Image\20090102191236877.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\Vidio\1.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20090102191236877.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\Image\Aodi.png" />
+    <Resource Include="Resource\Image\Aodi.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="01077_1.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

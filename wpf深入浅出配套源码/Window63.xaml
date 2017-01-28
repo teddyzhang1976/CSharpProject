@@ -1,0 +1,16 @@
+﻿<Window x:Class="WpfApplication1.Window63"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Window63" Height="314" Width="517">
+    <Grid x:Name="layoutRoot">
+        <Grid.Resources>
+            <!--移动路径-->
+            <PathGeometry x:Key="movePath" Figures="M 0,50 C 300,-100 300,400 600,120"></PathGeometry>
+        </Grid.Resources>
+        <Button Content="Move" Width="80" Height="80" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Button_Click">
+            <Button.RenderTransform>
+                <TranslateTransform X="0" Y="0" x:Name="tt"></TranslateTransform>
+            </Button.RenderTransform>
+        </Button>
+    </Grid>
+</Window>

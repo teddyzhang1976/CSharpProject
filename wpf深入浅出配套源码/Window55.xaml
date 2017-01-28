@@ -1,0 +1,9 @@
+﻿<Window x:Class="WpfApplication1.Window55"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Window55" Height="343" Width="426">
+    <Grid>
+        <Path Stroke="Red" Data="M 0,200 Q 100,0 200,200 T 400,200"></Path>
+        <Path Stroke="Blue" Data="M 0,200 Q 100,0 200,200 Q 300,400 400,200"></Path>
+    </Grid>
+</Window>

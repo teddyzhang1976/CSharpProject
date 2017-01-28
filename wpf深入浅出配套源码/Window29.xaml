@@ -1,0 +1,31 @@
+﻿<Window x:Class="WpfApplication1.Window29"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Window29" Height="278" Width="398">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="24" />
+            <RowDefinition Height="4" />
+            <RowDefinition Height="24" />
+            <RowDefinition Height="4" />
+            <RowDefinition Height="24" />
+            <RowDefinition Height="4" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <!--命令和命令参数-->
+        <TextBlock  HorizontalAlignment="Left" Name="textBlock1" Text="Name:" VerticalAlignment="Center" Grid.Row="0"/>
+        <TextBox x:Name="txtName" Margin="60,0,0,0" Grid.Row="0"></TextBox>
+        <Button Content="New Teacher" Grid.Row="2" Command="New" CommandParameter="Teacher"></Button>
+        <Button Content="New Student" Grid.Row="4" Command="New" CommandParameter="Student"></Button>
+        <ListBox Grid.Row="6" x:Name="lbInfos">
+            
+        </ListBox>
+       
+    </Grid>
+    <!--为窗体添加CommandBinding-->
+    <Window.CommandBindings>
+        <CommandBinding Command="New" CanExecute="CommandBinding_CanExecute" Executed="CommandBinding_Executed">
+            
+        </CommandBinding>
+    </Window.CommandBindings>
+</Window>

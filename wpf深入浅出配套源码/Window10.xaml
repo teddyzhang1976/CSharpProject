@@ -1,0 +1,19 @@
+﻿<Window x:Class="WpfApplication1.Window10"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Window10" Height="397" Width="485">
+    <StackPanel Width="409" Height="331" Background="LightBlue">
+        <ListView Height="302" Name="listView1" Width="396">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="ID" DisplayMemberBinding="{Binding XPath=@id}" Width="80">
+                        
+                    </GridViewColumn>
+                    <GridViewColumn Header="Name" DisplayMemberBinding="{Binding XPath=Name}" Width="150">
+
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </StackPanel>
+</Window>

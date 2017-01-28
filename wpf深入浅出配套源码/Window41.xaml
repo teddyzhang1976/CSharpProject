@@ -1,0 +1,33 @@
+﻿<Window x:Class="WpfApplication1.Window41"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Window41" Height="258" Width="352">
+    <Window.Resources>
+        <Style TargetType="CheckBox">
+            <Style.Triggers>
+                <MultiTrigger>
+                    <MultiTrigger.Conditions>
+                        <Condition Property="IsChecked" Value="True"></Condition>
+                        <Condition Property="Content" Value="粒粒皆辛苦"></Condition>
+                    </MultiTrigger.Conditions>
+                    <MultiTrigger.Setters>
+                        <Setter Property="FontSize" Value="20"></Setter>
+                        <Setter Property="Foreground" Value="Orange"></Setter>
+                    </MultiTrigger.Setters>
+                </MultiTrigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FF4589D8" Offset="0" />
+            <GradientStop Color="White" Offset="1" />
+        </LinearGradientBrush>
+    </Window.Background>
+    <StackPanel>
+        <CheckBox Content="锄禾日当午" Margin="5"></CheckBox>
+        <CheckBox Content="汗滴禾下土" Margin="5,0"></CheckBox>
+        <CheckBox Content="谁知盘中餐" Margin="5"></CheckBox>
+        <CheckBox Content="粒粒皆辛苦" Margin="5,0"></CheckBox>
+    </StackPanel>
+</Window>

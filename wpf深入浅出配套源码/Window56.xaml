@@ -1,0 +1,10 @@
+﻿<Window x:Class="WpfApplication1.Window56"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Window56" Height="250" Width="300" WindowStyle="None" AllowsTransparency="True" WindowStartupLocation="CenterScreen" Background="Yellow">
+    <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+        <Path Stroke="Orange" Fill="Yellow" x:Name="clipPath0" Visibility="Hidden" Data="M 55,100 A 50,50 0 1 1 100,60 A 110,95 0 0 1 200,60 A 50,50 0 1 1 250,100 A 110,95 0 1 1 55,100 Z">
+        </Path>
+        <Button Content="Clip" Width="80" Height="25" Click="Button_Click" HorizontalAlignment="Center" VerticalAlignment="Center"></Button>
+    </Grid>
+</Window>

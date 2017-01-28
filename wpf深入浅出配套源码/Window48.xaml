@@ -1,0 +1,21 @@
+﻿<Window x:Class="WpfApplication1.Window48"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Window48" Height="300" Width="300">
+    <Grid>
+        <Ellipse Height="140"  Name="ellipse1" Stroke="Gray" Width="140" Cursor="Hand" ToolTip="A Ball">
+            <Ellipse.Fill>
+                <RadialGradientBrush GradientOrigin="0.2,0.8" RadiusX="0.75" RadiusY="0.75">
+                    <RadialGradientBrush.RelativeTransform>
+                        <TransformGroup>
+                            <RotateTransform Angle="90" CenterX="0.5" CenterY="0.5"></RotateTransform>
+                        </TransformGroup>
+                    </RadialGradientBrush.RelativeTransform>
+                    <GradientStop Color="#FFFFFFFF" Offset="0" />
+                    <GradientStop Color="#FF444444" Offset="0.66" />
+                    <GradientStop Color="#FF999999" Offset="1" />
+                </RadialGradientBrush>
+            </Ellipse.Fill>
+        </Ellipse>
+    </Grid>
+</Window>

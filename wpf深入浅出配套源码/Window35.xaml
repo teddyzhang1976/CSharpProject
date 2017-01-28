@@ -1,0 +1,22 @@
+﻿<Window x:Class="WpfApplication1.Window35"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Window35" Height="350" Width="623" xmlns:my="clr-namespace:WpfApplication1">
+    <!--<DataTemplate>
+            <Grid>
+                <StackPanel Orientation="Horizontal">
+                    <Grid>
+                        <Rectangle Stroke="Yellow" Fill="Orange" Width="{Binding Price}"></Rectangle>
+                        <TextBlock Text="{Binding Year}"></TextBlock>
+                    </Grid>
+                    <TextBlock Text="{Binding Price}" Margin="5,0"></TextBlock>
+                </StackPanel>
+            </Grid>
+        </DataTemplate>-->
+    <StackPanel Orientation="Horizontal" Margin="5">
+        <my:CarDetailView x:Name="carDetailView1" />
+        <ListBox x:Name="listBoxCars" Width="180" Margin="5,0" SelectionChanged="listBoxCars_SelectionChanged">
+            
+        </ListBox>
+    </StackPanel>
+</Window>

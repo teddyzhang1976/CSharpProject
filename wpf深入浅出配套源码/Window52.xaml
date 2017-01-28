@@ -1,0 +1,18 @@
+﻿<Window x:Class="WpfApplication1.Window52"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Window52" Height="339" Width="325">
+    <Grid>
+        <Path Stroke="Blue" StrokeThickness="2">
+            <Path.Data>
+                <PathGeometry>
+                    <PathFigure StartPoint="0,300">
+                        <QuadraticBezierSegment Point1="150,-150" Point2="300,300">
+                            
+                        </QuadraticBezierSegment>
+                    </PathFigure>
+                </PathGeometry>
+            </Path.Data>
+        </Path>
+    </Grid>
+</Window>

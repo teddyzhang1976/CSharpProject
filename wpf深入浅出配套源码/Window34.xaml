@@ -1,0 +1,9 @@
+﻿<Window x:Class="WpfApplication1.Window34"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Window34">
+    <Grid>
+        <Image Source="pack://application:,,,/Resource/Image/20090102191236877.gif" x:Name="img0" Stretch="Fill"></Image>
+        <MediaElement Height="120" HorizontalAlignment="Left" Margin="10,10,0,0" Name="mediaElement1" VerticalAlignment="Top" Width="160" LoadedBehavior="Manual" />
+    </Grid>
+</Window>

@@ -1,0 +1,11 @@
+﻿<Window x:Class="WpfApplication1.Window20"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Window20" mc:Ignorable="d" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" Height="287" Width="416">
+    <StackPanel>
+        <TextBox Background="LightBlue" Margin="0,5"></TextBox>
+        <TextBox Background="LightBlue" Margin="0,5"></TextBox>
+        <TextBox Background="LightBlue" Margin="0,5"></TextBox>
+        <Button Width="60" Height="30" Content="Test" Click="Button_Click"></Button>
+    </StackPanel>
+</Window>

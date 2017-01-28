@@ -1,0 +1,24 @@
+﻿<Window x:Class="WpfApplication1.Window45"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Window45" Height="293" Width="437">
+    <Grid>
+        <Line X1="10" Y1="20" X2="260" Y2="20" Stroke="Red" StrokeThickness="10"></Line>
+        <Line X1="10" Y1="40" X2="260" Y2="40" Stroke="Orange" StrokeThickness="6"></Line>
+        <Line X1="10" Y1="60" X2="260" Y2="60" Stroke="Green" StrokeThickness="3"></Line>
+        <Line X1="10" Y1="80" X2="260" Y2="80" Stroke="Purple" StrokeThickness="2"></Line>
+        <Line X1="10" Y1="100" X2="260" Y2="100" Stroke="Black" StrokeThickness="1"></Line>
+        <Line X1="10" Y1="120" X2="260" Y2="120" StrokeDashArray="3" Stroke="Black" StrokeThickness="1"></Line>
+        <Line X1="10" Y1="140" X2="260" Y2="140" StrokeDashArray="5" Stroke="Black" StrokeThickness="1"></Line>
+        <Line X1="10" X2="260" Y1="160" Y2="160" Stroke="Black" StrokeThickness="6" StrokeEndLineCap="Flat"></Line>
+        <Line X1="10" X2="260" Y1="180" Y2="180" Stroke="Black" StrokeThickness="8" StrokeEndLineCap="Triangle"></Line>
+        <Line X1="10" X2="260" Y1="200" Y2="200" StrokeEndLineCap="Round" StrokeThickness="10">
+            <Line.Stroke>
+                <LinearGradientBrush EndPoint="0,0.5" StartPoint="1,0.5">
+                    <GradientStop Color="Blue"></GradientStop>
+                    <GradientStop Offset="1" Color="Red"></GradientStop>
+                </LinearGradientBrush>
+            </Line.Stroke>
+        </Line>
+    </Grid>
+</Window>

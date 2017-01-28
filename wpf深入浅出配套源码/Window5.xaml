@@ -1,0 +1,15 @@
+﻿<Window x:Class="WpfApplication1.Window5"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:String="clr-namespace:System;assembly=mscorlib"
+        Title="Window5" Height="331" Width="538">
+    <StackPanel Height="184" Name="stackPanel1" Width="288">
+        <StackPanel.Resources>
+            <String:String x:Key="myString">
+                菩提本无树，何处染尘埃。
+            </String:String>
+            
+        </StackPanel.Resources>
+        <TextBlock Height="23" Name="textBlock1" Text="{Binding Path=.,Source={StaticResource ResourceKey=myString}}" />
+    </StackPanel>
+</Window>
